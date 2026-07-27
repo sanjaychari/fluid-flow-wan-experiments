@@ -1,0 +1,36 @@
+schema_version: 1
+
+topology:
+  format: groups
+  params:
+    message_size: 32768
+    pe_mem_factor: 1024
+  groups:
+    FLUID_FLOW_WAN_GRP:
+      repetitions: 1
+      lps:
+        fluid-flow-wan-switch-lp: 4
+        fluid-flow-wan-terminal-lp: 8
+
+sections:
+  fluid_flow_wan:
+    topology_yaml_file: esnet-fluid-flow-wan-topology.yaml
+    traffic_trace_file: traffic-trace.csv
+
+    # iperf reports at 1 s. We split each observed 1-s volume uniformly into
+    # ten 100-ms fluid intervals to reduce the model's interval-hop delay while
+    # remaining under MAX_SIMULATION_INTERVALS for every archived run.
+    interval_seconds: 0.1
+    num_send_intervals: 3000
+    num_drain_intervals: 20
+
+    egress_model: pdes
+    debug_prints: 0
+    backpressure_delay_ms: 1.0
+
+    pause_high_watermark_fraction: 0.80
+    pause_low_watermark_fraction: 0.50
+
+    terminal_log_path: logs/terminal-events.csv
+    switch_log_path: logs/switch-events.csv
+    flowlet_log_path: logs/flowlet-events.csv

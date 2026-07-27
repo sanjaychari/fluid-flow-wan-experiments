@@ -1,0 +1,13 @@
+Time spent processing events for each LP:
+LPID: 0	-  Processing time: 1.786769e-02	-  Events processed: 1206
+LPID: 1	-  Processing time: 0.000000e+00	-  Events processed: 0
+LPID: 2	-  Processing time: 0.000000e+00	-  Events processed: 0
+LPID: 3	-  Processing time: 0.000000e+00	-  Events processed: 0
+LPID: 4	-  Processing time: 9.683392e-03	-  Events processed: 1222
+LPID: 5	-  Processing time: 4.002142e-03	-  Events processed: 1223
+LPID: 6	-  Processing time: 2.719032e-03	-  Events processed: 621
+LPID: 7	-  Processing time: 2.732800e-03	-  Events processed: 621
+LPID: 8	-  Processing time: 2.732722e-03	-  Events processed: 621
+LPID: 9	-  Processing time: 2.739764e-03	-  Events processed: 621
+LPID: 10	-  Processing time: 2.737018e-03	-  Events processed: 621
+LPID: 11	-  Processing time: 2.742592e-03	-  Events processed: 621

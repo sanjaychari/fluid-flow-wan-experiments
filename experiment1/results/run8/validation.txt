@@ -1,0 +1,33 @@
+Run directory: /workspace/fluid-flow-wan-experiments/experiment1/results/run8
+Mode: pdes
+
+flow 8001: LBNL1->STAR1 vlan4012
+  physical offered total : 8140.681013 Gbit
+  physical received total: 8137.932234 Gbit
+  CODES received total   : 8140.683000 Gbit
+  total-volume error     : +0.0338%
+  1-s NMAE raw           : 4.6579%
+  1-s NMAE delay-adjusted: 4.2882%
+  modeled delay removed  : 2 intervals (0.2 s)
+
+flow 8002: LBNL2 vlan3002 -> LBNL1 vlan3001 via StarLight
+  physical offered total : 108.150968 Gbit
+  physical received total: 108.146773 Gbit
+  CODES received total   : 108.150974 Gbit
+  total-volume error     : +0.0039%
+  1-s NMAE raw           : 2.9116%
+  1-s NMAE delay-adjusted: 4.9385%
+  modeled delay removed  : 4 intervals (0.4 s)
+
+flow 8003: STAR1 vlan3002 -> STAR2 vlan3001 via StarLight
+  physical offered total : 84.763528 Gbit
+  physical received total: 84.670415 Gbit
+  CODES received total   : 84.763525 Gbit
+  total-volume error     : +0.1100%
+  1-s NMAE raw           : 9.9482%
+  1-s NMAE delay-adjusted: 6.9217%
+  modeled delay removed  : 4 intervals (0.4 s)
+
+aggregate physical received: 8330.749422 Gbit
+aggregate CODES received   : 8333.597499 Gbit
+aggregate volume error     : +0.0342%

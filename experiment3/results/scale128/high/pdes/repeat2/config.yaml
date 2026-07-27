@@ -1,0 +1,32 @@
+schema_version: 1
+
+topology:
+  format: groups
+  params:
+    message_size: 32768
+    pe_mem_factor: 1024
+  groups:
+    FLUID_FLOW_WAN_GRP:
+      repetitions: 1
+      lps:
+        fluid-flow-wan-switch-lp: 128
+        fluid-flow-wan-terminal-lp: 256
+
+sections:
+  fluid_flow_wan:
+    topology_yaml_file: "topology.yaml"
+    interval_seconds: 10
+    num_send_intervals: 40
+    num_drain_intervals: 20
+    rng_seed: 3001
+    flow_generation_every_n_intervals: 4
+    random_flow_min: "1000 Gb"
+    random_flow_max: "4000 Gb"
+    egress_model: pdes
+    debug_prints: 0
+    backpressure_delay_ms: 1.0
+    pause_high_watermark_fraction: 0.80
+    pause_low_watermark_fraction: 0.50
+    terminal_log_path: "logs/terminal-events.csv"
+    switch_log_path: "logs/switch-events.csv"
+    flowlet_log_path: "logs/flowlet-events.csv"

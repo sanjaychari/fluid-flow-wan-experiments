@@ -1,0 +1,2 @@
+flow_id,label,start_seconds,offered_total_gbit,received_total_gbit,relative_volume_difference_pct,client_peer,server_peer,server_time
+4001,LBNL2->STAR2 vlan4012,0,8961.363364,8961.105666,-0.002876,10.10.2.32,10.10.2.42,"Fri, 07 Jun 2024 21:37:45 GMT"

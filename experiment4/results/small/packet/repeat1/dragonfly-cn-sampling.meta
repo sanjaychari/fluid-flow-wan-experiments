@@ -1,0 +1,10 @@
+Compute node sample format
+terminal_id (tw_lpid) 
+finished chunks (long)
+data size per sample (long) 
+finished hops (double) 
+time to finish chunks (double)
+busy time (double)
+sample end time(double) 
+forward events (long) 
+reverse events (long)

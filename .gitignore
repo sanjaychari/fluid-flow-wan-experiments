@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Locally compiled SimGrid harness
+experiment5/simgrid-flow-benchmark
+
+# Large transient Experiment 3 output.
+# These files are generated when rerunning the experiment but are not stored
+# in Git; compact analysis summaries and parity/checksum evidence are retained.
+experiment3/results/**/logs/flowlet-events.csv
+experiment3/results/**/diagnostic/model-output.log
+experiment3/analysis/parity/**/*-flowlet-events.csv

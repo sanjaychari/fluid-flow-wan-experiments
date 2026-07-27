@@ -1,0 +1,11 @@
+case,switches,terminals,load,mode,seed,config,topology
+scale32-medium-pdes,32,64,medium,pdes,3001,configs/scale32-medium-pdes.yaml,topologies/topology-32switch.yaml
+scale32-medium-statistical,32,64,medium,statistical,3001,configs/scale32-medium-statistical.yaml,topologies/topology-32switch.yaml
+scale32-high-pdes,32,64,high,pdes,3001,configs/scale32-high-pdes.yaml,topologies/topology-32switch.yaml
+scale32-high-statistical,32,64,high,statistical,3001,configs/scale32-high-statistical.yaml,topologies/topology-32switch.yaml
+scale64-medium-pdes,64,128,medium,pdes,3001,configs/scale64-medium-pdes.yaml,topologies/topology-64switch.yaml
+scale64-medium-statistical,64,128,medium,statistical,3001,configs/scale64-medium-statistical.yaml,topologies/topology-64switch.yaml
+scale64-high-pdes,64,128,high,pdes,3001,configs/scale64-high-pdes.yaml,topologies/topology-64switch.yaml
+scale64-high-statistical,64,128,high,statistical,3001,configs/scale64-high-statistical.yaml,topologies/topology-64switch.yaml
+scale128-high-pdes,128,256,high,pdes,3001,configs/scale128-high-pdes.yaml,topologies/topology-128switch.yaml
+scale128-high-statistical,128,256,high,statistical,3001,configs/scale128-high-statistical.yaml,topologies/topology-128switch.yaml

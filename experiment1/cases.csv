@@ -1,0 +1,9 @@
+run,scenario
+1,STAR-DTN-1 -> STAR-DTN-2 direct VLAN4012
+2,LBNL-DTN-1 -> LBNL-DTN-2 direct VLAN4012
+3,LBNL-DTN-1 -> STAR-DTN-1 direct VLAN4012
+4,LBNL-DTN-2 -> STAR-DTN-2 direct VLAN4012
+5,LBNL1->LBNL2 plus STAR1->STAR2 starting 61 s later
+6,STAR1 VLAN3002 -> STAR2 VLAN3001 via StarLight
+7,LBNL1->LBNL2 plus routed STAR1->STAR2 starting 3 s later
+8,LBNL1->STAR1; routed LBNL2->LBNL1 at +2 s; routed STAR1->STAR2 at +4 s

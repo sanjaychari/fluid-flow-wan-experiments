@@ -1,0 +1,15 @@
+Run directory: /workspace/fluid-flow-wan-experiments/experiment1/results/run4
+Mode: pdes
+
+flow 4001: LBNL2->STAR2 vlan4012
+  physical offered total : 8961.363364 Gbit
+  physical received total: 8961.105666 Gbit
+  CODES received total   : 8961.370827 Gbit
+  total-volume error     : +0.0030%
+  1-s NMAE raw           : 3.7318%
+  1-s NMAE delay-adjusted: 3.9043%
+  modeled delay removed  : 2 intervals (0.2 s)
+
+aggregate physical received: 8961.105666 Gbit
+aggregate CODES received   : 8961.370827 Gbit
+aggregate volume error     : +0.0030%

@@ -1,0 +1,44 @@
+# ESNet testbed topology abstraction for the June 7, 2024 experiment.
+# Terminal numbering is deliberately fixed by switch declaration order:
+#   0 LBNL-DTN-1 vlan4012 (10.10.2.62)
+#   1 LBNL-DTN-2 vlan4012 (10.10.2.42)
+#   2 STAR-DTN-1 vlan4012 (10.10.2.52)
+#   3 STAR-DTN-2 vlan4012 (10.10.2.32)
+#   4 LBNL-DTN-2 vlan3002 (10.33.2.17)
+#   5 STAR-DTN-1 vlan3002 (10.33.2.26)
+#   6 LBNL-DTN-1 vlan3001 (10.33.1.16)
+#   7 STAR-DTN-2 vlan3001 (10.33.1.27)
+#
+# VLAN3002 and VLAN3001 are represented as separate logical LBNL switching
+# domains so deterministic routing must traverse the StarLight L3 switch.
+# 100 Gbps is used for eth100 access and the StarLight-facing full-duplex path.
+
+topology:
+  switches:
+    VLAN4012:
+      terminals: 4
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "100 Gb"
+      connections: {}
+
+    LBNL_VLAN3002:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "100 Gb"
+      connections:
+        STARLIGHT: "100 Gbps"
+
+    STARLIGHT:
+      terminals: 0
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "100 Gb"
+      connections:
+        LBNL_VLAN3002: "100 Gbps"
+        LBNL_VLAN3001: "100 Gbps"
+
+    LBNL_VLAN3001:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "100 Gb"
+      connections:
+        STARLIGHT: "100 Gbps"

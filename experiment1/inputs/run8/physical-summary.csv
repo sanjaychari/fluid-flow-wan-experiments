@@ -1,0 +1,4 @@
+flow_id,label,start_seconds,offered_total_gbit,received_total_gbit,relative_volume_difference_pct,client_peer,server_peer,server_time
+8001,LBNL1->STAR1 vlan4012,0,8140.681013,8137.932234,-0.033766,10.10.2.52,10.10.2.62,"Fri, 07 Jun 2024 22:03:20 GMT"
+8002,LBNL2 vlan3002 -> LBNL1 vlan3001 via StarLight,2,108.150968,108.146773,-0.003878,10.33.1.16,10.33.2.17,"Fri, 07 Jun 2024 22:03:22 GMT"
+8003,STAR1 vlan3002 -> STAR2 vlan3001 via StarLight,4,84.763528,84.670415,-0.109851,10.33.1.27,10.33.2.26,"Fri, 07 Jun 2024 22:03:24 GMT"

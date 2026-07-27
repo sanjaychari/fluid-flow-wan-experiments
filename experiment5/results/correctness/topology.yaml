@@ -1,0 +1,15 @@
+topology:
+  switches:
+    S0:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "1000 Gb"
+      connections:
+        S1: "10 Gbps"
+
+    S1:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "1000 Gb"
+      connections:
+        S0: "100 Gbps"

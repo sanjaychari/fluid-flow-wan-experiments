@@ -1,0 +1,11 @@
+Router sample struct format: 
+router_id (tw_lpid) 
+busy time for each of the 16 links (double) 
+link traffic for each of the 16 links (int64_t) 
+sample end time (double) forward events per sample 
+reverse events per sample 
+
+Ordering of links 
+8 local (router-router same group) channels 
+4 global (router-router remote group) channels 
+4 terminal channels

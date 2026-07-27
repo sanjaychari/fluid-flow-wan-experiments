@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "https://simgrid.org/simgrid.dtd">
+<platform version="4.1">
+  <zone id="AS0" routing="Full">
+    <host id="T0" speed="1Gf"/>
+    <host id="T1" speed="1Gf"/>
+    <host id="T2" speed="1Gf"/>
+    <host id="T3" speed="1Gf"/>
+
+    <link id="T0_up" bandwidth="12.5GBps" latency="0s"/>
+    <link id="T1_up" bandwidth="12.5GBps" latency="0s"/>
+    <link id="bottleneck" bandwidth="1.25GBps" latency="0s"/>
+    <link id="T2_down" bandwidth="12.5GBps" latency="0s"/>
+    <link id="T3_down" bandwidth="12.5GBps" latency="0s"/>
+
+    <route src="T0" dst="T2" symmetrical="NO">
+      <link_ctn id="T0_up"/>
+      <link_ctn id="bottleneck"/>
+      <link_ctn id="T2_down"/>
+    </route>
+
+    <route src="T1" dst="T3" symmetrical="NO">
+      <link_ctn id="T1_up"/>
+      <link_ctn id="bottleneck"/>
+      <link_ctn id="T3_down"/>
+    </route>
+  </zone>
+</platform>

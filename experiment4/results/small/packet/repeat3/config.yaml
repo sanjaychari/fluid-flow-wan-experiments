@@ -1,0 +1,24 @@
+schema_version: 1
+components:
+  compute_host:
+    model: nw-lp
+
+topology:
+  format: parametric
+  fabric:
+    model: dragonfly
+    shape:
+      num_routers: 8
+    links:
+      local:  { bandwidth: 5.25, vc_size: 4096 }
+      global: { bandwidth: 4.7,  vc_size: 8192 }
+      cn:     { bandwidth: 5.25, vc_size: 4096 }
+    routing:
+      algorithm: minimal
+    packet_size: 512
+    chunk_size: 32
+    num_vcs: 1
+    modelnet_scheduler: fcfs
+    message_size: 512
+  hosts:
+    component: compute_host

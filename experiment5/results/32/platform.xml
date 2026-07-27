@@ -1,0 +1,756 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "https://simgrid.org/simgrid.dtd">
+<platform version="4.1">
+  <zone id="AS0" routing="Full">
+    <host id="T0" speed="1Gf"/>
+    <host id="T1" speed="1Gf"/>
+    <host id="T2" speed="1Gf"/>
+    <host id="T3" speed="1Gf"/>
+    <host id="T4" speed="1Gf"/>
+    <host id="T5" speed="1Gf"/>
+    <host id="T6" speed="1Gf"/>
+    <host id="T7" speed="1Gf"/>
+    <host id="T8" speed="1Gf"/>
+    <host id="T9" speed="1Gf"/>
+    <host id="T10" speed="1Gf"/>
+    <host id="T11" speed="1Gf"/>
+    <host id="T12" speed="1Gf"/>
+    <host id="T13" speed="1Gf"/>
+    <host id="T14" speed="1Gf"/>
+    <host id="T15" speed="1Gf"/>
+    <host id="T16" speed="1Gf"/>
+    <host id="T17" speed="1Gf"/>
+    <host id="T18" speed="1Gf"/>
+    <host id="T19" speed="1Gf"/>
+    <host id="T20" speed="1Gf"/>
+    <host id="T21" speed="1Gf"/>
+    <host id="T22" speed="1Gf"/>
+    <host id="T23" speed="1Gf"/>
+    <host id="T24" speed="1Gf"/>
+    <host id="T25" speed="1Gf"/>
+    <host id="T26" speed="1Gf"/>
+    <host id="T27" speed="1Gf"/>
+    <host id="T28" speed="1Gf"/>
+    <host id="T29" speed="1Gf"/>
+    <host id="T30" speed="1Gf"/>
+    <host id="T31" speed="1Gf"/>
+    <host id="T32" speed="1Gf"/>
+    <host id="T33" speed="1Gf"/>
+    <host id="T34" speed="1Gf"/>
+    <host id="T35" speed="1Gf"/>
+    <host id="T36" speed="1Gf"/>
+    <host id="T37" speed="1Gf"/>
+    <host id="T38" speed="1Gf"/>
+    <host id="T39" speed="1Gf"/>
+    <host id="T40" speed="1Gf"/>
+    <host id="T41" speed="1Gf"/>
+    <host id="T42" speed="1Gf"/>
+    <host id="T43" speed="1Gf"/>
+    <host id="T44" speed="1Gf"/>
+    <host id="T45" speed="1Gf"/>
+    <host id="T46" speed="1Gf"/>
+    <host id="T47" speed="1Gf"/>
+    <host id="T48" speed="1Gf"/>
+    <host id="T49" speed="1Gf"/>
+    <host id="T50" speed="1Gf"/>
+    <host id="T51" speed="1Gf"/>
+    <host id="T52" speed="1Gf"/>
+    <host id="T53" speed="1Gf"/>
+    <host id="T54" speed="1Gf"/>
+    <host id="T55" speed="1Gf"/>
+    <host id="T56" speed="1Gf"/>
+    <host id="T57" speed="1Gf"/>
+    <host id="T58" speed="1Gf"/>
+    <host id="T59" speed="1Gf"/>
+    <host id="T60" speed="1Gf"/>
+    <host id="T61" speed="1Gf"/>
+    <host id="T62" speed="1Gf"/>
+    <host id="T63" speed="1Gf"/>
+    <link id="T0_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T0_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T1_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T1_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T2_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T2_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T3_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T3_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T4_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T4_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T5_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T5_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T6_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T6_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T7_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T7_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T8_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T8_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T9_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T9_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T10_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T10_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T11_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T11_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T12_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T12_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T13_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T13_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T14_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T14_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T15_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T15_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T16_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T16_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T17_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T17_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T18_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T18_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T19_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T19_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T20_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T20_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T21_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T21_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T22_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T22_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T23_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T23_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T24_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T24_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T25_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T25_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T26_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T26_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T27_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T27_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T28_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T28_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T29_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T29_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T30_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T30_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T31_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T31_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T32_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T32_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T33_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T33_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T34_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T34_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T35_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T35_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T36_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T36_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T37_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T37_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T38_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T38_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T39_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T39_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T40_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T40_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T41_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T41_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T42_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T42_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T43_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T43_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T44_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T44_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T45_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T45_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T46_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T46_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T47_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T47_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T48_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T48_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T49_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T49_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T50_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T50_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T51_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T51_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T52_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T52_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T53_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T53_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T54_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T54_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T55_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T55_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T56_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T56_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T57_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T57_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T58_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T58_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T59_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T59_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T60_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T60_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T61_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T61_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T62_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T62_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="T63_up" bandwidth="12500.000000000MBps" latency="0s"/>
+    <link id="T63_down" bandwidth="12500.000000000MBps" latency="1s"/>
+    <link id="S0_S1" bandwidth="2291.550000000MBps" latency="1s"/>
+    <link id="S0_S2" bandwidth="1326.512500000MBps" latency="1s"/>
+    <link id="S0_S3" bandwidth="1257.962500000MBps" latency="1s"/>
+    <link id="S0_S4" bandwidth="1275.425000000MBps" latency="1s"/>
+    <link id="S1_S0" bandwidth="1996.600000000MBps" latency="1s"/>
+    <link id="S1_S5" bandwidth="3313.012500000MBps" latency="1s"/>
+    <link id="S1_S6" bandwidth="2076.162500000MBps" latency="1s"/>
+    <link id="S2_S11" bandwidth="1685.862500000MBps" latency="1s"/>
+    <link id="S2_S15" bandwidth="2655.200000000MBps" latency="1s"/>
+    <link id="S3_S16" bandwidth="3668.200000000MBps" latency="1s"/>
+    <link id="S3_S17" bandwidth="1620.362500000MBps" latency="1s"/>
+    <link id="S3_S19" bandwidth="2509.837500000MBps" latency="1s"/>
+    <link id="S4_S0" bandwidth="3029.187500000MBps" latency="1s"/>
+    <link id="S4_S13" bandwidth="1446.412500000MBps" latency="1s"/>
+    <link id="S5_S1" bandwidth="1734.150000000MBps" latency="1s"/>
+    <link id="S5_S7" bandwidth="2171.025000000MBps" latency="1s"/>
+    <link id="S5_S8" bandwidth="3115.600000000MBps" latency="1s"/>
+    <link id="S5_S9" bandwidth="2230.337500000MBps" latency="1s"/>
+    <link id="S5_S10" bandwidth="1724.312500000MBps" latency="1s"/>
+    <link id="S6_S28" bandwidth="2637.712500000MBps" latency="1s"/>
+    <link id="S6_S29" bandwidth="3254.750000000MBps" latency="1s"/>
+    <link id="S7_S5" bandwidth="1654.225000000MBps" latency="1s"/>
+    <link id="S7_S11" bandwidth="2665.025000000MBps" latency="1s"/>
+    <link id="S7_S12" bandwidth="3193.025000000MBps" latency="1s"/>
+    <link id="S7_S13" bandwidth="2112.675000000MBps" latency="1s"/>
+    <link id="S8_S12" bandwidth="3463.837500000MBps" latency="1s"/>
+    <link id="S8_S25" bandwidth="2286.325000000MBps" latency="1s"/>
+    <link id="S9_S18" bandwidth="1534.162500000MBps" latency="1s"/>
+    <link id="S9_S27" bandwidth="1830.775000000MBps" latency="1s"/>
+    <link id="S9_S28" bandwidth="3267.812500000MBps" latency="1s"/>
+    <link id="S10_S5" bandwidth="3293.887500000MBps" latency="1s"/>
+    <link id="S10_S21" bandwidth="2160.712500000MBps" latency="1s"/>
+    <link id="S10_S27" bandwidth="1550.362500000MBps" latency="1s"/>
+    <link id="S10_S24" bandwidth="1660.350000000MBps" latency="1s"/>
+    <link id="S10_S30" bandwidth="1353.850000000MBps" latency="1s"/>
+    <link id="S11_S7" bandwidth="2332.337500000MBps" latency="1s"/>
+    <link id="S11_S2" bandwidth="1560.662500000MBps" latency="1s"/>
+    <link id="S11_S14" bandwidth="2291.800000000MBps" latency="1s"/>
+    <link id="S12_S7" bandwidth="3248.075000000MBps" latency="1s"/>
+    <link id="S12_S22" bandwidth="1498.750000000MBps" latency="1s"/>
+    <link id="S12_S8" bandwidth="1697.187500000MBps" latency="1s"/>
+    <link id="S13_S7" bandwidth="1912.825000000MBps" latency="1s"/>
+    <link id="S13_S16" bandwidth="2479.475000000MBps" latency="1s"/>
+    <link id="S13_S14" bandwidth="1373.300000000MBps" latency="1s"/>
+    <link id="S13_S4" bandwidth="2059.400000000MBps" latency="1s"/>
+    <link id="S14_S11" bandwidth="3446.187500000MBps" latency="1s"/>
+    <link id="S14_S31" bandwidth="1642.450000000MBps" latency="1s"/>
+    <link id="S14_S13" bandwidth="2597.850000000MBps" latency="1s"/>
+    <link id="S15_S11" bandwidth="1640.437500000MBps" latency="1s"/>
+    <link id="S15_S2" bandwidth="2137.250000000MBps" latency="1s"/>
+    <link id="S15_S16" bandwidth="2633.050000000MBps" latency="1s"/>
+    <link id="S16_S15" bandwidth="1478.237500000MBps" latency="1s"/>
+    <link id="S16_S17" bandwidth="3645.162500000MBps" latency="1s"/>
+    <link id="S16_S3" bandwidth="1450.112500000MBps" latency="1s"/>
+    <link id="S16_S13" bandwidth="2804.625000000MBps" latency="1s"/>
+    <link id="S17_S16" bandwidth="2280.300000000MBps" latency="1s"/>
+    <link id="S17_S3" bandwidth="3696.600000000MBps" latency="1s"/>
+    <link id="S17_S18" bandwidth="2075.725000000MBps" latency="1s"/>
+    <link id="S18_S17" bandwidth="2595.650000000MBps" latency="1s"/>
+    <link id="S18_S23" bandwidth="3600.600000000MBps" latency="1s"/>
+    <link id="S18_S22" bandwidth="1258.637500000MBps" latency="1s"/>
+    <link id="S18_S9" bandwidth="2310.725000000MBps" latency="1s"/>
+    <link id="S19_S3" bandwidth="1724.925000000MBps" latency="1s"/>
+    <link id="S19_S20" bandwidth="3047.412500000MBps" latency="1s"/>
+    <link id="S20_S0" bandwidth="3181.012500000MBps" latency="1s"/>
+    <link id="S20_S15" bandwidth="1910.700000000MBps" latency="1s"/>
+    <link id="S20_S19" bandwidth="1308.800000000MBps" latency="1s"/>
+    <link id="S20_S21" bandwidth="2103.900000000MBps" latency="1s"/>
+    <link id="S20_S22" bandwidth="3650.450000000MBps" latency="1s"/>
+    <link id="S21_S20" bandwidth="3668.700000000MBps" latency="1s"/>
+    <link id="S21_S23" bandwidth="2098.800000000MBps" latency="1s"/>
+    <link id="S21_S24" bandwidth="2476.325000000MBps" latency="1s"/>
+    <link id="S22_S15" bandwidth="2461.587500000MBps" latency="1s"/>
+    <link id="S22_S18" bandwidth="3177.087500000MBps" latency="1s"/>
+    <link id="S22_S12" bandwidth="3426.912500000MBps" latency="1s"/>
+    <link id="S23_S21" bandwidth="3111.325000000MBps" latency="1s"/>
+    <link id="S23_S18" bandwidth="3697.000000000MBps" latency="1s"/>
+    <link id="S24_S21" bandwidth="1771.387500000MBps" latency="1s"/>
+    <link id="S24_S26" bandwidth="2372.925000000MBps" latency="1s"/>
+    <link id="S24_S29" bandwidth="3646.650000000MBps" latency="1s"/>
+    <link id="S24_S10" bandwidth="2545.600000000MBps" latency="1s"/>
+    <link id="S25_S8" bandwidth="3091.450000000MBps" latency="1s"/>
+    <link id="S25_S26" bandwidth="2695.212500000MBps" latency="1s"/>
+    <link id="S26_S25" bandwidth="2559.000000000MBps" latency="1s"/>
+    <link id="S26_S27" bandwidth="1831.550000000MBps" latency="1s"/>
+    <link id="S26_S24" bandwidth="3093.050000000MBps" latency="1s"/>
+    <link id="S27_S26" bandwidth="3312.087500000MBps" latency="1s"/>
+    <link id="S27_S9" bandwidth="3023.462500000MBps" latency="1s"/>
+    <link id="S28_S9" bandwidth="1790.950000000MBps" latency="1s"/>
+    <link id="S28_S6" bandwidth="3432.975000000MBps" latency="1s"/>
+    <link id="S29_S6" bandwidth="2721.525000000MBps" latency="1s"/>
+    <link id="S29_S24" bandwidth="1714.575000000MBps" latency="1s"/>
+    <link id="S30_S10" bandwidth="3330.512500000MBps" latency="1s"/>
+    <link id="S30_S31" bandwidth="3708.237500000MBps" latency="1s"/>
+    <link id="S31_S30" bandwidth="1822.787500000MBps" latency="1s"/>
+    <link id="S31_S14" bandwidth="1625.675000000MBps" latency="1s"/>
+    <route src="T0" dst="T32" symmetrical="NO">
+      <link_ctn id="T0_up"/>
+      <link_ctn id="S0_S3"/>
+      <link_ctn id="S3_S16"/>
+      <link_ctn id="T32_down"/>
+    </route>
+    <route src="T1" dst="T33" symmetrical="NO">
+      <link_ctn id="T1_up"/>
+      <link_ctn id="S0_S3"/>
+      <link_ctn id="S3_S16"/>
+      <link_ctn id="T33_down"/>
+    </route>
+    <route src="T2" dst="T34" symmetrical="NO">
+      <link_ctn id="T2_up"/>
+      <link_ctn id="S1_S0"/>
+      <link_ctn id="S0_S3"/>
+      <link_ctn id="S3_S17"/>
+      <link_ctn id="T34_down"/>
+    </route>
+    <route src="T3" dst="T35" symmetrical="NO">
+      <link_ctn id="T3_up"/>
+      <link_ctn id="S1_S0"/>
+      <link_ctn id="S0_S3"/>
+      <link_ctn id="S3_S17"/>
+      <link_ctn id="T35_down"/>
+    </route>
+    <route src="T4" dst="T36" symmetrical="NO">
+      <link_ctn id="T4_up"/>
+      <link_ctn id="S2_S15"/>
+      <link_ctn id="S15_S16"/>
+      <link_ctn id="S16_S17"/>
+      <link_ctn id="S17_S18"/>
+      <link_ctn id="T36_down"/>
+    </route>
+    <route src="T5" dst="T37" symmetrical="NO">
+      <link_ctn id="T5_up"/>
+      <link_ctn id="S2_S15"/>
+      <link_ctn id="S15_S16"/>
+      <link_ctn id="S16_S17"/>
+      <link_ctn id="S17_S18"/>
+      <link_ctn id="T37_down"/>
+    </route>
+    <route src="T6" dst="T38" symmetrical="NO">
+      <link_ctn id="T6_up"/>
+      <link_ctn id="S3_S19"/>
+      <link_ctn id="T38_down"/>
+    </route>
+    <route src="T7" dst="T39" symmetrical="NO">
+      <link_ctn id="T7_up"/>
+      <link_ctn id="S3_S19"/>
+      <link_ctn id="T39_down"/>
+    </route>
+    <route src="T8" dst="T40" symmetrical="NO">
+      <link_ctn id="T8_up"/>
+      <link_ctn id="S4_S0"/>
+      <link_ctn id="S0_S3"/>
+      <link_ctn id="S3_S19"/>
+      <link_ctn id="S19_S20"/>
+      <link_ctn id="T40_down"/>
+    </route>
+    <route src="T9" dst="T41" symmetrical="NO">
+      <link_ctn id="T9_up"/>
+      <link_ctn id="S4_S0"/>
+      <link_ctn id="S0_S3"/>
+      <link_ctn id="S3_S19"/>
+      <link_ctn id="S19_S20"/>
+      <link_ctn id="T41_down"/>
+    </route>
+    <route src="T10" dst="T42" symmetrical="NO">
+      <link_ctn id="T10_up"/>
+      <link_ctn id="S5_S10"/>
+      <link_ctn id="S10_S21"/>
+      <link_ctn id="T42_down"/>
+    </route>
+    <route src="T11" dst="T43" symmetrical="NO">
+      <link_ctn id="T11_up"/>
+      <link_ctn id="S5_S10"/>
+      <link_ctn id="S10_S21"/>
+      <link_ctn id="T43_down"/>
+    </route>
+    <route src="T12" dst="T44" symmetrical="NO">
+      <link_ctn id="T12_up"/>
+      <link_ctn id="S6_S28"/>
+      <link_ctn id="S28_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="T44_down"/>
+    </route>
+    <route src="T13" dst="T45" symmetrical="NO">
+      <link_ctn id="T13_up"/>
+      <link_ctn id="S6_S28"/>
+      <link_ctn id="S28_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="T45_down"/>
+    </route>
+    <route src="T14" dst="T46" symmetrical="NO">
+      <link_ctn id="T14_up"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S23"/>
+      <link_ctn id="T46_down"/>
+    </route>
+    <route src="T15" dst="T47" symmetrical="NO">
+      <link_ctn id="T15_up"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S23"/>
+      <link_ctn id="T47_down"/>
+    </route>
+    <route src="T16" dst="T48" symmetrical="NO">
+      <link_ctn id="T16_up"/>
+      <link_ctn id="S8_S25"/>
+      <link_ctn id="S25_S26"/>
+      <link_ctn id="S26_S24"/>
+      <link_ctn id="T48_down"/>
+    </route>
+    <route src="T17" dst="T49" symmetrical="NO">
+      <link_ctn id="T17_up"/>
+      <link_ctn id="S8_S25"/>
+      <link_ctn id="S25_S26"/>
+      <link_ctn id="S26_S24"/>
+      <link_ctn id="T49_down"/>
+    </route>
+    <route src="T18" dst="T50" symmetrical="NO">
+      <link_ctn id="T18_up"/>
+      <link_ctn id="S9_S27"/>
+      <link_ctn id="S27_S26"/>
+      <link_ctn id="S26_S25"/>
+      <link_ctn id="T50_down"/>
+    </route>
+    <route src="T19" dst="T51" symmetrical="NO">
+      <link_ctn id="T19_up"/>
+      <link_ctn id="S9_S27"/>
+      <link_ctn id="S27_S26"/>
+      <link_ctn id="S26_S25"/>
+      <link_ctn id="T51_down"/>
+    </route>
+    <route src="T20" dst="T52" symmetrical="NO">
+      <link_ctn id="T20_up"/>
+      <link_ctn id="S10_S27"/>
+      <link_ctn id="S27_S26"/>
+      <link_ctn id="T52_down"/>
+    </route>
+    <route src="T21" dst="T53" symmetrical="NO">
+      <link_ctn id="T21_up"/>
+      <link_ctn id="S10_S27"/>
+      <link_ctn id="S27_S26"/>
+      <link_ctn id="T53_down"/>
+    </route>
+    <route src="T22" dst="T54" symmetrical="NO">
+      <link_ctn id="T22_up"/>
+      <link_ctn id="S11_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S9"/>
+      <link_ctn id="S9_S27"/>
+      <link_ctn id="T54_down"/>
+    </route>
+    <route src="T23" dst="T55" symmetrical="NO">
+      <link_ctn id="T23_up"/>
+      <link_ctn id="S11_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S9"/>
+      <link_ctn id="S9_S27"/>
+      <link_ctn id="T55_down"/>
+    </route>
+    <route src="T24" dst="T56" symmetrical="NO">
+      <link_ctn id="T24_up"/>
+      <link_ctn id="S12_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S9"/>
+      <link_ctn id="S9_S28"/>
+      <link_ctn id="T56_down"/>
+    </route>
+    <route src="T25" dst="T57" symmetrical="NO">
+      <link_ctn id="T25_up"/>
+      <link_ctn id="S12_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S9"/>
+      <link_ctn id="S9_S28"/>
+      <link_ctn id="T57_down"/>
+    </route>
+    <route src="T26" dst="T58" symmetrical="NO">
+      <link_ctn id="T26_up"/>
+      <link_ctn id="S13_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S1"/>
+      <link_ctn id="S1_S6"/>
+      <link_ctn id="S6_S29"/>
+      <link_ctn id="T58_down"/>
+    </route>
+    <route src="T27" dst="T59" symmetrical="NO">
+      <link_ctn id="T27_up"/>
+      <link_ctn id="S13_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S1"/>
+      <link_ctn id="S1_S6"/>
+      <link_ctn id="S6_S29"/>
+      <link_ctn id="T59_down"/>
+    </route>
+    <route src="T28" dst="T60" symmetrical="NO">
+      <link_ctn id="T28_up"/>
+      <link_ctn id="S14_S31"/>
+      <link_ctn id="S31_S30"/>
+      <link_ctn id="T60_down"/>
+    </route>
+    <route src="T29" dst="T61" symmetrical="NO">
+      <link_ctn id="T29_up"/>
+      <link_ctn id="S14_S31"/>
+      <link_ctn id="S31_S30"/>
+      <link_ctn id="T61_down"/>
+    </route>
+    <route src="T30" dst="T62" symmetrical="NO">
+      <link_ctn id="T30_up"/>
+      <link_ctn id="S15_S11"/>
+      <link_ctn id="S11_S14"/>
+      <link_ctn id="S14_S31"/>
+      <link_ctn id="T62_down"/>
+    </route>
+    <route src="T31" dst="T63" symmetrical="NO">
+      <link_ctn id="T31_up"/>
+      <link_ctn id="S15_S11"/>
+      <link_ctn id="S11_S14"/>
+      <link_ctn id="S14_S31"/>
+      <link_ctn id="T63_down"/>
+    </route>
+    <route src="T32" dst="T0" symmetrical="NO">
+      <link_ctn id="T32_up"/>
+      <link_ctn id="S16_S13"/>
+      <link_ctn id="S13_S4"/>
+      <link_ctn id="S4_S0"/>
+      <link_ctn id="T0_down"/>
+    </route>
+    <route src="T33" dst="T1" symmetrical="NO">
+      <link_ctn id="T33_up"/>
+      <link_ctn id="S16_S13"/>
+      <link_ctn id="S13_S4"/>
+      <link_ctn id="S4_S0"/>
+      <link_ctn id="T1_down"/>
+    </route>
+    <route src="T34" dst="T2" symmetrical="NO">
+      <link_ctn id="T34_up"/>
+      <link_ctn id="S17_S16"/>
+      <link_ctn id="S16_S13"/>
+      <link_ctn id="S13_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S1"/>
+      <link_ctn id="T2_down"/>
+    </route>
+    <route src="T35" dst="T3" symmetrical="NO">
+      <link_ctn id="T35_up"/>
+      <link_ctn id="S17_S16"/>
+      <link_ctn id="S16_S13"/>
+      <link_ctn id="S13_S7"/>
+      <link_ctn id="S7_S5"/>
+      <link_ctn id="S5_S1"/>
+      <link_ctn id="T3_down"/>
+    </route>
+    <route src="T36" dst="T4" symmetrical="NO">
+      <link_ctn id="T36_up"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S15"/>
+      <link_ctn id="S15_S2"/>
+      <link_ctn id="T4_down"/>
+    </route>
+    <route src="T37" dst="T5" symmetrical="NO">
+      <link_ctn id="T37_up"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S15"/>
+      <link_ctn id="S15_S2"/>
+      <link_ctn id="T5_down"/>
+    </route>
+    <route src="T38" dst="T6" symmetrical="NO">
+      <link_ctn id="T38_up"/>
+      <link_ctn id="S19_S3"/>
+      <link_ctn id="T6_down"/>
+    </route>
+    <route src="T39" dst="T7" symmetrical="NO">
+      <link_ctn id="T39_up"/>
+      <link_ctn id="S19_S3"/>
+      <link_ctn id="T7_down"/>
+    </route>
+    <route src="T40" dst="T8" symmetrical="NO">
+      <link_ctn id="T40_up"/>
+      <link_ctn id="S20_S0"/>
+      <link_ctn id="S0_S4"/>
+      <link_ctn id="T8_down"/>
+    </route>
+    <route src="T41" dst="T9" symmetrical="NO">
+      <link_ctn id="T41_up"/>
+      <link_ctn id="S20_S0"/>
+      <link_ctn id="S0_S4"/>
+      <link_ctn id="T9_down"/>
+    </route>
+    <route src="T42" dst="T10" symmetrical="NO">
+      <link_ctn id="T42_up"/>
+      <link_ctn id="S21_S24"/>
+      <link_ctn id="S24_S10"/>
+      <link_ctn id="S10_S5"/>
+      <link_ctn id="T10_down"/>
+    </route>
+    <route src="T43" dst="T11" symmetrical="NO">
+      <link_ctn id="T43_up"/>
+      <link_ctn id="S21_S24"/>
+      <link_ctn id="S24_S10"/>
+      <link_ctn id="S10_S5"/>
+      <link_ctn id="T11_down"/>
+    </route>
+    <route src="T44" dst="T12" symmetrical="NO">
+      <link_ctn id="T44_up"/>
+      <link_ctn id="S22_S18"/>
+      <link_ctn id="S18_S9"/>
+      <link_ctn id="S9_S28"/>
+      <link_ctn id="S28_S6"/>
+      <link_ctn id="T12_down"/>
+    </route>
+    <route src="T45" dst="T13" symmetrical="NO">
+      <link_ctn id="T45_up"/>
+      <link_ctn id="S22_S18"/>
+      <link_ctn id="S18_S9"/>
+      <link_ctn id="S9_S28"/>
+      <link_ctn id="S28_S6"/>
+      <link_ctn id="T13_down"/>
+    </route>
+    <route src="T46" dst="T14" symmetrical="NO">
+      <link_ctn id="T46_up"/>
+      <link_ctn id="S23_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S12"/>
+      <link_ctn id="S12_S7"/>
+      <link_ctn id="T14_down"/>
+    </route>
+    <route src="T47" dst="T15" symmetrical="NO">
+      <link_ctn id="T47_up"/>
+      <link_ctn id="S23_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S12"/>
+      <link_ctn id="S12_S7"/>
+      <link_ctn id="T15_down"/>
+    </route>
+    <route src="T48" dst="T16" symmetrical="NO">
+      <link_ctn id="T48_up"/>
+      <link_ctn id="S24_S26"/>
+      <link_ctn id="S26_S25"/>
+      <link_ctn id="S25_S8"/>
+      <link_ctn id="T16_down"/>
+    </route>
+    <route src="T49" dst="T17" symmetrical="NO">
+      <link_ctn id="T49_up"/>
+      <link_ctn id="S24_S26"/>
+      <link_ctn id="S26_S25"/>
+      <link_ctn id="S25_S8"/>
+      <link_ctn id="T17_down"/>
+    </route>
+    <route src="T50" dst="T18" symmetrical="NO">
+      <link_ctn id="T50_up"/>
+      <link_ctn id="S25_S26"/>
+      <link_ctn id="S26_S27"/>
+      <link_ctn id="S27_S9"/>
+      <link_ctn id="T18_down"/>
+    </route>
+    <route src="T51" dst="T19" symmetrical="NO">
+      <link_ctn id="T51_up"/>
+      <link_ctn id="S25_S26"/>
+      <link_ctn id="S26_S27"/>
+      <link_ctn id="S27_S9"/>
+      <link_ctn id="T19_down"/>
+    </route>
+    <route src="T52" dst="T20" symmetrical="NO">
+      <link_ctn id="T52_up"/>
+      <link_ctn id="S26_S24"/>
+      <link_ctn id="S24_S10"/>
+      <link_ctn id="T20_down"/>
+    </route>
+    <route src="T53" dst="T21" symmetrical="NO">
+      <link_ctn id="T53_up"/>
+      <link_ctn id="S26_S24"/>
+      <link_ctn id="S24_S10"/>
+      <link_ctn id="T21_down"/>
+    </route>
+    <route src="T54" dst="T22" symmetrical="NO">
+      <link_ctn id="T54_up"/>
+      <link_ctn id="S27_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S15"/>
+      <link_ctn id="S15_S11"/>
+      <link_ctn id="T22_down"/>
+    </route>
+    <route src="T55" dst="T23" symmetrical="NO">
+      <link_ctn id="T55_up"/>
+      <link_ctn id="S27_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S15"/>
+      <link_ctn id="S15_S11"/>
+      <link_ctn id="T23_down"/>
+    </route>
+    <route src="T56" dst="T24" symmetrical="NO">
+      <link_ctn id="T56_up"/>
+      <link_ctn id="S28_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S12"/>
+      <link_ctn id="T24_down"/>
+    </route>
+    <route src="T57" dst="T25" symmetrical="NO">
+      <link_ctn id="T57_up"/>
+      <link_ctn id="S28_S9"/>
+      <link_ctn id="S9_S18"/>
+      <link_ctn id="S18_S22"/>
+      <link_ctn id="S22_S12"/>
+      <link_ctn id="T25_down"/>
+    </route>
+    <route src="T58" dst="T26" symmetrical="NO">
+      <link_ctn id="T58_up"/>
+      <link_ctn id="S29_S24"/>
+      <link_ctn id="S24_S10"/>
+      <link_ctn id="S10_S5"/>
+      <link_ctn id="S5_S7"/>
+      <link_ctn id="S7_S13"/>
+      <link_ctn id="T26_down"/>
+    </route>
+    <route src="T59" dst="T27" symmetrical="NO">
+      <link_ctn id="T59_up"/>
+      <link_ctn id="S29_S24"/>
+      <link_ctn id="S24_S10"/>
+      <link_ctn id="S10_S5"/>
+      <link_ctn id="S5_S7"/>
+      <link_ctn id="S7_S13"/>
+      <link_ctn id="T27_down"/>
+    </route>
+    <route src="T60" dst="T28" symmetrical="NO">
+      <link_ctn id="T60_up"/>
+      <link_ctn id="S30_S31"/>
+      <link_ctn id="S31_S14"/>
+      <link_ctn id="T28_down"/>
+    </route>
+    <route src="T61" dst="T29" symmetrical="NO">
+      <link_ctn id="T61_up"/>
+      <link_ctn id="S30_S31"/>
+      <link_ctn id="S31_S14"/>
+      <link_ctn id="T29_down"/>
+    </route>
+    <route src="T62" dst="T30" symmetrical="NO">
+      <link_ctn id="T62_up"/>
+      <link_ctn id="S31_S14"/>
+      <link_ctn id="S14_S11"/>
+      <link_ctn id="S11_S2"/>
+      <link_ctn id="S2_S15"/>
+      <link_ctn id="T30_down"/>
+    </route>
+    <route src="T63" dst="T31" symmetrical="NO">
+      <link_ctn id="T63_up"/>
+      <link_ctn id="S31_S14"/>
+      <link_ctn id="S14_S11"/>
+      <link_ctn id="S11_S2"/>
+      <link_ctn id="S2_S15"/>
+      <link_ctn id="T31_down"/>
+    </route>
+  </zone>
+</platform>
