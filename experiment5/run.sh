@@ -20,10 +20,18 @@ RUN_SCALE_SWEEP="${RUN_SCALE_SWEEP:-1}"
 # without turning the experiment into a second full scale matrix.
 RUN_INTERVAL_SWEEP="${RUN_INTERVAL_SWEEP:-1}"
 INTERVAL_SWEEP_SCALE="${INTERVAL_SWEEP_SCALE:-128}"
-INTERVAL_SWEEP_SECONDS="${INTERVAL_SWEEP_SECONDS:-1 10 100}"
+INTERVAL_SWEEP_SECONDS="${INTERVAL_SWEEP_SECONDS:-1 10 100 1000}"
+# By default run every interval in the sweep. This can be narrowed (for
+# example to "1000") while the analyzer still reads the complete sweep above.
+INTERVAL_SWEEP_RUN_SECONDS="${INTERVAL_SWEEP_RUN_SECONDS:-$INTERVAL_SWEEP_SECONDS}"
 SWEEP_INITIAL_CALIBRATION_SECONDS="${SWEEP_INITIAL_CALIBRATION_SECONDS:-1000}"
 SWEEP_CALIBRATION_STEP_SECONDS="${SWEEP_CALIBRATION_STEP_SECONDS:-500}"
 SWEEP_MAX_CALIBRATION_SECONDS="${SWEEP_MAX_CALIBRATION_SECONDS:-4000}"
+# A simulated-time calibration horizon can collapse to only a few intervals
+# for coarse sweeps. Keep enough interval steps for multi-hop forwarding.
+SWEEP_MIN_INITIAL_CALIBRATION_INTERVALS="${SWEEP_MIN_INITIAL_CALIBRATION_INTERVALS:-32}"
+SWEEP_MIN_CALIBRATION_STEP_INTERVALS="${SWEEP_MIN_CALIBRATION_STEP_INTERVALS:-8}"
+SWEEP_MIN_MAX_CALIBRATION_INTERVALS="${SWEEP_MIN_MAX_CALIBRATION_INTERVALS:-64}"
 
 INITIAL_CALIBRATION_DRAIN="${INITIAL_CALIBRATION_DRAIN:-1000}"
 CALIBRATION_STEP="${CALIBRATION_STEP:-500}"
@@ -361,7 +369,7 @@ if [[ "$RUN_INTERVAL_SWEEP" != "0" ]]; then
     S="$INTERVAL_SWEEP_SCALE"
     TERMINALS=$((S * 2))
 
-    for INTERVAL in $INTERVAL_SWEEP_SECONDS; do
+    for INTERVAL in $INTERVAL_SWEEP_RUN_SECONDS; do
         CASE="$RESULTS/interval-sweep/$S/${INTERVAL}s"
 
         echo
@@ -389,6 +397,16 @@ if [[ "$RUN_INTERVAL_SWEEP" != "0" ]]; then
                 "$INTERVAL"
         )"
 
+        if (( INITIAL_DRAIN < SWEEP_MIN_INITIAL_CALIBRATION_INTERVALS )); then
+            INITIAL_DRAIN="$SWEEP_MIN_INITIAL_CALIBRATION_INTERVALS"
+        fi
+        if (( STEP_DRAIN < SWEEP_MIN_CALIBRATION_STEP_INTERVALS )); then
+            STEP_DRAIN="$SWEEP_MIN_CALIBRATION_STEP_INTERVALS"
+        fi
+        if (( MAX_DRAIN < SWEEP_MIN_MAX_CALIBRATION_INTERVALS )); then
+            MAX_DRAIN="$SWEEP_MIN_MAX_CALIBRATION_INTERVALS"
+        fi
+
         python3 "$E5/generate_case.py" \
             --codes-root "$CODES_ROOT" \
             --case-dir "$CASE" \
@@ -402,7 +420,7 @@ if [[ "$RUN_INTERVAL_SWEEP" != "0" ]]; then
             if (( CAL_DRAIN > MAX_DRAIN )); then
                 echo \
                     "ERROR: ${INTERVAL}s interval case did not drain by " \
-                    "$SWEEP_MAX_CALIBRATION_SECONDS simulated seconds" >&2
+                    "$MAX_DRAIN calibration intervals" >&2
                 exit 1
             fi
 
