@@ -1,6 +1,6 @@
 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- /workspace/fluid-flow-wan-experiments/experiment5/results/interval-sweep/128/3600s/codes-performance.yaml 
 
-Tue Jul 28 12:20:18 2026
+Tue Jul 28 12:39:12 2026
 
 ROSS Version: v8.1.0
 
@@ -429,7 +429,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                     10840
-	Event Rate (events/sec)                               291633.0
+	Event Rate (events/sec)                               291546.8
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -448,8 +448,8 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                         12.3673
-	Priority Queue (enq/deq)                                0.0101
+	Initialization                                         12.3519
+	Priority Queue (enq/deq)                                0.0102
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
@@ -464,7 +464,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0963
+	Total Time (Note: Using Running Time above for Speedup)      0.0964
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

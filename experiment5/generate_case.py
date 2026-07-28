@@ -10,6 +10,9 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 
+SIMGRID_HOP_LATENCY_SECONDS = 1.0
+
+
 def parse_quantity_mbps(raw: str) -> float:
     raw = raw.strip().strip('"\'')
     m = re.fullmatch(r"([0-9.eE+-]+)\s*(Mbps|Gbps)", raw)
@@ -116,8 +119,7 @@ def write_traffic(path: Path, terminals: int, flow_gbit: float):
             w.writerow([0, src + 1, src, dst, f"{flow_gbit:.9f}"])
 
 
-def write_platform(path: Path, topology_path: Path, traffic_path: Path,
-                   interval_seconds: float):
+def write_platform(path: Path, topology_path: Path, traffic_path: Path):
     switches, terminal_counts, terminal_bw, adj, edge_bw = parse_topology(topology_path)
 
     terminal_to_switch = []
@@ -147,18 +149,19 @@ def write_platform(path: Path, topology_path: Path, traffic_path: Path,
         lines.append(f'    <link id="T{t}_up" bandwidth="{mbps_bytes:.9f}MBps" latency="0s"/>')
         lines.append(
             f'    <link id="T{t}_down" bandwidth="{mbps_bytes:.9f}MBps" '
-            f'latency="{interval_seconds:g}s"/>'
+            f'latency="{SIMGRID_HOP_LATENCY_SECONDS:g}s"/>'
         )
 
     for s, nbrs in enumerate(adj):
         for d in nbrs:
             bw_mbps = edge_bw[(switches[s], switches[d])]
             mbps_bytes = bw_mbps / 8.0
-            # CODES forwards a switch-egress fragment to the next hop in the
-            # next interval, so use the same per-hop delay in SimGrid.
+            # Keep the SimGrid reference platform fixed across the CODES
+            # interval sweep. The CODES fluid interval is an aggregation
+            # granularity parameter, not physical link latency.
             lines.append(
                 f'    <link id="S{s}_S{d}" bandwidth="{mbps_bytes:.9f}MBps" '
-                f'latency="{interval_seconds:g}s"/>'
+                f'latency="{SIMGRID_HOP_LATENCY_SECONDS:g}s"/>'
             )
 
     seen_pairs = set()
@@ -252,10 +255,7 @@ def main():
         ], check=True)
         terminals = args.switches * 2
         write_traffic(traffic, terminals, args.flow_gbit)
-        write_platform(
-            case / 'platform.xml', topology, traffic,
-            args.interval_seconds,
-        )
+        write_platform(case / 'platform.xml', topology, traffic)
         write_codes_config(
             case / 'codes-correctness.yaml', topology, traffic,
             args.switches, terminals, args.pilot_drain,

@@ -262,6 +262,9 @@ runs the CODES/SimGrid performance comparison. The performance runner also
 includes an interval-sensitivity subset at the 128-switch scale using 1-s,
 10-s, 60-s, and 3600-s fluid intervals by default. The 60-s and 3600-s
 points represent one-minute and one-hour temporal aggregation, respectively.
+Only the CODES fluid interval changes in this sweep. The SimGrid reference
+platform remains fixed at 1-s per-hop latency for every interval point; SimGrid
+does not use the CODES fluid-interval parameter.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
