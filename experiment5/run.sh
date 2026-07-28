@@ -13,6 +13,17 @@ SIMGRID_EXE="$E5/simgrid-flow-benchmark"
 # Can override, e.g.:
 #   SCALES=128 ./experiment5/run.sh
 SCALES="${SCALES:-32 64 128}"
+RUN_SCALE_SWEEP="${RUN_SCALE_SWEEP:-1}"
+
+# Interval-sensitivity subset of Experiment 5.  This is intentionally kept at
+# one topology scale so that it measures the temporal-granularity tradeoff
+# without turning the experiment into a second full scale matrix.
+RUN_INTERVAL_SWEEP="${RUN_INTERVAL_SWEEP:-1}"
+INTERVAL_SWEEP_SCALE="${INTERVAL_SWEEP_SCALE:-128}"
+INTERVAL_SWEEP_SECONDS="${INTERVAL_SWEEP_SECONDS:-1 10 100}"
+SWEEP_INITIAL_CALIBRATION_SECONDS="${SWEEP_INITIAL_CALIBRATION_SECONDS:-1000}"
+SWEEP_CALIBRATION_STEP_SECONDS="${SWEEP_CALIBRATION_STEP_SECONDS:-500}"
+SWEEP_MAX_CALIBRATION_SECONDS="${SWEEP_MAX_CALIBRATION_SECONDS:-4000}"
 
 INITIAL_CALIBRATION_DRAIN="${INITIAL_CALIBRATION_DRAIN:-1000}"
 CALIBRATION_STEP="${CALIBRATION_STEP:-500}"
@@ -192,6 +203,25 @@ PY
 }
 
 
+seconds_to_intervals()
+{
+    local seconds="$1"
+    local interval="$2"
+
+    python3 - "$seconds" "$interval" <<'PY'
+import math
+import sys
+
+seconds = float(sys.argv[1])
+interval = float(sys.argv[2])
+if seconds <= 0 or interval <= 0:
+    raise SystemExit("seconds and interval must be positive")
+print(max(1, math.ceil(seconds / interval)))
+PY
+}
+
+
+if [[ "$RUN_SCALE_SWEEP" != "0" ]]; then
 for S in $SCALES; do
     CASE="$RESULTS/$S"
     TERMINALS=$((S * 2))
@@ -324,12 +354,159 @@ PY
             > "$CASE/simgrid-performance-$R.out" 2>&1
     done
 done
+fi
 
-#
-# analyze.py reads all completed 32/64/128 cases.
-#
-python3 "$E5/analyze.py" "$RESULTS" \
-    | tee "$RESULTS/experiment5-performance-summary.csv"
+
+if [[ "$RUN_INTERVAL_SWEEP" != "0" ]]; then
+    S="$INTERVAL_SWEEP_SCALE"
+    TERMINALS=$((S * 2))
+
+    for INTERVAL in $INTERVAL_SWEEP_SECONDS; do
+        CASE="$RESULTS/interval-sweep/$S/${INTERVAL}s"
+
+        echo
+        echo "========================================"
+        echo "Experiment 5C: interval sweep"
+        echo "$S switches / $TERMINALS terminals / ${INTERVAL}s interval"
+        echo "========================================"
+
+        rm -rf "$CASE"
+        mkdir -p "$CASE"
+
+        INITIAL_DRAIN="$(
+            seconds_to_intervals \
+                "$SWEEP_INITIAL_CALIBRATION_SECONDS" \
+                "$INTERVAL"
+        )"
+        STEP_DRAIN="$(
+            seconds_to_intervals \
+                "$SWEEP_CALIBRATION_STEP_SECONDS" \
+                "$INTERVAL"
+        )"
+        MAX_DRAIN="$(
+            seconds_to_intervals \
+                "$SWEEP_MAX_CALIBRATION_SECONDS" \
+                "$INTERVAL"
+        )"
+
+        python3 "$E5/generate_case.py" \
+            --codes-root "$CODES_ROOT" \
+            --case-dir "$CASE" \
+            --switches "$S" \
+            --interval-seconds "$INTERVAL" \
+            --pilot-drain "$INITIAL_DRAIN"
+
+        CAL_DRAIN="$INITIAL_DRAIN"
+
+        while true; do
+            if (( CAL_DRAIN > MAX_DRAIN )); then
+                echo \
+                    "ERROR: ${INTERVAL}s interval case did not drain by " \
+                    "$SWEEP_MAX_CALIBRATION_SECONDS simulated seconds" >&2
+                exit 1
+            fi
+
+            echo \
+                "[$S/${INTERVAL}s] CODES drain calibration: " \
+                "$CAL_DRAIN intervals"
+
+            set_codes_drain \
+                "$CASE/codes-correctness.yaml" \
+                "$CAL_DRAIN"
+
+            rm -f "$CASE/terminal-events.csv"
+
+            (
+                cd "$CODES_BUILD"
+
+                mpirun -np 1 \
+                    "$CODES_EXE" \
+                    --sync=1 -- \
+                    "$CASE/codes-correctness.yaml"
+            ) > "$CASE/codes-calibration.out" 2>&1
+
+            if validate_codes_output \
+                "$CASE/codes-calibration.out" \
+                "$TERMINALS"
+            then
+                echo "[$S/${INTERVAL}s] calibration drained successfully"
+                break
+            fi
+
+            CAL_DRAIN=$((CAL_DRAIN + STEP_DRAIN))
+        done
+
+        LAST_RECEIVE="$(
+            python3 - "$CASE/terminal-events.csv" <<'PY'
+import csv
+import sys
+
+last = -1
+with open(sys.argv[1], newline="") as f:
+    for row in csv.DictReader(f):
+        if row["event"] == "receive":
+            last = max(last, int(row["interval"]))
+
+if last < 0:
+    raise SystemExit("no destination receive events found")
+print(last)
+PY
+        )"
+
+        DRAIN=$((LAST_RECEIVE + 5))
+
+        echo "[$S/${INTERVAL}s] final receive interval: $LAST_RECEIVE"
+        echo "[$S/${INTERVAL}s] timed-run drain intervals: $DRAIN"
+
+        python3 "$E5/generate_case.py" \
+            --codes-root "$CODES_ROOT" \
+            --case-dir "$CASE" \
+            --switches "$S" \
+            --interval-seconds "$INTERVAL" \
+            --performance-drain "$DRAIN"
+
+        for R in 1 2 3; do
+            echo "[$S/${INTERVAL}s] CODES performance repeat $R/3"
+
+            (
+                cd "$CODES_BUILD"
+
+                mpirun -np 1 \
+                    "$CODES_EXE" \
+                    --sync=1 -- \
+                    "$CASE/codes-performance.yaml"
+            ) > "$CASE/codes-performance-$R.out" 2>&1
+
+            validate_codes_output \
+                "$CASE/codes-performance-$R.out" \
+                "$TERMINALS"
+
+            echo "[$S/${INTERVAL}s] SimGrid performance repeat $R/3"
+
+            "$SIMGRID_EXE" \
+                --cfg=network/model:CM02 \
+                --cfg=network/TCP-gamma:0 \
+                --cfg=network/weight-S:0 \
+                --cfg=network/crosstraffic:0 \
+                "$CASE/platform.xml" \
+                "$CASE/traffic.csv" \
+                /dev/null \
+                --summary-only \
+                > "$CASE/simgrid-performance-$R.out" 2>&1
+        done
+    done
+
+    python3 "$E5/analyze_interval_sweep.py" "$RESULTS" \
+        --scale "$INTERVAL_SWEEP_SCALE" \
+        --intervals $INTERVAL_SWEEP_SECONDS \
+        | tee "$RESULTS/experiment5-interval-sweep-summary.csv"
+fi
+
+if [[ "$RUN_SCALE_SWEEP" != "0" ]]; then
+    # analyze.py reads all completed 32/64/128 cases.
+    python3 "$E5/analyze.py" "$RESULTS" \
+        | tee "$RESULTS/experiment5-performance-summary.csv"
+fi
 
 python3 "$E5/sanitize_results.py" \
     --results "$RESULTS" \

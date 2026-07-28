@@ -116,7 +116,8 @@ def write_traffic(path: Path, terminals: int, flow_gbit: float):
             w.writerow([0, src + 1, src, dst, f"{flow_gbit:.9f}"])
 
 
-def write_platform(path: Path, topology_path: Path, traffic_path: Path):
+def write_platform(path: Path, topology_path: Path, traffic_path: Path,
+                   interval_seconds: float):
     switches, terminal_counts, terminal_bw, adj, edge_bw = parse_topology(topology_path)
 
     terminal_to_switch = []
@@ -144,15 +145,20 @@ def write_platform(path: Path, topology_path: Path, traffic_path: Path):
     for t, bw_mbps in enumerate(terminal_bws):
         mbps_bytes = bw_mbps / 8.0
         lines.append(f'    <link id="T{t}_up" bandwidth="{mbps_bytes:.9f}MBps" latency="0s"/>')
-        lines.append(f'    <link id="T{t}_down" bandwidth="{mbps_bytes:.9f}MBps" latency="1s"/>')
+        lines.append(
+            f'    <link id="T{t}_down" bandwidth="{mbps_bytes:.9f}MBps" '
+            f'latency="{interval_seconds:g}s"/>'
+        )
 
     for s, nbrs in enumerate(adj):
         for d in nbrs:
             bw_mbps = edge_bw[(switches[s], switches[d])]
             mbps_bytes = bw_mbps / 8.0
-            # CODES forwards a switch-egress fragment to the next hop in the next interval.
+            # CODES forwards a switch-egress fragment to the next hop in the
+            # next interval, so use the same per-hop delay in SimGrid.
             lines.append(
-                f'    <link id="S{s}_S{d}" bandwidth="{mbps_bytes:.9f}MBps" latency="1s"/>'
+                f'    <link id="S{s}_S{d}" bandwidth="{mbps_bytes:.9f}MBps" '
+                f'latency="{interval_seconds:g}s"/>'
             )
 
     seen_pairs = set()
@@ -176,7 +182,8 @@ def write_platform(path: Path, topology_path: Path, traffic_path: Path):
 
 
 def write_codes_config(path: Path, topology: Path, traffic: Path, switches: int, terminals: int,
-                       drain_intervals: int, terminal_log: Path | None):
+                       drain_intervals: int, terminal_log: Path | None,
+                       interval_seconds: float):
     log_line = f'    terminal_log_path: "{terminal_log.name}"\n' if terminal_log else ''
     path.write_text(f'''schema_version: 1
 
@@ -196,7 +203,7 @@ sections:
   fluid_flow_wan:
     topology_yaml_file: "{topology.name}"
     traffic_trace_file: "{traffic.name}"
-    interval_seconds: 1
+    interval_seconds: {interval_seconds:g}
     num_send_intervals: 1
     num_drain_intervals: {drain_intervals}
     egress_model: pdes
@@ -215,7 +222,11 @@ def main():
     ap.add_argument('--flow-gbit', type=float, default=500.0)
     ap.add_argument('--pilot-drain', type=int, default=1000)
     ap.add_argument('--performance-drain', type=int)
+    ap.add_argument('--interval-seconds', type=float, default=1.0)
     args = ap.parse_args()
+
+    if args.interval_seconds <= 0:
+        raise SystemExit('--interval-seconds must be positive')
 
     case = args.case_dir.resolve()
     case.mkdir(parents=True, exist_ok=True)
@@ -241,11 +252,14 @@ def main():
         ], check=True)
         terminals = args.switches * 2
         write_traffic(traffic, terminals, args.flow_gbit)
-        write_platform(case / 'platform.xml', topology, traffic)
+        write_platform(
+            case / 'platform.xml', topology, traffic,
+            args.interval_seconds,
+        )
         write_codes_config(
             case / 'codes-correctness.yaml', topology, traffic,
             args.switches, terminals, args.pilot_drain,
-            case / 'terminal-events.csv'
+            case / 'terminal-events.csv', args.interval_seconds,
         )
     else:
         terminals = args.switches * 2
@@ -253,7 +267,8 @@ def main():
             raise SystemExit('generate the case before creating the performance config')
         write_codes_config(
             case / 'codes-performance.yaml', topology, traffic,
-            args.switches, terminals, args.performance_drain, None
+            args.switches, terminals, args.performance_drain, None,
+            args.interval_seconds,
         )
 
 

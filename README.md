@@ -258,7 +258,9 @@ The packet runs can take several minutes each. Primary summaries are written to
 ## 10. Run Experiment 5
 
 Experiment 5 first checks a controlled two-flow max-min allocation and then
-runs the CODES/SimGrid performance comparison.
+runs the CODES/SimGrid performance comparison. The performance runner also
+includes an interval-sensitivity subset at the 128-switch scale using 1-s,
+10-s, and 100-s fluid intervals by default.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
@@ -270,6 +272,7 @@ The performance summary is written to:
 
 ```text
 experiment5/results/experiment5-performance-summary.csv
+experiment5/results/experiment5-interval-sweep-summary.csv
 ```
 
 Experiment 5 text results are intended to be committed after the repository-wide
