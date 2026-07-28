@@ -20,9 +20,9 @@ RUN_SCALE_SWEEP="${RUN_SCALE_SWEEP:-1}"
 # without turning the experiment into a second full scale matrix.
 RUN_INTERVAL_SWEEP="${RUN_INTERVAL_SWEEP:-1}"
 INTERVAL_SWEEP_SCALE="${INTERVAL_SWEEP_SCALE:-128}"
-INTERVAL_SWEEP_SECONDS="${INTERVAL_SWEEP_SECONDS:-1 10 100 1000}"
+INTERVAL_SWEEP_SECONDS="${INTERVAL_SWEEP_SECONDS:-1 10 60 3600}"
 # By default run every interval in the sweep. This can be narrowed (for
-# example to "1000") while the analyzer still reads the complete sweep above.
+# example to "60 3600") while the analyzer still reads the complete sweep above.
 INTERVAL_SWEEP_RUN_SECONDS="${INTERVAL_SWEEP_RUN_SECONDS:-$INTERVAL_SWEEP_SECONDS}"
 SWEEP_INITIAL_CALIBRATION_SECONDS="${SWEEP_INITIAL_CALIBRATION_SECONDS:-1000}"
 SWEEP_CALIBRATION_STEP_SECONDS="${SWEEP_CALIBRATION_STEP_SECONDS:-500}"

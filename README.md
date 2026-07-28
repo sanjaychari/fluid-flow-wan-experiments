@@ -260,7 +260,8 @@ The packet runs can take several minutes each. Primary summaries are written to
 Experiment 5 first checks a controlled two-flow max-min allocation and then
 runs the CODES/SimGrid performance comparison. The performance runner also
 includes an interval-sensitivity subset at the 128-switch scale using 1-s,
-10-s, and 100-s fluid intervals by default.
+10-s, 60-s, and 3600-s fluid intervals by default. The 60-s and 3600-s
+points represent one-minute and one-hour temporal aggregation, respectively.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"

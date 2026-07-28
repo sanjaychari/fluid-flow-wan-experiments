@@ -16,12 +16,11 @@ sections:
   fluid_flow_wan:
     topology_yaml_file: "topology.yaml"
     traffic_trace_file: "traffic.csv"
-    interval_seconds: 100
+    interval_seconds: 3600
     num_send_intervals: 1
-    num_drain_intervals: 20
+    num_drain_intervals: 17
     egress_model: pdes
     debug_prints: 0
     backpressure_delay_ms: 1.0
     pause_high_watermark_fraction: 0.999999
     pause_low_watermark_fraction: 0.999998
-    terminal_log_path: "terminal-events.csv"
