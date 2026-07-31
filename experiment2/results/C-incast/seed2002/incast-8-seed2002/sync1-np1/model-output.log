@@ -1,6 +1,6 @@
-/workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
+/home/local/KHQ/sanjay.chari/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
 
-Fri Jul 24 12:59:37 2026
+Fri Jul 31 15:20:39 2026
 
 ROSS Version: v8.1.0
 
@@ -237,7 +237,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                      7706
-	Event Rate (events/sec)                               308067.5
+	Event Rate (events/sec)                               308771.1
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -256,12 +256,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          6.6059
-	Priority Queue (enq/deq)                                0.0059
+	Initialization                                          6.4652
+	Priority Queue (enq/deq)                                0.0058
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.0626
+	Event Processing                                        0.0625
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -272,7 +272,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0648
+	Total Time (Note: Using Running Time above for Speedup)      0.0647
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

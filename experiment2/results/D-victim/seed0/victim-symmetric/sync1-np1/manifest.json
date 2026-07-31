@@ -1,5 +1,5 @@
 {
-  "codes_commit": "e4b90e1708869faba1b903c657a3d95504eb9092",
+  "codes_commit": "34f832c761844cf4e8463c74e149f7efe57adf82",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -13,10 +13,10 @@
   "compiler": [
     "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
   ],
-  "created_utc": "2026-07-24T17:00:03.526863+00:00",
+  "created_utc": "2026-07-31T19:21:59.775621+00:00",
   "host": "anonymous-host",
   "input_sha256": {
-    "/workspace/fluid-flow-wan-experiments/experiment2/results/D-victim/seed0/victim-symmetric/sync1-np1/config.yaml": "6ed46b7dd5c5b772453d3b823041b0f460cfdc9af601ebbc55c2a7854ec32aec",
+    "/workspace/fluid-flow-wan-experiments/experiment2/results/D-victim/seed0/victim-symmetric/sync1-np1/config.yaml": "2bd7e3355c27af953ef103c0883c4d0d9292cb61aa352f5aa2c64505998298a2",
     "/workspace/fluid-flow-wan-experiments/experiment2/results/D-victim/seed0/victim-symmetric/sync1-np1/topology.yaml": "dcc4e2d008d43e57e515e59016467e11216537046539f20655a983cdea042453",
     "/workspace/fluid-flow-wan-experiments/experiment2/results/D-victim/seed0/victim-symmetric/sync1-np1/traffic.csv": "6b31e5b179189ac3f7707dc3c481141cd28624ea34f8cf9ea14ed4dc7aa3859a"
   },
@@ -33,5 +33,5 @@
   "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
   "seed": "0",
   "sync_mode": 1,
-  "wall_clock_sec": 3.468643856
+  "wall_clock_sec": 5.134446869
 }

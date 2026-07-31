@@ -1,5 +1,5 @@
 {
-  "codes_commit": "e4b90e1708869faba1b903c657a3d95504eb9092",
+  "codes_commit": "34f832c761844cf4e8463c74e149f7efe57adf82",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-random-traffic --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -13,10 +13,10 @@
   "compiler": [
     "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
   ],
-  "created_utc": "2026-07-24T16:58:45.921054+00:00",
+  "created_utc": "2026-07-31T19:17:35.106038+00:00",
   "host": "anonymous-host",
   "input_sha256": {
-    "/workspace/fluid-flow-wan-experiments/experiment2/results/B-buffer-pause/seed2002/buffer100Gb-moderate-seed2002/sync1-np1/config.yaml": "83a1aff4c6a6c066138965c583253c99afcb3bb61f0e39331d389137bfc15054",
+    "/workspace/fluid-flow-wan-experiments/experiment2/results/B-buffer-pause/seed2002/buffer100Gb-moderate-seed2002/sync1-np1/config.yaml": "92eed72e116cb479ce3b5a9c9db7b3e416ac38f6f99a7f30deab258ee1b1ab05",
     "/workspace/fluid-flow-wan-experiments/experiment2/results/B-buffer-pause/seed2002/buffer100Gb-moderate-seed2002/sync1-np1/topology.yaml": "13b0a249d5d0bc90ce6f76facc2e9be1a13ce19cbfda261801ad47728d685444"
   },
   "interval_seconds": "10",
@@ -32,5 +32,5 @@
   "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
   "seed": "2002",
   "sync_mode": 1,
-  "wall_clock_sec": 4.744960635
+  "wall_clock_sec": 4.808477283
 }

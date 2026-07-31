@@ -74,24 +74,7 @@ python -m pip install torch numpy pyzmq pandas scikit-learn
 Keep this environment active while configuring CODES and while running
 Experiment 3.
 
-## 3. Build ROSS
-
-The CODES pull-request CI currently pins ROSS to the commit below. Using the
-same commit makes the dependency version explicit.
-
-```bash
-git clone https://github.com/ROSS-org/ROSS.git "$HOME/ross"
-git -C "$HOME/ross" checkout 9b6ccb18f9b9db438bf41b5b221d0ef16a4dac48
-
-cmake -S "$HOME/ross" -B "$HOME/ross/build" -G Ninja \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DROSS_BUILD_MODELS=ON \
-    -DCMAKE_INSTALL_PREFIX="$HOME/ross/install"
-
-cmake --build "$HOME/ross/build" --target install -j2
-```
-
-## 4. Build CODES from pull request 267 with PyTorch enabled
+## 3. Build CODES from pull request 267 with PyTorch enabled
 
 The Fluid-Flow WAN implementation used by these experiments is in CODES pull
 request 267:
@@ -103,48 +86,20 @@ Clone CODES, fetch the pull-request head, and check out the tested revision:
 ```bash
 git clone https://github.com/codes-org/codes.git "$HOME/codes"
 cd "$HOME/codes"
-git fetch origin pull/267/head
+git fetch origin pull/267/head:local-expts
 
-git checkout e4b90e1708869faba1b903c657a3d95504eb9092
+git checkout local-expts
 ```
 
-If a later revision of pull request 267 is intentionally being tested, replace
-the commit above with that revision and record it with the results.
+Set torch_enable to 1 in codes/CODES-compile-instructions.sh.
 
-Locate the PyTorch CMake package from the active Python environment:
+Then compile CODES:
 
-```bash
-export Torch_DIR="$(python3 -c 'import torch; print(torch.utils.cmake_prefix_path)')/Torch"
 ```
-
-Configure CODES with both PyTorch and ZeroMQ explicitly enabled. The other
-optional workload packages are disabled because these experiments do not
-require them.
-
-```bash
-cd "$HOME/codes"
-rm -rf build
-
-cmake -S . -B build -G Ninja \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DBUILD_TESTING=ON \
-    -DCODES_USE_TORCH=ON \
-    -DCODES_USE_ZEROMQ=ON \
-    -DCODES_USE_SWM=OFF \
-    -DCODES_USE_UNION=OFF \
-    -DCODES_USE_DUMPI=OFF \
-    -DCMAKE_PREFIX_PATH="$HOME/ross/install" \
-    -DTorch_DIR="$Torch_DIR"
-
-cmake --build build -j2
-```
-
-During configuration, verify that CMake reports both of these features as
-enabled:
-
-```text
-Torch ML models enabled
-ZeroMQ director-client/zmqml surrogate enabled
+cd $HOME
+cp "$HOME/codes/CODES-compile-instructions.sh" .
+export CUDA_HOME=<enter your CUDA home directory here. Typically it is /usr/local/cuda>
+bash CODES-compile-instructions.sh
 ```
 
 The main executables used by the experiment scripts should then exist:
@@ -156,7 +111,7 @@ ls -l \
     "$HOME/codes/build/src/model-net-synthetic"
 ```
 
-## 5. Configure the experiment repository
+## 4. Configure the experiment repository
 
 Clone this repository to any location. The examples below use a neutral local
 directory name:
@@ -175,7 +130,7 @@ export CODES_BUILD="$CODES_ROOT/build"
 export ROSS_ROOT=/path/to/ross
 ```
 
-## 6. Run Experiment 1
+## 5. Run Experiment 1
 
 Experiment 1 replays the committed ESNet validation inputs and analyzes all
 eight scenarios.
@@ -194,7 +149,7 @@ experiment1/analysis/experiment1-run-summary.csv
 experiment1/analysis/experiment1-flow-summary.csv
 ```
 
-## 7. Run Experiment 2
+## 6. Run Experiment 2
 
 Generate the deterministic topology and configuration matrix, then run the
 sequential congestion experiments:
@@ -213,7 +168,7 @@ The optional conservative-execution parity check is run separately:
 
 Primary summaries are written under `experiment2/analysis/`.
 
-## 8. Run Experiment 3
+## 7. Run Experiment 3
 
 Experiment 3 compares local egress computation with the same analytical
 calculation performed synchronously through the ZeroMQ backend. It does not
@@ -241,7 +196,7 @@ experiment3/analysis/experiment3-paired.csv
 experiment3/analysis/experiment3-diagnostic-latency.csv
 ```
 
-## 9. Run Experiment 4
+## 8. Run Experiment 4
 
 Experiment 4 compares simulation throughput for matched offered data volumes
 using the Fluid-Flow WAN model and the packet-based CODES baseline.
@@ -255,7 +210,7 @@ REPEATS=3 ./experiment4/run_all.sh
 The packet runs can take several minutes each. Primary summaries are written to
 `experiment4/analysis/`.
 
-## 10. Run Experiment 5
+## 9. Run Experiment 5
 
 Experiment 5 first checks a controlled two-flow max-min allocation and then
 runs the CODES/SimGrid performance comparison. The performance runner also

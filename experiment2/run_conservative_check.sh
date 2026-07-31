@@ -12,7 +12,7 @@ for np in 2 4; do
     con="$ROOT/results/$scenario/seed$seed/$CASE/sync2-np${np}/logs"
     cmpdir="$ROOT/analysis/conservative-parity/$CASE/np${np}"
     mkdir -p "$cmpdir"
-    for csv in terminal-events.csv switch-events.csv flowlet-events.csv; do
+    for csv in terminal-events.csv switch-events.csv fluid-segment-events.csv; do
         python3 "$ROOT/../common/canonicalize_csv.py" "$seq/$csv" "$cmpdir/sequential-$csv"
         python3 "$ROOT/../common/canonicalize_csv.py" "$con/$csv" "$cmpdir/conservative-$csv"
         diff -u "$cmpdir/sequential-$csv" "$cmpdir/conservative-$csv"

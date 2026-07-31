@@ -142,8 +142,8 @@ def analyze_case(case, scenario, seed):
 
     # Flow-specific delivered volume from final-hop switch sends. Used for victim analysis.
     flow_delivered = defaultdict(float)
-    fl_csv = run / "logs" / "flowlet-events.csv"
-    with fl_csv.open(newline="") as f:
+    segment_csv = run / "logs" / "fluid-segment-events.csv"
+    with segment_csv.open(newline="") as f:
         rd = csv.DictReader(f)
         fields = rd.fieldnames or []
         unit = "gbit" if any(x.endswith("_gbit") for x in fields) else "mbit"
@@ -151,7 +151,7 @@ def analyze_case(case, scenario, seed):
         for r in rd:
             if r["target_type"] != "terminal" or not r["event"].startswith("allocate_send"):
                 continue
-            flow_delivered[int(r["flowlet_id"])] += float(r[f"send_{unit}"]) * scale
+            flow_delivered[int(r["flow_id"])] += float(r[f"send_{unit}"]) * scale
 
     victim_gbit = flow_delivered.get(20008, 0.0)
     elephant_values = [flow_delivered.get(20000 + i, 0.0) for i in range(8)]
@@ -211,7 +211,7 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
         w.writeheader(); w.writerows(rows)
 
-    # Paired three-seed treatment summaries for A/B/C.
+    # Paired ten-seed treatment summaries for A/B/C.
     groups = defaultdict(list)
     for r in rows:
         treatment = re.sub(r"-seed\d+$", "", r["case"])

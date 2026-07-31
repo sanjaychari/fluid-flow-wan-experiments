@@ -1,6 +1,6 @@
-/workspace/codes/build/src/model-net-fluid-flow-wan-random-traffic --sync=1 -- config.yaml 
+/home/local/KHQ/sanjay.chari/codes/build/src/model-net-fluid-flow-wan-random-traffic --sync=1 -- config.yaml 
 
-Fri Jul 24 12:58:27 2026
+Fri Jul 31 15:16:41 2026
 
 ROSS Version: v8.1.0
 
@@ -217,7 +217,7 @@ fluid-flow-wan-terminal gid=189 terminal=125 switch=62 generated_gbit=6378.91019
 fluid-flow-wan-terminal gid=190 terminal=126 switch=63 generated_gbit=6528.971641 sent_gbit=5548.687157 source_backlog_gbit=980.284484 active_source_flows=3 received_gbit=2497.576479 rate_updates_received=212 rate_cache_entries=4 pause_updates_received=4 pause_frames_received=2 resume_frames_received=2 total_pause_time_ms=18900.000000 generated_flows=10 received_fragments=147
 fluid-flow-wan-terminal gid=191 terminal=127 switch=63 generated_gbit=5864.252509 sent_gbit=4807.112030 source_backlog_gbit=1057.140479 active_source_flows=4 received_gbit=3118.526825 rate_updates_received=332 rate_cache_entries=3 pause_updates_received=12 pause_frames_received=6 resume_frames_received=6 total_pause_time_ms=146700.000000 generated_flows=10 received_fragments=148
 
-	: Running Time = 1.1461 seconds
+	: Running Time = 1.1398 seconds
 
 TW Library Statistics:
 	Total Events Processed                                  214433
@@ -237,7 +237,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                    214433
-	Event Rate (events/sec)                               187092.4
+	Event Rate (events/sec)                               188133.1
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -256,12 +256,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          6.5785
-	Priority Queue (enq/deq)                                0.2814
+	Initialization                                          6.4399
+	Priority Queue (enq/deq)                                0.2770
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        2.8910
+	Event Processing                                        2.8745
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -272,7 +272,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      2.9708
+	Total Time (Note: Using Running Time above for Speedup)      2.9543
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

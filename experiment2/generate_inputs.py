@@ -45,12 +45,14 @@ sections:
     pause_low_watermark_fraction: {pause_lo:.2f}
     terminal_log_path: "logs/terminal-events.csv"
     switch_log_path: "logs/switch-events.csv"
-    flowlet_log_path: "logs/flowlet-events.csv"
+    fluid_segment_log_path: "logs/fluid-segment-events.csv"
 '''
 
 
 cases = []
-seeds = (2001, 2002, 2003)
+# Ten paired stochastic seeds are shared across the load, buffer/PAUSE,
+# and incast treatments.
+seeds = tuple(range(2001, 2011))
 loads = {
     "low": (8, 200, 400),
     "medium": (4, 300, 600),

@@ -30,7 +30,7 @@ def main() -> None:
 
     # C: persistent incast.  Each source offers 100 Gbit every 10 s (=10 Gbps).
     for fanin in (4, 8, 16):
-        for seed in (2001, 2002, 2003):
+        for seed in range(2001, 2011):
             rng = random.Random(seed * 100 + fanin)
             sources = rng.sample(list(range(1, nterm)), fanin)
             rows = []

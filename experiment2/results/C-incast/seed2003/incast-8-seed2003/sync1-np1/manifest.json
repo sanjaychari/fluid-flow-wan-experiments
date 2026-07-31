@@ -1,5 +1,5 @@
 {
-  "codes_commit": "e4b90e1708869faba1b903c657a3d95504eb9092",
+  "codes_commit": "34f832c761844cf4e8463c74e149f7efe57adf82",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -13,10 +13,10 @@
   "compiler": [
     "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
   ],
-  "created_utc": "2026-07-24T16:59:44.061224+00:00",
+  "created_utc": "2026-07-31T19:20:45.549019+00:00",
   "host": "anonymous-host",
   "input_sha256": {
-    "/workspace/fluid-flow-wan-experiments/experiment2/results/C-incast/seed2003/incast-8-seed2003/sync1-np1/config.yaml": "acbd225e23f4f139c060c6ca3f412ab12a16d71317c1b55f335900e8b6659873",
+    "/workspace/fluid-flow-wan-experiments/experiment2/results/C-incast/seed2003/incast-8-seed2003/sync1-np1/config.yaml": "cb8a0d511ff6b0e5e82be27b6a0688a208151b7459f6cecc88bac3cd5add4833",
     "/workspace/fluid-flow-wan-experiments/experiment2/results/C-incast/seed2003/incast-8-seed2003/sync1-np1/topology.yaml": "13b0a249d5d0bc90ce6f76facc2e9be1a13ce19cbfda261801ad47728d685444",
     "/workspace/fluid-flow-wan-experiments/experiment2/results/C-incast/seed2003/incast-8-seed2003/sync1-np1/traffic.csv": "45be0d5485b2626765a6fbb52b84eb1e87c8502b4eb3584210ef63e406a6095d"
   },
@@ -33,5 +33,5 @@
   "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
   "seed": "2003",
   "sync_mode": 1,
-  "wall_clock_sec": 3.459208931
+  "wall_clock_sec": 3.493430233
 }
