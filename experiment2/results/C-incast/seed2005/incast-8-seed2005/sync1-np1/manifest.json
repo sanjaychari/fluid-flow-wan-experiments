@@ -1,0 +1,37 @@
+{
+  "codes_commit": "34f832c761844cf4e8463c74e149f7efe57adf82",
+  "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml",
+  "command_argv": [
+    "mpirun",
+    "-np",
+    "1",
+    "/workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic",
+    "--sync=1",
+    "--",
+    "config.yaml"
+  ],
+  "compiler": [
+    "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+  ],
+  "created_utc": "2026-07-31T19:20:52.657125+00:00",
+  "host": "anonymous-host",
+  "input_sha256": {
+    "/workspace/fluid-flow-wan-experiments/experiment2/results/C-incast/seed2005/incast-8-seed2005/sync1-np1/config.yaml": "cb8a0d511ff6b0e5e82be27b6a0688a208151b7459f6cecc88bac3cd5add4833",
+    "/workspace/fluid-flow-wan-experiments/experiment2/results/C-incast/seed2005/incast-8-seed2005/sync1-np1/topology.yaml": "13b0a249d5d0bc90ce6f76facc2e9be1a13ce19cbfda261801ad47728d685444",
+    "/workspace/fluid-flow-wan-experiments/experiment2/results/C-incast/seed2005/incast-8-seed2005/sync1-np1/traffic.csv": "66360afc35cbd2c291a4e8c0f60e5d35f0dd715859857be81ca3a0825978adfd"
+  },
+  "interval_seconds": "10",
+  "mode": "pdes",
+  "mpi": [
+    "mpirun (Open MPI) 4.1.2",
+    ""
+  ],
+  "notes": [],
+  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.35",
+  "rank_count": 1,
+  "return_code": 0,
+  "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
+  "seed": "2005",
+  "sync_mode": 1,
+  "wall_clock_sec": 3.487722559
+}
