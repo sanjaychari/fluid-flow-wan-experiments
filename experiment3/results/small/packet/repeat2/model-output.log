@@ -1,6 +1,6 @@
 /workspace/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=1 --payload_size=262144 -- config.yaml 
 
-Thu Aug  6 12:22:46 2026
+Thu Aug  6 16:54:33 2026
 
 ROSS Version: v8.1.0
 
@@ -1090,7 +1090,7 @@ server 2368 recvd 262144 bytes in 0.001795 seconds, 139.266015 MiB/s sent_count 
 server 2369 recvd 262144 bytes in 0.001794 seconds, 139.356130 MiB/s sent_count 1 recvd_count 1 local_count 1 
 server 2370 recvd 262144 bytes in 0.001794 seconds, 139.353050 MiB/s sent_count 1 recvd_count 1 local_count 1 
 
-	: Running Time = 123.1954 seconds
+	: Running Time = 122.6585 seconds
 
 TW Library Statistics:
 	Total Events Processed                               124889416
@@ -1110,7 +1110,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                 124889416
-	Event Rate (events/sec)                              1013750.6
+	Event Rate (events/sec)                              1018187.8
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -1129,12 +1129,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                    856
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          7.7815
-	Priority Queue (enq/deq)                               83.4454
+	Initialization                                          7.8202
+	Priority Queue (enq/deq)                               82.8802
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                      293.0504
+	Event Processing                                      291.8894
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -1145,7 +1145,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)    319.3209
+	Total Time (Note: Using Running Time above for Speedup)    317.9302
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

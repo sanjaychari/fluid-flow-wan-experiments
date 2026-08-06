@@ -28,4 +28,4 @@ sections:
     pause_high_watermark_fraction: 0.999999
     pause_low_watermark_fraction: 0.999998
 
-    flowlet_log_path: "flowlet-events.csv"
+    fluid_segment_log_path: "fluid-segment-events.csv"

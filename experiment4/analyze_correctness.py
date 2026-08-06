@@ -29,6 +29,7 @@ def codes_rates(path: Path):
         fields = reader.fieldnames or []
 
         switch_field = find_field(fields, ("switch", "switch_id"))
+        flow_field = find_field(fields, ("flow_id", "flowlet_id"))
         send_field = find_field(
             fields,
             ("send_gbit", "sent_gbit", "send_mbit", "sent_mbit"),
@@ -52,7 +53,7 @@ def codes_rates(path: Path):
             if int(row["target_index"]) != 1:
                 continue
 
-            flow = int(row["flowlet_id"])
+            flow = int(row[flow_field])
             if flow not in (1, 2):
                 continue
 
@@ -116,7 +117,7 @@ def main():
     if len(sys.argv) != 3:
         raise SystemExit(
             "usage: analyze_correctness.py "
-            "flowlet-events.csv simgrid-fct.csv"
+            "fluid-segment-events.csv simgrid-fct.csv"
         )
 
     c1, c2, interval = codes_rates(Path(sys.argv[1]))

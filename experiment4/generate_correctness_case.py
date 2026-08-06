@@ -40,7 +40,7 @@ interval,flow_id,source_terminal,destination_terminal,offered_gbit
 0,2,1,3,10
 """)
 
-    # Only flowlet logging is needed to inspect CODES's max-min allocation.
+    # Only fluid-segment logging is needed to inspect CODES's max-min allocation.
     (case / "codes.yaml").write_text("""\
 schema_version: 1
 
@@ -72,7 +72,7 @@ sections:
     pause_high_watermark_fraction: 0.999999
     pause_low_watermark_fraction: 0.999998
 
-    flowlet_log_path: "flowlet-events.csv"
+    fluid_segment_log_path: "fluid-segment-events.csv"
 """)
 
     # Equivalent SimGrid bottleneck.

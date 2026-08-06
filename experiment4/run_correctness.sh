@@ -47,7 +47,7 @@ echo "[4A] Running SimGrid max-min correctness case"
 
 echo "[4A] Correctness result"
 python3 "$E4/analyze_correctness.py" \
-    "$CASE/flowlet-events.csv" \
+    "$CASE/fluid-segment-events.csv" \
     "$CASE/simgrid-fct.csv" \
     | tee "$CASE/correctness-summary.csv"
 

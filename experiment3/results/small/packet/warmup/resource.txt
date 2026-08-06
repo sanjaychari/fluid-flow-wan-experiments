@@ -1,18 +1,18 @@
 	Command being timed: "mpirun -np 1 /workspace/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=1 --payload_size=262144 -- config.yaml"
-	User time (seconds): 123.67
-	System time (seconds): 3.02
+	User time (seconds): 123.43
+	System time (seconds): 3.10
 	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:07.49
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:07.38
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 9511208
+	Maximum resident set size (kbytes): 9511280
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 1
-	Minor (reclaiming a frame) page faults: 2310596
-	Voluntary context switches: 9926
-	Involuntary context switches: 916
+	Minor (reclaiming a frame) page faults: 2310611
+	Voluntary context switches: 10173
+	Involuntary context switches: 689
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 26160

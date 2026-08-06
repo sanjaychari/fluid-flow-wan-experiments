@@ -1,6 +1,6 @@
 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- /workspace/fluid-flow-wan-experiments/experiment4/results/correctness/codes.yaml 
 
-Thu Aug  6 14:27:08 2026
+Thu Aug  6 17:54:19 2026
 
 ROSS Version: v8.1.0
 
@@ -24,17 +24,17 @@ ROSS Event Memory Allocation:
 
 *** END SIMULATION ***
 
-fluid-flow-wan gid=0 switch=0 name=S0 ports=3 shared_buffer_gbit=1000.000000 received_fragments=6 sent_fragments=6 buffered_residual_gbit=0.000000 sent_gbit=20.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=1 switch=1 name=S1 ports=3 shared_buffer_gbit=1000.000000 received_fragments=6 sent_fragments=6 buffered_residual_gbit=0.000000 sent_gbit=20.000000 local_delivery_gbit=20.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=0 switch=0 name=S0 ports=3 shared_buffer_gbit=1000.000000 received_fragments=4 sent_fragments=6 buffered_residual_gbit=1.140000 sent_gbit=20.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=1 switch=1 name=S1 ports=3 shared_buffer_gbit=1000.000000 received_fragments=6 sent_fragments=4 buffered_residual_gbit=0.000000 sent_gbit=20.000000 local_delivery_gbit=20.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan-terminal gid=2 terminal=0 switch=0 generated_gbit=10.000000 sent_gbit=10.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
 fluid-flow-wan-terminal gid=3 terminal=1 switch=0 generated_gbit=10.000000 sent_gbit=10.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
-fluid-flow-wan-terminal gid=4 terminal=2 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=10.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=3
-fluid-flow-wan-terminal gid=5 terminal=3 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=10.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=3
+fluid-flow-wan-terminal gid=4 terminal=2 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=10.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=2
+fluid-flow-wan-terminal gid=5 terminal=3 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=10.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=2
 
 	: Running Time = 0.0003 seconds
 
 TW Library Statistics:
-	Total Events Processed                                      83
+	Total Events Processed                                      79
 	Events Aborted (part of RBs)                                 0
 	Events Rolled Back                                           0
 	Event Ties Detected in PE Queues                             0
@@ -50,8 +50,8 @@ TW Library Statistics:
 	Fossil Collect Attempts                                      0
 	Total GVT Computations                                       0
 
-	Net Events Processed                                        83
-	Event Rate (events/sec)                               279461.3
+	Net Events Processed                                        79
+	Event Rate (events/sec)                               290441.2
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -70,7 +70,7 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          0.8106
+	Initialization                                          0.7936
 	Priority Queue (enq/deq)                                0.0000
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
@@ -86,7 +86,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0008
+	Total Time (Note: Using Running Time above for Speedup)      0.0007
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

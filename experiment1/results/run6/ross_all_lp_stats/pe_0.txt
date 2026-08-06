@@ -1,13 +1,13 @@
 Time spent processing events for each LP:
 LPID: 0	-  Processing time: 0.000000e+00	-  Events processed: 0
-LPID: 1	-  Processing time: 8.915506e-02	-  Events processed: 6004
-LPID: 2	-  Processing time: 7.173952e-02	-  Events processed: 5295
-LPID: 3	-  Processing time: 6.784048e-02	-  Events processed: 4585
-LPID: 4	-  Processing time: 1.329311e-02	-  Events processed: 3021
-LPID: 5	-  Processing time: 1.333202e-02	-  Events processed: 3021
-LPID: 6	-  Processing time: 1.335538e-02	-  Events processed: 3021
-LPID: 7	-  Processing time: 1.336368e-02	-  Events processed: 3021
-LPID: 8	-  Processing time: 1.337354e-02	-  Events processed: 3021
-LPID: 9	-  Processing time: 4.923679e-02	-  Events processed: 6022
-LPID: 10	-  Processing time: 1.334514e-02	-  Events processed: 3021
-LPID: 11	-  Processing time: 1.898305e-02	-  Events processed: 5312
+LPID: 1	-  Processing time: 8.925633e-02	-  Events processed: 6004
+LPID: 2	-  Processing time: 7.156163e-02	-  Events processed: 5295
+LPID: 3	-  Processing time: 6.801798e-02	-  Events processed: 4585
+LPID: 4	-  Processing time: 1.348005e-02	-  Events processed: 3021
+LPID: 5	-  Processing time: 1.357019e-02	-  Events processed: 3021
+LPID: 6	-  Processing time: 1.358648e-02	-  Events processed: 3021
+LPID: 7	-  Processing time: 1.369085e-02	-  Events processed: 3021
+LPID: 8	-  Processing time: 1.356807e-02	-  Events processed: 3021
+LPID: 9	-  Processing time: 5.029457e-02	-  Events processed: 6022
+LPID: 10	-  Processing time: 1.355786e-02	-  Events processed: 3021
+LPID: 11	-  Processing time: 1.951251e-02	-  Events processed: 5312

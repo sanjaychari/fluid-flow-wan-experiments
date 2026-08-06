@@ -1,6 +1,6 @@
 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
 
-Thu Aug  6 12:02:31 2026
+Thu Aug  6 16:45:06 2026
 
 ROSS Version: v8.1.0
 
@@ -24,7 +24,7 @@ ROSS Event Memory Allocation:
 
 *** END SIMULATION ***
 
-fluid-flow-wan gid=0 switch=0 name=S00 ports=7 shared_buffer_gbit=100.000000 received_fragments=134 sent_fragments=133 buffered_residual_gbit=0.000000 sent_gbit=7986.888021 local_delivery_gbit=7986.888021 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=0 switch=0 name=S00 ports=7 shared_buffer_gbit=100.000000 received_fragments=134 sent_fragments=133 buffered_residual_gbit=0.000000 sent_gbit=7988.288021 local_delivery_gbit=7988.288021 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=1 switch=1 name=S01 ports=8 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=2 switch=2 name=S10 ports=4 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=3 switch=3 name=S27 ports=7 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
@@ -38,7 +38,7 @@ fluid-flow-wan gid=10 switch=10 name=S61 ports=8 shared_buffer_gbit=100.000000 r
 fluid-flow-wan gid=11 switch=11 name=S03 ports=6 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=12 switch=12 name=S04 ports=8 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=13 switch=13 name=S40 ports=7 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=14 switch=14 name=S58 ports=7 shared_buffer_gbit=100.000000 received_fragments=72 sent_fragments=72 buffered_residual_gbit=0.000000 sent_gbit=4000.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=14 switch=14 name=S58 ports=7 shared_buffer_gbit=100.000000 received_fragments=139 sent_fragments=72 buffered_residual_gbit=0.000000 sent_gbit=4000.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=15 switch=15 name=S05 ports=6 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=16 switch=16 name=S11 ports=5 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=17 switch=17 name=S35 ports=5 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
@@ -58,7 +58,7 @@ fluid-flow-wan gid=30 switch=30 name=S14 ports=5 shared_buffer_gbit=100.000000 r
 fluid-flow-wan gid=31 switch=31 name=S62 ports=6 shared_buffer_gbit=100.000000 received_fragments=62 sent_fragments=62 buffered_residual_gbit=0.000000 sent_gbit=4000.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=32 switch=32 name=S21 ports=5 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=33 switch=33 name=S34 ports=4 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=34 switch=34 name=S57 ports=5 shared_buffer_gbit=100.000000 received_fragments=72 sent_fragments=72 buffered_residual_gbit=0.000000 sent_gbit=4000.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=34 switch=34 name=S57 ports=5 shared_buffer_gbit=100.000000 received_fragments=72 sent_fragments=139 buffered_residual_gbit=44.897724 sent_gbit=4000.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=35 switch=35 name=S17 ports=6 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=36 switch=36 name=S18 ports=6 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=37 switch=37 name=S32 ports=9 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
@@ -88,7 +88,7 @@ fluid-flow-wan gid=60 switch=60 name=S44 ports=4 shared_buffer_gbit=100.000000 r
 fluid-flow-wan gid=61 switch=61 name=S46 ports=4 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=62 switch=62 name=S56 ports=4 shared_buffer_gbit=100.000000 received_fragments=36 sent_fragments=36 buffered_residual_gbit=0.000000 sent_gbit=2000.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=63 switch=63 name=S54 ports=5 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan-terminal gid=64 terminal=0 switch=0 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=7986.888021 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=133
+fluid-flow-wan-terminal gid=64 terminal=0 switch=0 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=7988.288021 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=133
 fluid-flow-wan-terminal gid=65 terminal=1 switch=0 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=66 terminal=2 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=67 terminal=3 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
@@ -217,10 +217,10 @@ fluid-flow-wan-terminal gid=189 terminal=125 switch=62 generated_gbit=0.000000 s
 fluid-flow-wan-terminal gid=190 terminal=126 switch=63 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=191 terminal=127 switch=63 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 
-	: Running Time = 0.0170 seconds
+	: Running Time = 0.0182 seconds
 
 TW Library Statistics:
-	Total Events Processed                                    6390
+	Total Events Processed                                    6559
 	Events Aborted (part of RBs)                                 0
 	Events Rolled Back                                           0
 	Event Ties Detected in PE Queues                             0
@@ -236,8 +236,8 @@ TW Library Statistics:
 	Fossil Collect Attempts                                      0
 	Total GVT Computations                                       0
 
-	Net Events Processed                                      6390
-	Event Rate (events/sec)                               375286.3
+	Net Events Processed                                      6559
+	Event Rate (events/sec)                               361238.1
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -256,12 +256,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          6.5038
-	Priority Queue (enq/deq)                                0.0049
+	Initialization                                          6.5837
+	Priority Queue (enq/deq)                                0.0050
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.0423
+	Event Processing                                        0.0451
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -272,7 +272,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0441
+	Total Time (Note: Using Running Time above for Speedup)      0.0471
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

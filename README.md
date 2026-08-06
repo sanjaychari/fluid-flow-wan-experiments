@@ -220,7 +220,7 @@ Before staging generated outputs, run the repository-wide anonymization and
 audit:
 
 ```bash
-python3 common/anonymize_repository.py --apply
+./common/sanitize_results.py --repo-root .
 ```
 
 A nonzero exit means a local path, username, hostname, email address, or

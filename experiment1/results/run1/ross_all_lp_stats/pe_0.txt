@@ -1,13 +1,13 @@
 Time spent processing events for each LP:
-LPID: 0	-  Processing time: 9.074095e-02	-  Events processed: 6003
+LPID: 0	-  Processing time: 8.891108e-02	-  Events processed: 6003
 LPID: 1	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 2	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 3	-  Processing time: 0.000000e+00	-  Events processed: 0
-LPID: 4	-  Processing time: 1.378433e-02	-  Events processed: 3021
-LPID: 5	-  Processing time: 1.388585e-02	-  Events processed: 3021
-LPID: 6	-  Processing time: 5.024688e-02	-  Events processed: 6022
-LPID: 7	-  Processing time: 2.104891e-02	-  Events processed: 6021
-LPID: 8	-  Processing time: 1.376807e-02	-  Events processed: 3021
-LPID: 9	-  Processing time: 1.378838e-02	-  Events processed: 3021
-LPID: 10	-  Processing time: 1.384983e-02	-  Events processed: 3021
-LPID: 11	-  Processing time: 1.377106e-02	-  Events processed: 3021
+LPID: 4	-  Processing time: 1.319841e-02	-  Events processed: 3021
+LPID: 5	-  Processing time: 1.326087e-02	-  Events processed: 3021
+LPID: 6	-  Processing time: 4.921209e-02	-  Events processed: 6022
+LPID: 7	-  Processing time: 2.058326e-02	-  Events processed: 6021
+LPID: 8	-  Processing time: 1.326053e-02	-  Events processed: 3021
+LPID: 9	-  Processing time: 1.328285e-02	-  Events processed: 3021
+LPID: 10	-  Processing time: 1.330356e-02	-  Events processed: 3021
+LPID: 11	-  Processing time: 1.320520e-02	-  Events processed: 3021

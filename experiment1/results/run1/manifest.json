@@ -13,7 +13,7 @@
   "compiler": [
     "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
   ],
-  "created_utc": "2026-08-06T15:50:58.814914+00:00",
+  "created_utc": "2026-08-06T20:34:54.941284+00:00",
   "host": "anonymous-host",
   "input_sha256": {
     "/workspace/fluid-flow-wan-experiments/experiment1/results/run1/config.yaml": "868ff51ccd2fe9aadb9023b4a02cf2d8d010d3e31d70a3e922214d4734f669a5",
@@ -35,5 +35,5 @@
   "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 4.85934595
+  "wall_clock_sec": 3.294188724
 }

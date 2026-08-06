@@ -1,19 +1,19 @@
 /workspace/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=4 --payload_size=262144 -- config.yaml 
 
-Thu Aug  6 13:10:39 2026
+Thu Aug  6 17:42:14 2026
 
 ROSS Version: v8.1.0
 
 tw_net_start: Found world size to be 1 
+credit_size not specified, using default: 8
+no credit_delay specified - all credit delays set to 1.42
+Within-node eager limit (node_eager_limit) not specified, setting to 16000
 NIC num injection port not specified, setting to 1
 NIC seq delay not specified, setting to 10.000000
 NIC num copy queues not specified, setting to 1
 
  Total nodes 1056 routers 264 groups 33 radix 16 
 within node transfer per byte delay is 0.190476
-credit_size not specified, using default: 8
-no credit_delay specified - all credit delays set to 1.42
-Within-node eager limit (node_eager_limit) not specified, setting to 16000
 
 ROSS Core Configuration: 
 	Total PEs                                                    1
@@ -1090,7 +1090,7 @@ server 2368 recvd 1048576 bytes in 0.007179 seconds, 139.287437 MiB/s sent_count
 server 2369 recvd 1048576 bytes in 0.007176 seconds, 139.352555 MiB/s sent_count 4 recvd_count 4 local_count 4 
 server 2370 recvd 1048576 bytes in 0.007175 seconds, 139.364797 MiB/s sent_count 4 recvd_count 4 local_count 4 
 
-	: Running Time = 502.6629 seconds
+	: Running Time = 503.8188 seconds
 
 TW Library Statistics:
 	Total Events Processed                               499587122
@@ -1110,7 +1110,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                 499587122
-	Event Rate (events/sec)                               993881.1
+	Event Rate (events/sec)                               991600.9
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -1129,12 +1129,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                    856
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          8.0413
-	Priority Queue (enq/deq)                              335.4961
+	Initialization                                          7.7542
+	Priority Queue (enq/deq)                              336.6742
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                     1197.2685
+	Event Processing                                     1199.5511
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -1145,7 +1145,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)   1302.9023
+	Total Time (Note: Using Running Time above for Speedup)   1305.8987
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

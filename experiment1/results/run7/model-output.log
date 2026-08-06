@@ -1,6 +1,6 @@
 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
 
-Thu Aug  6 11:51:05 2026
+Thu Aug  6 16:35:01 2026
 
 ROSS Version: v8.1.0
 
@@ -37,7 +37,7 @@ fluid-flow-wan-terminal gid=9 terminal=5 switch=1 generated_gbit=84.694742 sent_
 fluid-flow-wan-terminal gid=10 terminal=6 switch=3 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=11 terminal=7 switch=3 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=84.694742 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=2308
 
-	: Running Time = 0.2023 seconds
+	: Running Time = 0.2022 seconds
 
 TW Library Statistics:
 	Total Events Processed                                   57659
@@ -57,7 +57,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                     57659
-	Event Rate (events/sec)                               285086.4
+	Event Rate (events/sec)                               285124.4
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -76,12 +76,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          1.1509
-	Priority Queue (enq/deq)                                0.0356
+	Initialization                                          1.0471
+	Priority Queue (enq/deq)                                0.0353
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.5127
+	Event Processing                                        0.5125
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 

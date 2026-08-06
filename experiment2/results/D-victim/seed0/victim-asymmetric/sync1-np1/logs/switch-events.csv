@@ -1,7 +1,7 @@
 interval,event,switch,switch_name,port,target_type,target_index,capacity_gbit,queued_before_gbit,sent_gbit,queued_after_gbit,shared_queued_before_gbit,shared_queued_after_gbit,shared_buffer_gbit,dropped_gbit,active_queue_entries
-1,egress,7,S45,1,switch,60,100.637,0,99.4014,0,0,0,100,0,0
+1,egress,7,S45,1,switch,60,100.637,0,99.9348,0,0,0,100,0,0
 2,egress,7,S45,1,switch,60,100.637,0,99.4551,0,0,0,100,0,0
-2,egress,60,S44,1,terminal,120,1000,0,99.4014,0,0,0,100,0,0
+2,egress,60,S44,1,terminal,120,1000,0,99.9348,0,0,0,100,0,0
 3,egress,60,S44,1,terminal,120,1000,0,99.4551,0,0,0,100,0,0
 3,egress,7,S45,1,switch,60,100.637,0,99.4551,0,0,0,100,0,0
 4,egress,7,S45,1,switch,60,100.637,0,99.4551,0,0,0,100,0,0

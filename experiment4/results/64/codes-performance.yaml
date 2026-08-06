@@ -18,7 +18,7 @@ sections:
     traffic_trace_file: "traffic.csv"
     interval_seconds: 1
     num_send_intervals: 1
-    num_drain_intervals: 394
+    num_drain_intervals: 392
     egress_model: pdes
     debug_prints: 0
     backpressure_delay_ms: 1.0
