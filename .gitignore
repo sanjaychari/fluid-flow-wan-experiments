@@ -3,7 +3,7 @@ __pycache__/
 *.pyc
 
 # Locally compiled SimGrid harness
-experiment5/simgrid-flow-benchmark
+experiment4/simgrid-flow-benchmark
 
 # Large transient Experiment 3 output.
 # These files are generated when rerunning the experiment but are not stored

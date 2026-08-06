@@ -1,0 +1,40 @@
+{
+  "codes_commit": "753e614222f64c339fbf848bb26a6a356c0e03d6",
+  "command": "mpirun -np 1 /workspace/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=4 --payload_size=262144 -- config.yaml",
+  "command_argv": [
+    "mpirun",
+    "-np",
+    "1",
+    "/workspace/codes/build/src/model-net-synthetic",
+    "--sync=1",
+    "--traffic=2",
+    "--num_messages=4",
+    "--payload_size=262144",
+    "--",
+    "config.yaml"
+  ],
+  "compiler": [
+    "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+  ],
+  "created_utc": "2026-08-06T17:01:44.413214+00:00",
+  "host": "anonymous-host",
+  "input_sha256": {
+    "/workspace/fluid-flow-wan-experiments/experiment3/results/large/packet/repeat1/config.yaml": "683b428a5e83c62d622128dde72abb2e696850228f03792235b39eb7bf6e9496"
+  },
+  "interval_seconds": "0",
+  "mode": "packet",
+  "mpi": [
+    "mpirun (Open MPI) 4.1.2",
+    ""
+  ],
+  "notes": [
+    "target_gbit=8.858370048000"
+  ],
+  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.35",
+  "rank_count": 1,
+  "return_code": 0,
+  "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
+  "seed": "",
+  "sync_mode": 1,
+  "wall_clock_sec": 510.316210563
+}

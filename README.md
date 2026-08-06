@@ -18,9 +18,8 @@ These paths can be overridden with environment variables.
 
 - `experiment1/` — ESNet trace-driven validation
 - `experiment2/` — congestion, finite buffering, PAUSE, incast, and victim-flow experiments
-- `experiment3/` — synchronous ZeroMQ external-computation overhead
-- `experiment4/` — fluid-versus-packet CODES simulator-throughput comparison
-- `experiment5/` — CODES-versus-SimGrid flow-level comparison
+- `experiment3/` — fluid-versus-packet CODES simulator-throughput comparison
+- `experiment4/` — CODES-versus-SimGrid flow-level comparison
 - `common/` — shared topology, manifest, and CSV utilities
 
 Generated results may be committed after anonymization. Before staging new
@@ -48,14 +47,14 @@ sudo apt install -y \
     python3 python3-venv python3-pip
 ```
 
-Experiment 5 also requires SimGrid:
+Experiment 4 also requires SimGrid:
 
 ```bash
 sudo apt install -y libsimgrid-dev
 pkg-config --modversion simgrid
 ```
 
-The Experiment 5 scripts were exercised with SimGrid 3.30 and configure CM02
+The Experiment 4 scripts were exercised with SimGrid 3.30 and configure CM02
 for unweighted max-min sharing.
 
 ## 2. Python environment
@@ -168,51 +167,23 @@ The optional conservative-execution parity check is run separately:
 
 Primary summaries are written under `experiment2/analysis/`.
 
-## 7. Run Experiment 3
+## 8. Run Experiment 3
 
-Experiment 3 compares local egress computation with the same analytical
-calculation performed synchronously through the ZeroMQ backend. It does not
-train a model.
-
-Keep the Python environment from Section 2 active, then run:
-
-```bash
-cd "$HOME/fluid-flow-wan-experiments"
-./experiment3/setup.sh
-
-REPEATS=5 RUN_DIAGNOSTICS=1 \
-    ./experiment3/run_all.sh
-```
-
-The runner owns the ZeroMQ server lifecycle. Do not leave another server bound
-to the configured endpoint before starting the experiment.
-
-Primary summaries are written to:
-
-```text
-experiment3/analysis/experiment3-runs.csv
-experiment3/analysis/experiment3-summary.csv
-experiment3/analysis/experiment3-paired.csv
-experiment3/analysis/experiment3-diagnostic-latency.csv
-```
-
-## 8. Run Experiment 4
-
-Experiment 4 compares simulation throughput for matched offered data volumes
+Experiment 3 compares simulation throughput for matched offered data volumes
 using the Fluid-Flow WAN model and the packet-based CODES baseline.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
-./experiment4/setup.sh
-REPEATS=3 ./experiment4/run_all.sh
+./experiment3/setup.sh
+REPEATS=3 ./experiment3/run_all.sh
 ```
 
 The packet runs can take several minutes each. Primary summaries are written to
-`experiment4/analysis/`.
+`experiment3/analysis/`.
 
-## 9. Run Experiment 5
+## 9. Run Experiment 4
 
-Experiment 5 first checks a controlled two-flow max-min allocation and then
+Experiment 4 first checks a controlled two-flow max-min allocation and then
 runs the CODES/SimGrid performance comparison. The performance runner also
 includes an interval-sensitivity subset at the 128-switch scale using 1-s,
 10-s, 60-s, and 3600-s fluid intervals by default. The 60-s and 3600-s
@@ -223,19 +194,19 @@ does not use the CODES fluid-interval parameter.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
-./experiment5/run_correctness.sh
-./experiment5/run.sh
+./experiment4/run_correctness.sh
+./experiment4/run.sh
 ```
 
 The performance summary is written to:
 
 ```text
-experiment5/results/experiment5-performance-summary.csv
-experiment5/results/experiment5-interval-sweep-summary.csv
+experiment4/results/experiment4-performance-summary.csv
+experiment4/results/experiment4-interval-sweep-summary.csv
 ```
 
-Experiment 5 text results are intended to be committed after the repository-wide
-anonymization pass. The locally compiled `experiment5/simgrid-flow-benchmark`
+Experiment 4 text results are intended to be committed after the repository-wide
+anonymization pass. The locally compiled `experiment4/simgrid-flow-benchmark`
 binary remains ignored and should be rebuilt from source.
 
 ## Re-running and preserving outputs

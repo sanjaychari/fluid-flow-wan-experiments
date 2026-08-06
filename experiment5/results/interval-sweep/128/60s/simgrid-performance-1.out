@@ -1,5 +1,0 @@
-[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'CM02'
-[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/TCP-gamma' to '0'
-[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/weight-S' to '0'
-[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/crosstraffic' to '0'
-SIMGRID_WALL_RUNTIME_SEC=0.014554957

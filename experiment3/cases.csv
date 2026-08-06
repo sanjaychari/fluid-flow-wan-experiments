@@ -1,11 +1,4 @@
-case,switches,terminals,load,mode,seed,config,topology
-scale32-medium-pdes,32,64,medium,pdes,3001,configs/scale32-medium-pdes.yaml,topologies/topology-32switch.yaml
-scale32-medium-statistical,32,64,medium,statistical,3001,configs/scale32-medium-statistical.yaml,topologies/topology-32switch.yaml
-scale32-high-pdes,32,64,high,pdes,3001,configs/scale32-high-pdes.yaml,topologies/topology-32switch.yaml
-scale32-high-statistical,32,64,high,statistical,3001,configs/scale32-high-statistical.yaml,topologies/topology-32switch.yaml
-scale64-medium-pdes,64,128,medium,pdes,3001,configs/scale64-medium-pdes.yaml,topologies/topology-64switch.yaml
-scale64-medium-statistical,64,128,medium,statistical,3001,configs/scale64-medium-statistical.yaml,topologies/topology-64switch.yaml
-scale64-high-pdes,64,128,high,pdes,3001,configs/scale64-high-pdes.yaml,topologies/topology-64switch.yaml
-scale64-high-statistical,64,128,high,statistical,3001,configs/scale64-high-statistical.yaml,topologies/topology-64switch.yaml
-scale128-high-pdes,128,256,high,pdes,3001,configs/scale128-high-pdes.yaml,topologies/topology-128switch.yaml
-scale128-high-statistical,128,256,high,statistical,3001,configs/scale128-high-statistical.yaml,topologies/topology-128switch.yaml
+point,packet_num_messages,packet_payload_bytes,hosts,target_gbit,fluid_config,fluid_trace,packet_config
+small,1,262144,1056,2.214592512000,configs/fluid-small.yaml,traces/fluid-small.csv,configs/packet-dragonfly-minimal.yaml
+medium,2,262144,1056,4.429185024000,configs/fluid-medium.yaml,traces/fluid-medium.csv,configs/packet-dragonfly-minimal.yaml
+large,4,262144,1056,8.858370048000,configs/fluid-large.yaml,traces/fluid-large.csv,configs/packet-dragonfly-minimal.yaml

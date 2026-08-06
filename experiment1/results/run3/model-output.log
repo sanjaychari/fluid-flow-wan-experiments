@@ -1,11 +1,11 @@
 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
 
-Fri Jul 24 12:52:03 2026
+Thu Aug  6 11:51:00 2026
 
 ROSS Version: v8.1.0
 
 tw_net_start: Found world size to be 1 
-fluid-flow-wan config: workload=trace-traffic switches=4 terminals=8 interval_seconds=0.100000 num_send_intervals=3000 num_drain_intervals=20 backpressure_delay_ms=1.000000 trace_records=3000 traffic_trace_file=./traffic-trace.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30736
+fluid-flow-wan config: workload=trace-traffic switches=4 terminals=8 interval_seconds=0.100000 num_send_intervals=3000 num_drain_intervals=20 backpressure_delay_ms=1.000000 trace_records=3000 traffic_trace_file=./traffic-trace.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30744
 
 ROSS Core Configuration: 
 	Total PEs                                                    1
@@ -24,7 +24,7 @@ ROSS Event Memory Allocation:
 
 *** END SIMULATION ***
 
-fluid-flow-wan gid=0 switch=0 name=VLAN4012 ports=4 shared_buffer_gbit=100.000000 received_fragments=3000 sent_fragments=3001 buffered_residual_gbit=2.799003 sent_gbit=7517.653057 local_delivery_gbit=7517.653057 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=0 switch=0 name=VLAN4012 ports=4 shared_buffer_gbit=100.000000 received_fragments=3000 sent_fragments=3001 buffered_residual_gbit=0.239202 sent_gbit=7517.653057 local_delivery_gbit=7517.653057 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=1 switch=1 name=LBNL_VLAN3002 ports=3 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=2 switch=2 name=STARLIGHT ports=2 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
 fluid-flow-wan gid=3 switch=3 name=LBNL_VLAN3001 ports=3 shared_buffer_gbit=100.000000 received_fragments=0 sent_fragments=0 buffered_residual_gbit=0.000000 sent_gbit=0.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
@@ -40,7 +40,7 @@ fluid-flow-wan-terminal gid=11 terminal=7 switch=3 generated_gbit=0.000000 sent_
 	: Running Time = 0.0943 seconds
 
 TW Library Statistics:
-	Total Events Processed                                   36174
+	Total Events Processed                                   36175
 	Events Aborted (part of RBs)                                 0
 	Events Rolled Back                                           0
 	Event Ties Detected in PE Queues                             0
@@ -56,13 +56,13 @@ TW Library Statistics:
 	Fossil Collect Attempts                                      0
 	Total GVT Computations                                       0
 
-	Net Events Processed                                     36174
-	Event Rate (events/sec)                               383426.6
+	Net Events Processed                                     36175
+	Event Rate (events/sec)                               383425.0
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
 	Events Allocated                                         12305
-	Memory Allocated                                        420303
+	Memory Allocated                                        421327
 	Memory Wasted                                              170
 
 TW Data Structure sizes in bytes (sizeof):
@@ -76,12 +76,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          1.1093
-	Priority Queue (enq/deq)                                0.0182
+	Initialization                                          1.0177
+	Priority Queue (enq/deq)                                0.0186
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.2376
+	Event Processing                                        0.2375
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 

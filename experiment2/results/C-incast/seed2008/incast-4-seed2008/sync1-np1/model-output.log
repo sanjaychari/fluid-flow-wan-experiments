@@ -1,11 +1,11 @@
-/home/local/KHQ/sanjay.chari/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
+/workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
 
-Fri Jul 31 15:20:23 2026
+Thu Aug  6 12:02:23 2026
 
 ROSS Version: v8.1.0
 
 tw_net_start: Found world size to be 1 
-fluid-flow-wan config: workload=trace-traffic switches=64 terminals=128 interval_seconds=10.000000 num_send_intervals=20 num_drain_intervals=20 backpressure_delay_ms=1.000000 trace_records=80 traffic_trace_file=./traffic.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30736
+fluid-flow-wan config: workload=trace-traffic switches=64 terminals=128 interval_seconds=10.000000 num_send_intervals=20 num_drain_intervals=20 backpressure_delay_ms=1.000000 trace_records=80 traffic_trace_file=./traffic.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30744
 
 ROSS Core Configuration: 
 	Total PEs                                                    1
@@ -93,7 +93,7 @@ fluid-flow-wan-terminal gid=65 terminal=1 switch=0 generated_gbit=0.000000 sent_
 fluid-flow-wan-terminal gid=66 terminal=2 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=67 terminal=3 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=68 terminal=4 switch=2 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=69 terminal=5 switch=2 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=4 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=69 terminal=5 switch=2 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
 fluid-flow-wan-terminal gid=70 terminal=6 switch=3 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=71 terminal=7 switch=3 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=72 terminal=8 switch=4 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
@@ -129,7 +129,7 @@ fluid-flow-wan-terminal gid=101 terminal=37 switch=18 generated_gbit=0.000000 se
 fluid-flow-wan-terminal gid=102 terminal=38 switch=19 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=103 terminal=39 switch=19 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=104 terminal=40 switch=20 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=105 terminal=41 switch=20 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=2 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=105 terminal=41 switch=20 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
 fluid-flow-wan-terminal gid=106 terminal=42 switch=21 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=107 terminal=43 switch=21 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=108 terminal=44 switch=22 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
@@ -171,7 +171,7 @@ fluid-flow-wan-terminal gid=143 terminal=79 switch=39 generated_gbit=0.000000 se
 fluid-flow-wan-terminal gid=144 terminal=80 switch=40 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=145 terminal=81 switch=40 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=146 terminal=82 switch=41 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=147 terminal=83 switch=41 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=3 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=147 terminal=83 switch=41 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
 fluid-flow-wan-terminal gid=148 terminal=84 switch=42 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=149 terminal=85 switch=42 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=150 terminal=86 switch=43 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
@@ -186,7 +186,7 @@ fluid-flow-wan-terminal gid=158 terminal=94 switch=47 generated_gbit=0.000000 se
 fluid-flow-wan-terminal gid=159 terminal=95 switch=47 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=160 terminal=96 switch=48 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=161 terminal=97 switch=48 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=162 terminal=98 switch=49 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=2 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=162 terminal=98 switch=49 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
 fluid-flow-wan-terminal gid=163 terminal=99 switch=49 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=164 terminal=100 switch=50 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=165 terminal=101 switch=50 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
@@ -217,10 +217,10 @@ fluid-flow-wan-terminal gid=189 terminal=125 switch=62 generated_gbit=0.000000 s
 fluid-flow-wan-terminal gid=190 terminal=126 switch=63 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=191 terminal=127 switch=63 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 
-	: Running Time = 0.0146 seconds
+	: Running Time = 0.0147 seconds
 
 TW Library Statistics:
-	Total Events Processed                                    6106
+	Total Events Processed                                    6092
 	Events Aborted (part of RBs)                                 0
 	Events Rolled Back                                           0
 	Event Ties Detected in PE Queues                             0
@@ -236,13 +236,13 @@ TW Library Statistics:
 	Fossil Collect Attempts                                      0
 	Total GVT Computations                                       0
 
-	Net Events Processed                                      6106
-	Event Rate (events/sec)                               418907.8
+	Net Events Processed                                      6092
+	Event Rate (events/sec)                               415694.3
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
 	Events Allocated                                        196625
-	Memory Allocated                                       6715734
+	Memory Allocated                                       6732118
 	Memory Wasted                                              535
 
 TW Data Structure sizes in bytes (sizeof):
@@ -256,12 +256,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          6.4646
+	Initialization                                          6.5930
 	Priority Queue (enq/deq)                                0.0047
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.0361
+	Event Processing                                        0.0363
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -272,7 +272,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0378
+	Total Time (Note: Using Running Time above for Speedup)      0.0380
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

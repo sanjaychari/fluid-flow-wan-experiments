@@ -1,6 +1,0 @@
-switches,load,pdes_case,statistical_case
-32,medium,scale32-medium-pdes,scale32-medium-statistical
-32,high,scale32-high-pdes,scale32-high-statistical
-64,medium,scale64-medium-pdes,scale64-medium-statistical
-64,high,scale64-high-pdes,scale64-high-statistical
-128,high,scale128-high-pdes,scale128-high-statistical

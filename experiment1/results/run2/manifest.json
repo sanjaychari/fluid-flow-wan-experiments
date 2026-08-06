@@ -1,5 +1,5 @@
 {
-  "codes_commit": "e4b90e1708869faba1b903c657a3d95504eb9092",
+  "codes_commit": "753e614222f64c339fbf848bb26a6a356c0e03d6",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -13,7 +13,7 @@
   "compiler": [
     "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
   ],
-  "created_utc": "2026-07-24T16:52:03.198540+00:00",
+  "created_utc": "2026-08-06T15:50:59.857431+00:00",
   "host": "anonymous-host",
   "input_sha256": {
     "/workspace/fluid-flow-wan-experiments/experiment1/results/run2/config.yaml": "652148d8c0895c7e31d1ec4ed8b5086c9622ccc1678c927746e41f3fc4abfe51",
@@ -35,5 +35,5 @@
   "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 1.022505847
+  "wall_clock_sec": 0.949511583
 }

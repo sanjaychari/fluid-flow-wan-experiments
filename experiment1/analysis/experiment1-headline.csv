@@ -1,2 +1,2 @@
 runs,flows,complete_matrix,max_whole_run_relative_error_pct,max_delay_adjusted_1s_nmae_pct,max_source_backlog_gbit,max_ready_queue_gbit,max_shared_buffer_occupied_gbit,total_dropped_gbit,volume_threshold_pct,nmae_threshold_pct,pass
-8,12,1,0.181872,7.205113,0.000000000,0.000000000,0.000000000,0.000000000,1.0,10.0,1
+8,12,1,0.181870,6.387675,0.000000000,0.000000000,0.000000000,0.000000000,1.0,10.0,1

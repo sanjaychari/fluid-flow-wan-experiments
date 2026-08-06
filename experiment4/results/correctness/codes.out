@@ -1,0 +1,100 @@
+/workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- /workspace/fluid-flow-wan-experiments/experiment4/results/correctness/codes.yaml 
+
+Thu Aug  6 14:27:08 2026
+
+ROSS Version: v8.1.0
+
+tw_net_start: Found world size to be 1 
+fluid-flow-wan config: workload=trace-traffic switches=2 terminals=4 interval_seconds=1.000000 num_send_intervals=1 num_drain_intervals=8 backpressure_delay_ms=1.000000 trace_records=2 traffic_trace_file=/workspace/fluid-flow-wan-experiments/experiment4/results/correctness/traffic.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30744
+
+ROSS Core Configuration: 
+	Total PEs                                                    1
+	Total KPs                                          [Nodes (1) x KPs (16)] 16
+	Total LPs                                                    6
+	Simulation End Time                                31536000000000000.00
+	LP-to-PE Mapping                                   model defined
+
+
+ROSS Event Memory Allocation:
+	Model events                                              6145
+	Network events                                              16
+	Total events                                              6160
+
+*** START SEQUENTIAL SIMULATION ***
+
+*** END SIMULATION ***
+
+fluid-flow-wan gid=0 switch=0 name=S0 ports=3 shared_buffer_gbit=1000.000000 received_fragments=6 sent_fragments=6 buffered_residual_gbit=0.000000 sent_gbit=20.000000 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=1 switch=1 name=S1 ports=3 shared_buffer_gbit=1000.000000 received_fragments=6 sent_fragments=6 buffered_residual_gbit=0.000000 sent_gbit=20.000000 local_delivery_gbit=20.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan-terminal gid=2 terminal=0 switch=0 generated_gbit=10.000000 sent_gbit=10.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=3 terminal=1 switch=0 generated_gbit=10.000000 sent_gbit=10.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=4 terminal=2 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=10.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=3
+fluid-flow-wan-terminal gid=5 terminal=3 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=10.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=3
+
+	: Running Time = 0.0003 seconds
+
+TW Library Statistics:
+	Total Events Processed                                      83
+	Events Aborted (part of RBs)                                 0
+	Events Rolled Back                                           0
+	Event Ties Detected in PE Queues                             0
+	Efficiency                                              100.00 %
+	Total Remote (shared mem) Events Processed                   0
+	Percent Remote Events                                     0.00 %
+	Total Remote (network) Events Processed                      0
+	Percent Remote Events                                     0.00 %
+
+	Total Roll Backs                                             0
+	Primary Roll Backs                                           0
+	Secondary Roll Backs                                         0
+	Fossil Collect Attempts                                      0
+	Total GVT Computations                                       0
+
+	Net Events Processed                                        83
+	Event Rate (events/sec)                               279461.3
+	Total Events Scheduled Past End Time                         0
+
+TW Memory Statistics:
+	Events Allocated                                          6161
+	Memory Allocated                                        210967
+	Memory Wasted                                              312
+
+TW Data Structure sizes in bytes (sizeof):
+	PE struct                                                 1328
+	KP struct                                                  320
+	LP struct                                                  320
+	LP Model struct                                          34952
+	LP RNGs                                                     80
+	Total LP                                                 35352
+	Event struct                                               344
+	Event struct with Model                                  33112
+
+TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
+	Initialization                                          0.8106
+	Priority Queue (enq/deq)                                0.0000
+	AVL Tree (insert/delete)                                0.0000
+	LZ4 (de)compression                                     0.0000
+	Buddy system                                            0.0000
+	Event Processing                                        0.0007
+	Event Cancel                                            0.0000
+	Event Abort                                             0.0000
+
+	GVT                                                     0.0000
+	Fossil Collect                                          0.0000
+	Primary Rollbacks                                       0.0000
+	Network Read                                            0.0000
+	Other Network                                           0.0000
+	Instrumentation (computation)                           0.0000
+	Instrumentation (write)                                 0.0000
+	Total Time (Note: Using Running Time above for Speedup)      0.0008
+
+TW GVT Statistics: MPI AllReduce
+	GVT Interval                                                16
+	GVT Real Time Interval (cycles)                    0
+	GVT Real Time Interval (sec)                        0.00000000
+	Batch Size                                                  16
+
+	Forced GVT                                                   0
+	Total GVT Computations                                       0
+	Total All Reduce Calls                                       0
+	Average Reduction / GVT                                   -nan

@@ -1,4 +1,0 @@
-point,packet_num_messages,packet_payload_bytes,hosts,target_gbit,fluid_config,fluid_trace,packet_config
-small,1,262144,1056,2.214592512000,configs/fluid-small.yaml,traces/fluid-small.csv,configs/packet-dragonfly-minimal.yaml
-medium,2,262144,1056,4.429185024000,configs/fluid-medium.yaml,traces/fluid-medium.csv,configs/packet-dragonfly-minimal.yaml
-large,4,262144,1056,8.858370048000,configs/fluid-large.yaml,traces/fluid-large.csv,configs/packet-dragonfly-minimal.yaml
