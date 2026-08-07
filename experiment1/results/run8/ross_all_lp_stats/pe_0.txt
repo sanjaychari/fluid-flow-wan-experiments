@@ -1,13 +1,13 @@
 Time spent processing events for each LP:
-LPID: 0	-  Processing time: 9.772139e-02	-  Events processed: 6003
-LPID: 1	-  Processing time: 1.546224e-01	-  Events processed: 9028
-LPID: 2	-  Processing time: 1.299246e-01	-  Events processed: 8604
-LPID: 3	-  Processing time: 1.471195e-01	-  Events processed: 9242
-LPID: 4	-  Processing time: 5.159487e-02	-  Events processed: 6062
-LPID: 5	-  Processing time: 1.395064e-02	-  Events processed: 3061
-LPID: 6	-  Processing time: 2.268534e-02	-  Events processed: 6061
-LPID: 7	-  Processing time: 1.405172e-02	-  Events processed: 3061
-LPID: 8	-  Processing time: 5.281350e-02	-  Events processed: 6062
-LPID: 9	-  Processing time: 5.157059e-02	-  Events processed: 6062
-LPID: 10	-  Processing time: 2.056013e-02	-  Events processed: 5364
-LPID: 11	-  Processing time: 2.055036e-02	-  Events processed: 5376
+LPID: 0	-  Processing time: 9.646525e-02	-  Events processed: 6003
+LPID: 1	-  Processing time: 1.516216e-01	-  Events processed: 9028
+LPID: 2	-  Processing time: 1.533172e-01	-  Events processed: 9028
+LPID: 3	-  Processing time: 1.894255e-01	-  Events processed: 12006
+LPID: 4	-  Processing time: 5.192504e-02	-  Events processed: 6062
+LPID: 5	-  Processing time: 1.392360e-02	-  Events processed: 3061
+LPID: 6	-  Processing time: 2.248136e-02	-  Events processed: 6061
+LPID: 7	-  Processing time: 1.396249e-02	-  Events processed: 3061
+LPID: 8	-  Processing time: 5.124722e-02	-  Events processed: 6062
+LPID: 9	-  Processing time: 5.192772e-02	-  Events processed: 6062
+LPID: 10	-  Processing time: 2.251168e-02	-  Events processed: 6061
+LPID: 11	-  Processing time: 2.340909e-02	-  Events processed: 6061

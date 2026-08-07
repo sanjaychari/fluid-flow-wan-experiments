@@ -1,15 +1,15 @@
-Run directory: /home/local/KHQ/sanjay.chari/fluid-flow-wan-experiments/experiment1/results/run6
+Run directory: /workspace/fluid-flow-wan-experiments/experiment1/results/run6
 Mode: pdes
 
 flow 6001: STAR1 vlan3002 -> STAR2 vlan3001 via StarLight
   physical offered total : 84.188909 Gbit
   physical received total: 84.036068 Gbit
-  CODES received total   : 84.188904 Gbit
+  CODES received total   : 84.188895 Gbit
   total-volume error     : +0.1819%
-  1-s NMAE raw           : 11.0574%
-  1-s NMAE delay-adjusted: 6.1943%
+  1-s NMAE raw           : 2.9825%
+  1-s NMAE delay-adjusted: 10.9821%
   modeled delay removed  : 4 intervals (0.4 s)
 
 aggregate physical received: 84.036068 Gbit
-aggregate CODES received   : 84.188904 Gbit
+aggregate CODES received   : 84.188895 Gbit
 aggregate volume error     : +0.1819%
