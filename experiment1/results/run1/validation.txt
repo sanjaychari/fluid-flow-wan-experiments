@@ -1,4 +1,4 @@
-Run directory: /workspace/fluid-flow-wan-experiments/experiment1/results/run1
+Run directory: /home/local/KHQ/sanjay.chari/fluid-flow-wan-experiments/experiment1/results/run1
 Mode: pdes
 
 flow 1001: STAR1->STAR2 vlan4012

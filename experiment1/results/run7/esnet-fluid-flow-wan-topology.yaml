@@ -11,34 +11,36 @@
 #
 # VLAN3002 and VLAN3001 are represented as separate logical LBNL switching
 # domains so deterministic routing must traverse the StarLight L3 switch.
-# 100 Gbps is used for eth100 access and the StarLight-facing full-duplex path.
+#
+# The topology uses the documented physical capacities:
+#   host-facing links: 200 Gbps
+#   inter-switch links: 400 Gbps
+#   shared switch buffer: 113.66 MB = 909.28 Mbit
 
 topology:
   switches:
     VLAN4012:
       terminals: 4
-      terminal_bandwidth: "100 Gbps"
-      switch_buffer: "100 Gb"
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
       connections: {}
 
     LBNL_VLAN3002:
       terminals: 2
-      terminal_bandwidth: "100 Gbps"
-      switch_buffer: "100 Gb"
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
       connections:
-        STARLIGHT: "100 Gbps"
-
+        STARLIGHT: "400 Gbps"
     STARLIGHT:
       terminals: 0
-      terminal_bandwidth: "100 Gbps"
-      switch_buffer: "100 Gb"
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
       connections:
-        LBNL_VLAN3002: "100 Gbps"
-        LBNL_VLAN3001: "100 Gbps"
-
+        LBNL_VLAN3002: "400 Gbps"
+        LBNL_VLAN3001: "400 Gbps"
     LBNL_VLAN3001:
       terminals: 2
-      terminal_bandwidth: "100 Gbps"
-      switch_buffer: "100 Gb"
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
       connections:
-        STARLIGHT: "100 Gbps"
+        STARLIGHT: "400 Gbps"

@@ -1,4 +1,4 @@
-Run directory: /workspace/fluid-flow-wan-experiments/experiment1/results/run6
+Run directory: /home/local/KHQ/sanjay.chari/fluid-flow-wan-experiments/experiment1/results/run6
 Mode: pdes
 
 flow 6001: STAR1 vlan3002 -> STAR2 vlan3001 via StarLight

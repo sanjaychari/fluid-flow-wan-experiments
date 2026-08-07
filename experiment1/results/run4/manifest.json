@@ -1,5 +1,5 @@
 {
-  "codes_commit": "753e614222f64c339fbf848bb26a6a356c0e03d6",
+  "codes_commit": "d985f8ec2755ff81b377254ccf9f1385504e947a",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -13,11 +13,11 @@
   "compiler": [
     "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
   ],
-  "created_utc": "2026-08-06T20:34:58.249383+00:00",
+  "created_utc": "2026-08-07T00:32:23.677865+00:00",
   "host": "anonymous-host",
   "input_sha256": {
     "/workspace/fluid-flow-wan-experiments/experiment1/results/run4/config.yaml": "868ff51ccd2fe9aadb9023b4a02cf2d8d010d3e31d70a3e922214d4734f669a5",
-    "/workspace/fluid-flow-wan-experiments/experiment1/results/run4/esnet-fluid-flow-wan-topology.yaml": "ceb09260eac95ce70a352e6eeefcac0b409bdaae3929b7aa55e24d0bd31211a6",
+    "/workspace/fluid-flow-wan-experiments/experiment1/results/run4/esnet-fluid-flow-wan-topology.yaml": "b656bafe4638bb615f49913231bbd355b98f3e4c7d62609492a69c00443cbf0f",
     "/workspace/fluid-flow-wan-experiments/experiment1/results/run4/physical-summary.csv": "4b69eadb8c143a91f6e58b29774ed761de4363903082166d256ed0aed2373773",
     "/workspace/fluid-flow-wan-experiments/experiment1/results/run4/receiver-reference.csv": "f13af2da47b0575983599f5f2d3afe5ca6272b1340866c6cbc64520b4d0e87c8",
     "/workspace/fluid-flow-wan-experiments/experiment1/results/run4/traffic-trace.csv": "b8c62269da770b6f5a9bbb3d55d2557677351ab118921c1bc86fbe5bcfea3484"
@@ -35,5 +35,5 @@
   "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 1.076979909
+  "wall_clock_sec": 1.115939741
 }

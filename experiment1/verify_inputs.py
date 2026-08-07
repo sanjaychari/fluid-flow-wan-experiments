@@ -43,6 +43,55 @@ def main() -> None:
             f"{sum(topo.terminal_counts)} terminals"
         )
 
+    expected_terminal_mbps = 200_000.0
+    for switch, bandwidth_mbps in zip(
+        topo.switches, topo.terminal_bandwidth_mbps
+    ):
+        if not math.isclose(
+            bandwidth_mbps,
+            expected_terminal_mbps,
+            rel_tol=0.0,
+            abs_tol=1e-9,
+        ):
+            raise SystemExit(
+                f"{switch}: terminal bandwidth is {bandwidth_mbps} Mbps; "
+                f"expected {expected_terminal_mbps} Mbps"
+            )
+
+    expected_buffer_mbit = 909.28
+    for switch, buffer_mbit in zip(
+        topo.switches, topo.switch_buffer_mbit
+    ):
+        if not math.isclose(
+            buffer_mbit,
+            expected_buffer_mbit,
+            rel_tol=0.0,
+            abs_tol=1e-9,
+        ):
+            raise SystemExit(
+                f"{switch}: switch buffer is {buffer_mbit} Mbit; "
+                f"expected {expected_buffer_mbit} Mbit"
+            )
+
+    expected_switch_link_mbps = 400_000.0
+    if len(topo.edge_mbps) != 4:
+        raise SystemExit(
+            f"expected 4 directed switch links, found {len(topo.edge_mbps)}"
+        )
+
+    for (src, dst), bandwidth_mbps in topo.edge_mbps.items():
+        if not math.isclose(
+            bandwidth_mbps,
+            expected_switch_link_mbps,
+            rel_tol=0.0,
+            abs_tol=1e-9,
+        ):
+            raise SystemExit(
+                f"{topo.switches[src]} -> {topo.switches[dst]} bandwidth "
+                f"is {bandwidth_mbps} Mbps; expected "
+                f"{expected_switch_link_mbps} Mbps"
+            )
+
     total_flows = 0
     for run in RUNS:
         case = INPUTS / f"run{run}"

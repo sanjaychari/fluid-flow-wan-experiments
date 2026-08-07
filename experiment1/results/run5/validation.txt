@@ -1,13 +1,13 @@
-Run directory: /workspace/fluid-flow-wan-experiments/experiment1/results/run5
+Run directory: /home/local/KHQ/sanjay.chari/fluid-flow-wan-experiments/experiment1/results/run5
 Mode: pdes
 
 flow 5001: LBNL1->LBNL2 vlan4012
   physical offered total : 8607.286260 Gbit
   physical received total: 8606.255468 Gbit
-  CODES received total   : 8607.291790 Gbit
+  CODES received total   : 8607.291800 Gbit
   total-volume error     : +0.0120%
-  1-s NMAE raw           : 4.3563%
-  1-s NMAE delay-adjusted: 3.6437%
+  1-s NMAE raw           : 4.4214%
+  1-s NMAE delay-adjusted: 3.8379%
   modeled delay removed  : 2 intervals (0.2 s)
 
 flow 5002: STAR1->STAR2 vlan4012
@@ -15,10 +15,10 @@ flow 5002: STAR1->STAR2 vlan4012
   physical received total: 6160.185693 Gbit
   CODES received total   : 6160.173100 Gbit
   total-volume error     : -0.0002%
-  1-s NMAE raw           : 4.2536%
-  1-s NMAE delay-adjusted: 4.5969%
+  1-s NMAE raw           : 4.1827%
+  1-s NMAE delay-adjusted: 4.2352%
   modeled delay removed  : 2 intervals (0.2 s)
 
 aggregate physical received: 14766.441161 Gbit
-aggregate CODES received   : 14767.464890 Gbit
+aggregate CODES received   : 14767.464900 Gbit
 aggregate volume error     : +0.0069%

@@ -1,11 +1,11 @@
-/workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
+/home/local/KHQ/sanjay.chari/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
 
-Thu Aug  6 16:35:01 2026
+Thu Aug  6 20:32:26 2026
 
 ROSS Version: v8.1.0
 
 tw_net_start: Found world size to be 1 
-fluid-flow-wan config: workload=trace-traffic switches=4 terminals=8 interval_seconds=0.100000 num_send_intervals=3030 num_drain_intervals=20 backpressure_delay_ms=1.000000 trace_records=6000 traffic_trace_file=./traffic-trace.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30744
+fluid-flow-wan config: workload=trace-traffic switches=4 terminals=8 interval_seconds=0.100000 num_send_intervals=3030 num_drain_intervals=20 backpressure_delay_ms=1.000000 trace_records=6000 traffic_trace_file=./traffic-trace.csv output_data_unit=Mb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30744
 
 ROSS Core Configuration: 
 	Total PEs                                                    1
@@ -24,23 +24,23 @@ ROSS Event Memory Allocation:
 
 *** END SIMULATION ***
 
-fluid-flow-wan gid=0 switch=0 name=VLAN4012 ports=4 shared_buffer_gbit=100.000000 received_fragments=3000 sent_fragments=3001 buffered_residual_gbit=2.919262 sent_gbit=8949.595153 local_delivery_gbit=8949.595153 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=1 switch=1 name=LBNL_VLAN3002 ports=3 shared_buffer_gbit=100.000000 received_fragments=3000 sent_fragments=3000 buffered_residual_gbit=0.000000 sent_gbit=84.694742 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=2 switch=2 name=STARLIGHT ports=2 shared_buffer_gbit=100.000000 received_fragments=3000 sent_fragments=2308 buffered_residual_gbit=0.000000 sent_gbit=84.694742 local_delivery_gbit=0.000000 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=3 switch=3 name=LBNL_VLAN3001 ports=3 shared_buffer_gbit=100.000000 received_fragments=2308 sent_fragments=2308 buffered_residual_gbit=0.000000 sent_gbit=84.694742 local_delivery_gbit=84.694742 dropped_gbit=0.000000 ready_queue_gbit=0.000000 shared_buffer_occupied_gbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan-terminal gid=4 terminal=0 switch=0 generated_gbit=8949.595153 sent_gbit=8949.595153 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
-fluid-flow-wan-terminal gid=5 terminal=1 switch=0 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=8949.595153 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=3001
-fluid-flow-wan-terminal gid=6 terminal=2 switch=0 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=7 terminal=3 switch=0 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=8 terminal=4 switch=1 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=9 terminal=5 switch=1 generated_gbit=84.694742 sent_gbit=84.694742 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
-fluid-flow-wan-terminal gid=10 terminal=6 switch=3 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=11 terminal=7 switch=3 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=84.694742 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=2308
+fluid-flow-wan gid=0 switch=0 name=VLAN4012 ports=4 shared_buffer_mbit=909.280000 received_fragments=3000 sent_fragments=3000 buffered_residual_mbit=0.000000 sent_mbit=8949595.153320 local_delivery_mbit=8949595.153320 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=1 switch=1 name=LBNL_VLAN3002 ports=3 shared_buffer_mbit=909.280000 received_fragments=3000 sent_fragments=3000 buffered_residual_mbit=0.000000 sent_mbit=84694.741550 local_delivery_mbit=0.000000 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=2 switch=2 name=STARLIGHT ports=2 shared_buffer_mbit=909.280000 received_fragments=3000 sent_fragments=2308 buffered_residual_mbit=0.000000 sent_mbit=84694.741550 local_delivery_mbit=0.000000 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan gid=3 switch=3 name=LBNL_VLAN3001 ports=3 shared_buffer_mbit=909.280000 received_fragments=2308 sent_fragments=2308 buffered_residual_mbit=0.000000 sent_mbit=84694.741550 local_delivery_mbit=84694.741550 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
+fluid-flow-wan-terminal gid=4 terminal=0 switch=0 generated_mbit=8949595.153320 sent_mbit=8949595.153320 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=5 terminal=1 switch=0 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=8949595.153320 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=3000
+fluid-flow-wan-terminal gid=6 terminal=2 switch=0 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
+fluid-flow-wan-terminal gid=7 terminal=3 switch=0 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
+fluid-flow-wan-terminal gid=8 terminal=4 switch=1 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
+fluid-flow-wan-terminal gid=9 terminal=5 switch=1 generated_mbit=84694.741550 sent_mbit=84694.741550 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=10 terminal=6 switch=3 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
+fluid-flow-wan-terminal gid=11 terminal=7 switch=3 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=84694.741550 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=2308
 
-	: Running Time = 0.2022 seconds
+	: Running Time = 0.2156 seconds
 
 TW Library Statistics:
-	Total Events Processed                                   57659
+	Total Events Processed                                   57656
 	Events Aborted (part of RBs)                                 0
 	Events Rolled Back                                           0
 	Event Ties Detected in PE Queues                             0
@@ -56,8 +56,8 @@ TW Library Statistics:
 	Fossil Collect Attempts                                      0
 	Total GVT Computations                                       0
 
-	Net Events Processed                                     57659
-	Event Rate (events/sec)                               285124.4
+	Net Events Processed                                     57656
+	Event Rate (events/sec)                               267454.6
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -76,12 +76,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          1.0471
-	Priority Queue (enq/deq)                                0.0353
+	Initialization                                          1.0553
+	Priority Queue (enq/deq)                                0.0351
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.5125
+	Event Processing                                        0.5471
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -92,7 +92,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.5242
+	Total Time (Note: Using Running Time above for Speedup)      0.5588
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

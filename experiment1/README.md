@@ -6,7 +6,7 @@ experiments used for the Fluid-Flow WAN evaluation.
 The committed `inputs/` files are the exact normalized inputs from the archived
 validation artifact:
 
-- one common four-switch/eight-terminal ESNet topology;
+- one common four-switch/eight-terminal ESNet logical topology with 200-Gbps host-facing links, 400-Gbps inter-switch links, and 909.28-Mbit shared switch buffers;
 - one CODES configuration per physical experiment;
 - the sender-side 100 ms Fluid-Flow WAN traffic trace used by CODES;
 - the physical receiver-side 1 s volume reference used for validation; and
@@ -15,6 +15,15 @@ validation artifact:
 The original 1 s iperf sender volumes had already been split uniformly across
 ten 100 ms fluid intervals in the archived `traffic-trace.csv` files. The run
 scripts intentionally use these exact traces instead of regenerating them.
+Each `offered_gbit` value is therefore sender-side application traffic supplied
+to the source terminal during one 100 ms simulation interval. The subdivision
+preserves every measured 1 s sender total and assumes uniform transmission
+within that 1 s observation window.
+
+The common logical topology uses 200-Gbps terminal-facing links, 400-Gbps
+inter-switch links, and a 909.28-Mbit shared buffer per modeled switch. The
+traffic traces are not scaled to those capacities: they replay the measured
+iperf sender volumes.
 
 ## Scenarios
 
