@@ -46,13 +46,37 @@ EXPECTED_GBIT=500
 
 mkdir -p "$RESULTS"
 
-echo -n "SimGrid version: "
-/usr/bin/pkg-config --modversion simgrid 2>/dev/null || echo "unknown"
+command -v pkg-config >/dev/null 2>&1 || {
+    echo "missing pkg-config; install it before running Experiment 4" >&2
+    exit 1
+}
 
-g++ -std=c++17 -O2 \
+pkg-config --exists simgrid || {
+    echo "SimGrid was not found by pkg-config." >&2
+    echo "On macOS with Homebrew: brew install simgrid pkg-config" >&2
+    exit 1
+}
+
+echo -n "SimGrid version: "
+pkg-config --modversion simgrid
+
+SIMGRID_CFLAGS="$(pkg-config --cflags simgrid)"
+SIMGRID_LIBS="$(pkg-config --libs simgrid)"
+
+# Homebrew SimGrid depends on Boost, but SimGrid's pkg-config metadata does
+# not necessarily propagate the Boost header path to the compiler.
+if [[ "$(uname -s)" == "Darwin" ]] && command -v brew >/dev/null 2>&1; then
+    BOOST_PREFIX="$(brew --prefix boost 2>/dev/null || true)"
+    if [[ -n "$BOOST_PREFIX" ]]; then
+        SIMGRID_CFLAGS="$SIMGRID_CFLAGS -I$BOOST_PREFIX/include"
+    fi
+fi
+
+c++ -std=c++17 -O2 \
+    $SIMGRID_CFLAGS \
     "$E4/simgrid-flow-benchmark.cpp" \
     -o "$SIMGRID_EXE" \
-    -lsimgrid
+    $SIMGRID_LIBS
 
 
 set_codes_drain()

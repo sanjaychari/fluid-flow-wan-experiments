@@ -26,16 +26,27 @@ else
     echo "model must be fluid or packet" >&2; exit 2
 fi
 
-echo "[E4] $POINT $MODEL $leaf"
-start_ns=$(date +%s%N)
+echo "[E3] $POINT $MODEL $leaf"
+
+# Python time_ns() is portable across macOS and Linux; macOS date does not
+# support GNU date's %N nanosecond conversion.
+start_ns=$(python3 -c 'import time; print(time.time_ns())')
+
 set +e
-(cd "$OUT" && /usr/bin/time -v -o resource.txt "${cmd[@]}") > "$OUT/model-output.log" 2>&1
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    # BSD/macOS time: -l prints resource usage and -o writes it to a file.
+    (cd "$OUT" && /usr/bin/time -l -o resource.txt "${cmd[@]}") > "$OUT/model-output.log" 2>&1
+else
+    # GNU time: -v prints verbose resource usage.
+    (cd "$OUT" && /usr/bin/time -v -o resource.txt "${cmd[@]}") > "$OUT/model-output.log" 2>&1
+fi
 rc=$?
 set -e
-end_ns=$(date +%s%N)
+
+end_ns=$(python3 -c 'import time; print(time.time_ns())')
 wall=$(python3 - "$start_ns" "$end_ns" <<'PY'
 import sys
-print((int(sys.argv[2])-int(sys.argv[1]))/1e9)
+print((int(sys.argv[2]) - int(sys.argv[1])) / 1e9)
 PY
 )
 manifest_args=(); for p in "${inputs[@]}"; do manifest_args+=(--input "$p"); done

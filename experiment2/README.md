@@ -14,7 +14,7 @@ The setup creates the four scenario families from the experiment plan:
 - A: low / medium / high load, traffic seeds 2001–2010
 - B: 25 / 100 / 400 Gb shared buffers × aggressive (0.50/0.30) or moderate (0.80/0.50) PAUSE × ten paired seeds
 - C: 4 / 8 / 16-source persistent incast × ten deterministic source-set seeds
-- D: 8 elephant flows plus one 1 Gbps victim across S45->S44, with the direct reverse edge absent versus present at the same bottleneck bandwidth
+- D: 8 elephant flows plus one 1 Gbps victim across S44->S45, with that direct reverse edge absent versus present at the S45->S44 bottleneck bandwidth
 
 ```bash
 ./experiment2/setup.sh

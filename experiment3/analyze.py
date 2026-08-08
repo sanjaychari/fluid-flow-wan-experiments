@@ -16,11 +16,20 @@ for point,case in cases.items():
             if not m or not e: raise RuntimeError(f"missing runtime/events in {log}")
             runtime=float(m.group(1)); events=int(e.group(1))
             resource=(log.parent/"resource.txt").read_text(errors="replace") if (log.parent/"resource.txt").is_file() else ""
-            rss=re.search(r"Maximum resident set size \(kbytes\):\s*(\d+)",resource)
+            # GNU /usr/bin/time -v reports maximum RSS in KiB. BSD/macOS
+            # /usr/bin/time -l reports maximum resident set size in bytes.
+            rss_gnu=re.search(r"Maximum resident set size \(kbytes\):\s*(\d+)",resource)
+            rss_bsd=re.search(r"(?im)^\s*(\d+)\s+maximum resident set size\s*$",resource)
+            if rss_gnu:
+                peak_rss_kb=int(rss_gnu.group(1))
+            elif rss_bsd:
+                peak_rss_kb=int(rss_bsd.group(1)) // 1024
+            else:
+                peak_rss_kb=0
             rows.append({"point":point,"model":model,"repeat":rep,"hosts":int(case["hosts"]),"target_gbit":target,
                          "runtime_sec":runtime,"net_events":events,"net_event_rate_per_sec":events/runtime,
                          "events_per_simulated_gbit":events/target,"simulated_gbit_per_wall_sec":target/runtime,
-                         "peak_rss_kb":int(rss.group(1)) if rss else 0})
+                         "peak_rss_kb":peak_rss_kb})
 out=ROOT/"analysis"/"experiment3-runs.csv"; out.parent.mkdir(parents=True,exist_ok=True)
 with out.open("w",newline="") as f:
     w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n"); w.writeheader(); w.writerows(rows)

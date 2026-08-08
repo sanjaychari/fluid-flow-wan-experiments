@@ -41,6 +41,7 @@ sections:
     egress_model: pdes
     debug_prints: 0
     backpressure_delay_ms: 1.0
+    pause_enabled: 1
     pause_high_watermark_fraction: {pause_hi:.2f}
     pause_low_watermark_fraction: {pause_lo:.2f}
     terminal_log_path: "logs/terminal-events.csv"

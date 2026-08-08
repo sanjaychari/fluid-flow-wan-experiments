@@ -1,0 +1,4 @@
+interval,flow_id,source_terminal,destination_terminal,offered_gbit
+0,1,0,3,500
+0,2,1,3,40
+10,3,2,3,200

@@ -1,75 +1,40 @@
 #!/usr/bin/env bash
 set -euo pipefail
+E1="$(cd "$(dirname "$0")" && pwd)"
+CODES_ROOT="${CODES_ROOT:-$HOME/codes}"
+CODES_BUILD="${CODES_BUILD:-$CODES_ROOT/build}"
+CODES_EXE="$CODES_BUILD/src/model-net-fluid-flow-wan-trace-traffic"
+CASE="$E1/results/correctness"
+SIMGRID_EXE="$E1/simgrid-flow-benchmark"
+"$E1/setup.sh"
+rm -rf "$CASE" "$E1/analysis"
+mkdir -p "$CASE" "$E1/analysis"
+cp "$E1/inputs/topology.yaml" "$CASE/topology.yaml"
+cp "$E1/inputs/traffic.csv" "$CASE/traffic.csv"
+cp "$E1/inputs/codes.yaml" "$CASE/codes.yaml"
+cp "$E1/inputs/platform.xml" "$CASE/platform.xml"
+CXX="${CXX:-c++}"
+# shellcheck disable=SC2046
+"$CXX" -std=c++17 -O2 -I"$(brew --prefix boost)/include" "$E1/simgrid-flow-benchmark.cpp" -o "$SIMGRID_EXE" $(pkg-config --cflags --libs simgrid)
 
-ROOT="$(cd "$(dirname "$0")" && pwd)"
-source "$ROOT/../common/env.sh"
+echo "[1] Running CODES dynamic flow-sharing case"
+(
+    cd "$CODES_BUILD"
+    mpirun -np 1 "$CODES_EXE" --sync=1 -- "$CASE/codes.yaml"
+) > "$CASE/codes.out" 2>&1
 
-require_executable "$TRACE_BIN"
-"$ROOT/setup.sh"
+echo "[1] Running SimGrid analytical flow-sharing case"
+"$SIMGRID_EXE" \
+    --cfg=network/model:CM02 \
+    --cfg=network/TCP-gamma:0 \
+    --cfg=network/weight-S:0 \
+    --cfg=network/crosstraffic:0 \
+    "$CASE/platform.xml" "$CASE/traffic.csv" "$CASE/simgrid-fct.csv" \
+    > "$CASE/simgrid.out" 2>&1
 
-RUNS="${RUNS:-1 2 3 4 5 6 7 8}"
-
-for run in $RUNS; do
-    case "$run" in
-        1|2|3|4|5|6|7|8) ;;
-        *) echo "invalid Experiment 1 run: $run" >&2; exit 1 ;;
-    esac
-
-    src="$ROOT/inputs/run$run"
-    out="$ROOT/results/run$run"
-
-    rm -rf "$out"
-    mkdir -p "$out/logs"
-
-    cp "$src/config.yaml" "$out/config.yaml"
-    cp "$src/traffic-trace.csv" "$out/traffic-trace.csv"
-    cp "$src/receiver-reference.csv" "$out/receiver-reference.csv"
-    cp "$src/physical-summary.csv" "$out/physical-summary.csv"
-    cp "$ROOT/inputs/esnet-fluid-flow-wan-topology.yaml" \
-       "$out/esnet-fluid-flow-wan-topology.yaml"
-
-    echo "[Experiment 1] run $run"
-
-    start_ns=$(date +%s%N)
-    set +e
-    (
-        cd "$out"
-        "$MPIEXEC" "$MPI_NP_FLAG" 1 \
-            "$TRACE_BIN" --sync=1 -- config.yaml
-    ) > "$out/model-output.log" 2>&1
-    rc=$?
-    set -e
-    end_ns=$(date +%s%N)
-
-    wall=$(python3 - "$start_ns" "$end_ns" <<'PY'
-import sys
-print((int(sys.argv[2]) - int(sys.argv[1])) / 1e9)
-PY
-)
-
-    python3 "$ROOT/../common/write_manifest.py" \
-        --output "$out/manifest.json" \
-        --codes-root "$CODES_ROOT" \
-        --ross-root "$ROSS_ROOT" \
-        --command "$MPIEXEC $MPI_NP_FLAG 1 $TRACE_BIN --sync=1 -- config.yaml" \
-        --sync 1 \
-        --ranks 1 \
-        --mode pdes \
-        --wall-clock-sec "$wall" \
-        --return-code "$rc" \
-        --interval-seconds 0.1 \
-        --input "$out/config.yaml" \
-        --input "$out/esnet-fluid-flow-wan-topology.yaml" \
-        --input "$out/traffic-trace.csv" \
-        --input "$out/receiver-reference.csv" \
-        --input "$out/physical-summary.csv"
-
-    if (( rc != 0 )); then
-        echo "Experiment 1 run $run failed (rc=$rc)" >&2
-        tail -100 "$out/model-output.log" >&2
-        exit "$rc"
-    fi
-
-done
-
-python3 "$ROOT/analyze.py"
+echo "[1] Comparing analytical, CODES, and SimGrid results"
+python3 "$E1/analyze.py" \
+    "$CASE/fluid-segment-events.csv" \
+    "$CASE/simgrid-fct.csv" \
+    "$E1/analysis/interval-comparison.csv" \
+    | tee "$E1/analysis/correctness-summary.csv"

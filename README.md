@@ -16,7 +16,7 @@ These paths can be overridden with environment variables.
 
 ## Repository layout
 
-- `experiment1/` — ESNet trace-driven validation
+- `experiment1/` — dynamic flow-sharing correctness against analytical max-min allocation and SimGrid
 - `experiment2/` — congestion, finite buffering, PAUSE, incast, and victim-flow experiments
 - `experiment3/` — fluid-versus-packet CODES simulator-throughput comparison
 - `experiment4/` — CODES-versus-SimGrid flow-level comparison
@@ -131,8 +131,9 @@ export ROSS_ROOT=/path/to/ross
 
 ## 5. Run Experiment 1
 
-Experiment 1 replays the committed ESNet validation inputs and analyzes all
-eight scenarios.
+Experiment 1 uses the ESnet-derived topology parameters in a controlled
+three-flow workload and validates dynamic max-min sharing against an
+analytical solution and SimGrid.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
@@ -183,8 +184,7 @@ The packet runs can take several minutes each. Primary summaries are written to
 
 ## 9. Run Experiment 4
 
-Experiment 4 first checks a controlled two-flow max-min allocation and then
-runs the CODES/SimGrid performance comparison. The performance runner also
+Experiment 4 runs the CODES/SimGrid performance comparison. The performance runner also
 includes an interval-sensitivity subset at the 128-switch scale using 1-s,
 10-s, 60-s, and 3600-s fluid intervals by default. The 60-s and 3600-s
 points represent one-minute and one-hour temporal aggregation, respectively.
@@ -194,7 +194,6 @@ does not use the CODES fluid-interval parameter.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
-./experiment4/run_correctness.sh
 ./experiment4/run.sh
 ```
 

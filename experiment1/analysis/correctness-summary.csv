@@ -1,0 +1,4 @@
+simulator,max_interval_service_error_gbit,max_interval_service_error_pct,flow1_finish_sec,flow2_finish_sec,flow3_finish_sec,max_finish_error_sec
+Analytical,0.000000000,0.000000000,3.700000000,0.400000000,3.000000000,0.000000000
+CODES,0.150000000,0.750000000,3.700000000,0.400000000,3.100000000,0.100000000
+SimGrid,NA,NA,3.700000000,0.400000000,3.000000000,0.000000000

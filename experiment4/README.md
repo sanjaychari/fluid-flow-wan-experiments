@@ -43,11 +43,10 @@ RUN_SCALE_SWEEP=0 ./experiment4/run.sh
 ## Committed results
 
 The `results/` directory contains the exact generated topologies, workloads,
-configurations, correctness outputs, calibration evidence, and measured runtime
-outputs used by the analysis scripts. These text artifacts are intended to be
-committed.
+configurations, calibration evidence, and measured runtime outputs used by the
+analysis scripts. These text artifacts are intended to be committed.
 
-`run.sh` and `run_correctness.sh` invoke `sanitize_results.py` after a run. The
+`run.sh` invokes `sanitize_results.py` after a run. The
 sanitizer replaces local absolute CODES/repository paths with stable anonymous
 paths:
 

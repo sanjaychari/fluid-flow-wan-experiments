@@ -1,4 +1,0 @@
-simulator,flow1_rate_gbps,flow2_rate_gbps,max_relative_error_pct
-Analytical,5.000000000,5.000000000,0.000000000
-CODES,5.000000000,5.000000000,0.000000000
-SimGrid,5.000000000,5.000000000,0.000000000

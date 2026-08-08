@@ -1,11 +1,11 @@
-/workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
+/home/anonymous/Documents/RPI/Kitware_Research/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml 
 
-Thu Aug  6 16:45:42 2026
+Fri Aug  7 22:50:13 2026
 
-ROSS Version: v8.1.0
+ROSS Version: 8.1.1-53-gdc3a6a0
 
 tw_net_start: Found world size to be 1 
-fluid-flow-wan config: workload=trace-traffic switches=64 terminals=128 interval_seconds=10.000000 num_send_intervals=20 num_drain_intervals=20 backpressure_delay_ms=1.000000 trace_records=160 traffic_trace_file=./traffic.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30744
+fluid-flow-wan config: workload=trace-traffic switches=64 terminals=128 interval_seconds=10.000000 num_send_intervals=20 num_drain_intervals=20 backpressure_delay_ms=1.000000 pause_enabled=1 trace_records=160 traffic_trace_file=./traffic.csv output_data_unit=Gb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30752
 
 ROSS Core Configuration: 
 	Total PEs                                                    1
@@ -197,7 +197,7 @@ fluid-flow-wan-terminal gid=169 terminal=105 switch=52 generated_gbit=0.000000 s
 fluid-flow-wan-terminal gid=170 terminal=106 switch=53 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=171 terminal=107 switch=53 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=172 terminal=108 switch=54 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=173 terminal=109 switch=54 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=173 terminal=109 switch=54 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=2 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
 fluid-flow-wan-terminal gid=174 terminal=110 switch=55 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=175 terminal=111 switch=55 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=176 terminal=112 switch=56 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
@@ -214,13 +214,13 @@ fluid-flow-wan-terminal gid=186 terminal=122 switch=61 generated_gbit=0.000000 s
 fluid-flow-wan-terminal gid=187 terminal=123 switch=61 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=188 terminal=124 switch=62 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 fluid-flow-wan-terminal gid=189 terminal=125 switch=62 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=190 terminal=126 switch=63 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
+fluid-flow-wan-terminal gid=190 terminal=126 switch=63 generated_gbit=2000.000000 sent_gbit=2000.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=2 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
 fluid-flow-wan-terminal gid=191 terminal=127 switch=63 generated_gbit=0.000000 sent_gbit=0.000000 source_backlog_gbit=0.000000 active_source_flows=0 received_gbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
 
-	: Running Time = 0.0221 seconds
+	: Running Time = 0.0081 seconds
 
 TW Library Statistics:
-	Total Events Processed                                    7321
+	Total Events Processed                                    7311
 	Events Aborted (part of RBs)                                 0
 	Events Rolled Back                                           0
 	Event Ties Detected in PE Queues                             0
@@ -236,32 +236,32 @@ TW Library Statistics:
 	Fossil Collect Attempts                                      0
 	Total GVT Computations                                       0
 
-	Net Events Processed                                      7321
-	Event Rate (events/sec)                               330564.0
+	Net Events Processed                                      7311
+	Event Rate (events/sec)                               905835.7
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
 	Events Allocated                                        196625
-	Memory Allocated                                       6732118
-	Memory Wasted                                              535
+	Memory Allocated                                       6732374
+	Memory Wasted                                              279
 
 TW Data Structure sizes in bytes (sizeof):
 	PE struct                                                 1328
 	KP struct                                                  320
 	LP struct                                                  320
-	LP Model struct                                          34952
+	LP Model struct                                          37000
 	LP RNGs                                                     80
-	Total LP                                                 35352
+	Total LP                                                 37400
 	Event struct                                               344
 	Event struct with Model                                  33112
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          6.6398
-	Priority Queue (enq/deq)                                0.0056
+	Initialization                                          0.3269
+	Priority Queue (enq/deq)                                0.0004
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.0553
+	Event Processing                                        0.0080
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -272,7 +272,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0574
+	Total Time (Note: Using Running Time above for Speedup)      0.0081
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16
@@ -283,4 +283,4 @@ TW GVT Statistics: MPI AllReduce
 	Forced GVT                                                   0
 	Total GVT Computations                                       0
 	Total All Reduce Calls                                       0
-	Average Reduction / GVT                                   -nan
+	Average Reduction / GVT                                    nan

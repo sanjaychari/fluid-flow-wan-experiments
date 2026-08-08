@@ -47,7 +47,11 @@ def main() -> None:
                 w.writerow(["flow_id", "source_terminal", "destination_terminal", "label"])
                 w.writerows(flow_meta)
 
-    # D: guarantee that every flow traverses the known low-rate S45->S44 edge.
+    # D: exercise the S44->S45 reverse direction itself. The paired topology
+    # treatment below removes that direct reverse edge in the asymmetric case
+    # and restores it at the S45->S44 bottleneck rate in the symmetric case.
+    # Sending the elephants/victim S44->S45 makes the treatment observable;
+    # the previous S45->S44 traffic never traversed the modified edge.
     s45 = topo.terminals_on_switch("S45")[0]
     s44 = topo.terminals_on_switch("S44")[0]
     edge = topo.edge_mbps[(topo.switch_index["S45"], topo.switch_index["S44"])] / 1000.0
@@ -58,13 +62,13 @@ def main() -> None:
     meta = []
     for i in range(8):
         fid = 20000 + i
-        meta.append((fid, s45, s44, "elephant"))
+        meta.append((fid, s44, s45, "elephant"))
         for interval in range(40):
-            rows.append((interval, fid, s45, s44, "75.000000"))  # 7.5 Gbps
+            rows.append((interval, fid, s44, s45, "75.000000"))  # 7.5 Gbps
     victim = 20008
-    meta.append((victim, s45, s44, "victim"))
+    meta.append((victim, s44, s45, "victim"))
     for interval in range(40):
-        rows.append((interval, victim, s45, s44, "10.000000"))  # 1 Gbps
+        rows.append((interval, victim, s44, s45, "10.000000"))  # 1 Gbps
 
     for mode in ("asymmetric", "symmetric"):
         write_trace(OUT / f"victim-{mode}.csv", rows)
@@ -93,7 +97,8 @@ def main() -> None:
     (ROOT / "topologies" / "topology-victim-symmetric.yaml").write_text(symmetric)
     (ROOT / "topologies" / "topology-victim-asymmetric.yaml").write_text(asymmetric)
 
-    print(f"wrote incast and victim traces; victim terminals {s45}->{s44}; bottleneck={edge:.4f} Gbps")
+    print(f"wrote incast and victim traces; victim terminals {s44}->{s45}; "
+          f"symmetric reverse bottleneck={edge:.4f} Gbps")
 
 
 if __name__ == "__main__":

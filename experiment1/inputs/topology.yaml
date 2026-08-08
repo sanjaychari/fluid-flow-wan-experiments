@@ -1,0 +1,34 @@
+# ESnet testbed logical topology.
+# terminal links: 200 Gbps
+# inter-switch links: 400 Gbps
+# shared buffer: 909.28 Mbit
+
+topology:
+  switches:
+    VLAN4012:
+      terminals: 4
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
+      connections: {}
+
+    LBNL_VLAN3002:
+      terminals: 2
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
+      connections:
+        STARLIGHT: "400 Gbps"
+
+    STARLIGHT:
+      terminals: 0
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
+      connections:
+        LBNL_VLAN3002: "400 Gbps"
+        LBNL_VLAN3001: "400 Gbps"
+
+    LBNL_VLAN3001:
+      terminals: 2
+      terminal_bandwidth: "200 Gbps"
+      switch_buffer: "909.28 Mb"
+      connections:
+        STARLIGHT: "400 Gbps"

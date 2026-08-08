@@ -1,5 +1,5 @@
 {
-  "codes_commit": "d985f8ec2755ff81b377254ccf9f1385504e947a",
+  "codes_commit": "d518d2ea9ced7fa7407678594dbfbbeba51d7823",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -11,29 +11,29 @@
     "config.yaml"
   ],
   "compiler": [
-    "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    "Apple clang version 21.0.0 (clang-2100.1.1.101)"
   ],
-  "created_utc": "2026-08-06T21:12:03.126138+00:00",
+  "created_utc": "2026-08-08T03:05:29.219919+00:00",
   "host": "anonymous-host",
   "input_sha256": {
-    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/repeat3/config.yaml": "b09fe3f5511ce03f5f1918026191b640b5848c7ae215c60129a3bb89fdd851f6",
+    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/repeat3/config.yaml": "42d74d38b7ea0de8465947468076ffb9d1143eeeb1f8b8efdedfc5e8289d414b",
     "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/repeat3/topology.yaml": "f758727ac3261aa950034a19b0d6ac92b1126c32275b1b9da0cfb34c219d6f14",
     "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/repeat3/traffic.csv": "e6e219bf282de8b31f39201bef210e3b9d36a887bb4ae69222f7048ea52249c1"
   },
   "interval_seconds": "1",
   "mode": "fluid",
   "mpi": [
-    "mpirun (Open MPI) 4.1.2",
-    ""
+    "HYDRA build details:",
+    "    Version:                                 5.0.1"
   ],
   "notes": [
     "target_gbit=4.429185024000"
   ],
-  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.35",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
   "rank_count": 1,
   "return_code": 0,
-  "ross_commit": "f27cff5107a1a01bed713fa96a77b5f107a430f9",
+  "ross_commit": "",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 6.326514618
+  "wall_clock_sec": 0.810072
 }
