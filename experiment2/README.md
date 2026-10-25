@@ -1,23 +1,7 @@
-# Experiment 2 — large-network congestion and backpressure
+# Experiment 2 — Large-network congestion and backpressure
 
-Fixed science platform:
+Retains the four original scenario families on the fixed 64-switch/128-terminal topology: A) load, B) buffer size × PAUSE policy, C) incast fan-in, and D) elephant/victim asymmetry. The new workload is finite-flow/trace driven because `model-net-rate-fluid-wan` does not have the old interval random-traffic generator. Paired seeds and topology treatments are retained. CODES-native destination FCT, maximum switch-buffer occupancy, dropped volume, and PAUSE activity are summarized.
 
-- 64 switches, 2 terminals/switch (128 terminals)
-- average directed out-degree 4.0, reverse-link probability 0.50
-- 10–30 Gbps switch links, 100 Gbps terminal links
-- 10 s data interval, 1 ms control/backpressure delay
-- topology seed 12345
-- sequential (`--sync=1`) for science results
+Run: `./experiment2/setup.sh && ./experiment2/run_sequential.sh`.
 
-The setup creates the four scenario families from the experiment plan:
-
-- A: low / medium / high load, traffic seeds 2001–2010
-- B: 25 / 100 / 400 Gb shared buffers × aggressive (0.50/0.30) or moderate (0.80/0.50) PAUSE × ten paired seeds
-- C: 4 / 8 / 16-source persistent incast × ten deterministic source-set seeds
-- D: 8 elephant flows plus one 1 Gbps victim across S44->S45, with that direct reverse edge absent versus present at the S45->S44 bottleneck bandwidth
-
-```bash
-./experiment2/setup.sh
-./experiment2/run_sequential.sh
-./experiment2/run_conservative_check.sh   # optional parity/parallelization evidence
-```
+All cases use the common 5-ms one-way per-link latency.

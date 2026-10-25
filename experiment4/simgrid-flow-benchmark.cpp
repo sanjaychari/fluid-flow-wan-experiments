@@ -17,6 +17,7 @@ struct Flow {
   unsigned long long id = 0;
   int src = -1;
   int dst = -1;
+  double start_sec = 0.0;
   double gbit = 0.0;
 };
 
@@ -50,7 +51,7 @@ static std::vector<Flow> load_flows(const std::string& path)
     throw std::runtime_error("empty traffic CSV");
   if (!line.empty() && line.back() == '\r')
     line.pop_back();
-  if (line != "interval,flow_id,source_terminal,destination_terminal,offered_gbit")
+  if (line != "start_time_sec,flow_id,source_terminal,destination_terminal,offered_gbit")
     throw std::runtime_error("unexpected traffic CSV header: " + line);
 
   std::vector<Flow> flows;
@@ -62,9 +63,8 @@ static std::vector<Flow> load_flows(const std::string& path)
     auto f = split_csv(line);
     if (f.size() != 5)
       throw std::runtime_error("malformed traffic row: " + line);
-    if (std::stoi(f[0]) != 0)
-      throw std::runtime_error("Experiment 4 expects all flows to start in interval 0");
     Flow flow;
+    flow.start_sec = std::stod(f[0]);
     flow.id = std::stoull(f[1]);
     flow.src = std::stoi(f[2]);
     flow.dst = std::stoi(f[3]);
@@ -83,6 +83,8 @@ static void receiver(const std::string& mailbox_name)
 
 static void sender(const Flow flow)
 {
+  if (flow.start_sec > sg4::Engine::get_clock())
+    sg4::this_actor::sleep_until(flow.start_sec);
   const std::string mailbox_name = "flow-" + std::to_string(flow.id);
   auto* mailbox = sg4::Mailbox::by_name(mailbox_name);
   const std::uint64_t bytes = static_cast<std::uint64_t>(std::llround(flow.gbit * 1.0e9 / 8.0));

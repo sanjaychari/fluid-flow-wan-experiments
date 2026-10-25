@@ -2,9 +2,10 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
+source "$ROOT/../common/env.sh"
 REPEATS="${REPEATS:-3}"
 
-[[ -f "$ROOT/cases.csv" ]] || "$ROOT/setup.sh"
+"$ROOT/setup.sh"
 
 # Read cases.csv on fd 3 so child commands such as mpirun cannot consume the
 # loop's CSV input. This is compatible with macOS Bash 3.2 and modern Linux.

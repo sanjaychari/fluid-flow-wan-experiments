@@ -3,32 +3,25 @@ schema_version: 1
 topology:
   format: groups
   params:
-    message_size: 32768
-    pe_mem_factor: 1024
+    message_size: 65536
   groups:
-    FLUID_FLOW_WAN_GRP:
+    RATE_FLUID_WAN_GRP:
       repetitions: 1
       lps:
-        fluid-flow-wan-switch-lp: 4
-        fluid-flow-wan-terminal-lp: 8
+        rate-fluid-wan-switch-lp: 2
+        rate-fluid-wan-terminal-lp: 12
+
+simulation:
+  end_time: "120s"
+  pe_mem_factor: 1024
 
 sections:
-  fluid_flow_wan:
-    topology_yaml_file: "topology.yaml"
-    traffic_trace_file: "traffic.csv"
-
-    interval_seconds: 0.1
-    num_send_intervals: 11
-    num_drain_intervals: 40
-
-    egress_model: pdes
-    debug_prints: 0
-    backpressure_delay_ms: 1.0
-    pause_enabled: 0
-
-    pause_high_watermark_fraction: 0.80
-    pause_low_watermark_fraction: 0.50
-
-    fluid_segment_log_path: "fluid-segment-events.csv"
-    terminal_log_path: "terminal-events.csv"
-    switch_log_path: "switch-events.csv"
+  rate_fluid_wan:
+    topology_file: "topology.yaml"
+    flow_file: "flows.csv"
+    link_latency: "5 ms"
+    pause_enabled: 1
+    pause_high_watermark_fraction: 0.8
+    pause_low_watermark_fraction: 0.2
+    debug: 1
+    flow_summary_file: "rate-fluid-flow-summary.csv"

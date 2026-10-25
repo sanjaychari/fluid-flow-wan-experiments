@@ -1,0 +1,9 @@
+start_time,flow_id,source_terminal,destination_terminal,size
+0 s,700200,80,0,12.5 GB
+0 s,700201,35,0,12.5 GB
+0 s,700202,115,0,12.5 GB
+0 s,700203,34,0,12.5 GB
+0 s,700204,99,0,12.5 GB
+0 s,700205,15,0,12.5 GB
+0 s,700206,48,0,12.5 GB
+0 s,700207,47,0,12.5 GB

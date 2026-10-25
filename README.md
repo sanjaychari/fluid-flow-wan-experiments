@@ -16,10 +16,10 @@ These paths can be overridden with environment variables.
 
 ## Repository layout
 
-- `experiment1/` — dynamic flow-sharing correctness against analytical max-min allocation and SimGrid
+- `experiment1/` — mixed persistent/bursty dynamic-sharing correctness against analytical max-min allocation and SimGrid
 - `experiment2/` — congestion, finite buffering, PAUSE, incast, and victim-flow experiments
 - `experiment3/` — fluid-versus-packet CODES simulator-throughput comparison
-- `experiment4/` — CODES-versus-SimGrid flow-level comparison
+- `experiment4/` — fixed-128-switch CODES-versus-SimGrid flow-density runtime comparison
 - `common/` — shared topology, manifest, and CSV utilities
 
 Generated results may be committed after anonymization. Before staging new
@@ -54,8 +54,9 @@ sudo apt install -y libsimgrid-dev
 pkg-config --modversion simgrid
 ```
 
-The Experiment 4 scripts were exercised with SimGrid 3.30 and configure CM02
-for unweighted max-min sharing.
+The SimGrid-based experiments use the `raw` network model. Experiment 1
+uses equal-latency competing paths so its sharing semantics match the analytical
+unweighted max-min reference.
 
 ## 2. Python environment
 
@@ -131,9 +132,10 @@ export ROSS_ROOT=/path/to/ross
 
 ## 5. Run Experiment 1
 
-Experiment 1 uses the ESnet-derived topology parameters in a controlled
-three-flow workload and validates dynamic max-min sharing against an
-analytical solution and SimGrid.
+Experiment 1 uses a controlled two-switch WAN with multiple equal-hop
+destinations. Three persistent bulk transfers are interleaved with six shorter
+bursts, and dynamic max-min sharing is validated against both a closed-form
+solution and SimGrid.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
@@ -141,12 +143,10 @@ cd "$HOME/fluid-flow-wan-experiments"
 ./experiment1/run.sh
 ```
 
-Primary summaries are written to:
+The primary summary is written to:
 
 ```text
-experiment1/analysis/experiment1-headline.csv
-experiment1/analysis/experiment1-run-summary.csv
-experiment1/analysis/experiment1-flow-summary.csv
+experiment1/analysis/flow-comparison.csv
 ```
 
 ## 6. Run Experiment 2
@@ -184,29 +184,25 @@ The packet runs can take several minutes each. Primary summaries are written to
 
 ## 9. Run Experiment 4
 
-Experiment 4 runs the CODES/SimGrid performance comparison. The performance runner also
-includes an interval-sensitivity subset at the 128-switch scale using 1-s,
-10-s, 60-s, and 3600-s fluid intervals by default. The 60-s and 3600-s
-points represent one-minute and one-hour temporal aggregation, respectively.
-Only the CODES fluid interval changes in this sweep. The SimGrid reference
-platform remains fixed at 1-s per-hop latency for every interval point; SimGrid
-does not use the CODES fluid-interval parameter.
+Experiment 4 fixes the network at 128 switches and compares CODES with SimGrid
+while varying flow density at fixed offered volume and approximately fixed
+workload span. The experiment isolates how the number of active persistent flows
+and resulting rate-control events affect simulator runtime.
 
 ```bash
 cd "$HOME/fluid-flow-wan-experiments"
-./experiment4/run.sh
+REPEATS=3 ./experiment4/run.sh
 ```
 
-The performance summary is written to:
+The primary summary is:
 
 ```text
-experiment4/results/experiment4-performance-summary.csv
-experiment4/results/experiment4-interval-sweep-summary.csv
+experiment4/results/experiment4-flow-density-summary.csv
 ```
 
-Experiment 4 text results are intended to be committed after the repository-wide
-anonymization pass. The locally compiled `experiment4/simgrid-flow-benchmark`
-binary remains ignored and should be rebuilt from source.
+It reports CODES and SimGrid simulation runtime, their runtime ratio,
+flow count, represented start-time span and offered volume, and the CODES event
+count.
 
 ## Re-running and preserving outputs
 

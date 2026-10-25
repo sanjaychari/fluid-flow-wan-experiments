@@ -1,26 +1,26 @@
 {
-  "codes_commit": "d518d2ea9ced7fa7407678594dbfbbeba51d7823",
-  "command": "mpirun -np 1 /workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- config.yaml",
+  "codes_commit": "7cecb6a7d042dcc2ca11c140b4f1b32b5f630d39",
+  "command": "mpirun -np 1 /workspace/codes/build/src/model-net-rate-fluid-wan --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
     "-np",
     "1",
-    "/workspace/codes/build/src/model-net-fluid-flow-wan-trace-traffic",
+    "/workspace/codes/build/src/model-net-rate-fluid-wan",
     "--sync=1",
     "--",
     "config.yaml"
   ],
   "compiler": [
-    "Apple clang version 21.0.0 (clang-2100.1.1.101)"
+    "Apple clang version 21.0.0 (clang-2100.3.34.2)"
   ],
-  "created_utc": "2026-08-08T03:02:33.103465+00:00",
+  "created_utc": "2026-10-24T15:41:59.190579+00:00",
   "host": "anonymous-host",
   "input_sha256": {
-    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/warmup/config.yaml": "42d74d38b7ea0de8465947468076ffb9d1143eeeb1f8b8efdedfc5e8289d414b",
-    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/warmup/topology.yaml": "f758727ac3261aa950034a19b0d6ac92b1126c32275b1b9da0cfb34c219d6f14",
-    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/warmup/traffic.csv": "e6e219bf282de8b31f39201bef210e3b9d36a887bb4ae69222f7048ea52249c1"
+    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/warmup/config.yaml": "89dfa8d04b839d114c5a0483a98a90a69e9e6b5aabee0f951677c48b20ac75f7",
+    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/warmup/flows.csv": "18dbd2b14c0782adf0ca65663ad34dc6639a1d7f91f3f2fa967924a5e6dc3f8d",
+    "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/warmup/topology.yaml": "4b3bb9fa96340aecd489a4fa561da040ce924a25db47187b11398ee890d62fc9"
   },
-  "interval_seconds": "1",
+  "interval_seconds": "0",
   "mode": "fluid",
   "mpi": [
     "HYDRA build details:",
@@ -29,11 +29,11 @@
   "notes": [
     "target_gbit=4.429185024000"
   ],
-  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
   "rank_count": 1,
   "return_code": 0,
   "ross_commit": "",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 0.798184
+  "wall_clock_sec": 2.357892
 }

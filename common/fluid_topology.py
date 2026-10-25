@@ -67,12 +67,19 @@ class FluidTopology:
 
 def _quantity(raw: str, *, bandwidth: bool) -> float:
     raw = raw.strip().strip('"\'')
-    units = "Mbps|Gbps" if bandwidth else "Mb|Gb"
+    units = "Mbps|Gbps" if bandwidth else "Mb|Gb|MB|GB"
     m = re.fullmatch(rf"([0-9.eE+-]+)\s*({units})", raw)
     if not m:
         raise ValueError(f"unsupported quantity: {raw}")
     value = float(m.group(1))
-    return value * (1000.0 if m.group(2).startswith("G") else 1.0)
+    unit = m.group(2)
+    if bandwidth:
+        return value * (1000.0 if unit == "Gbps" else 1.0)
+    # Historical helper stores switch buffers in Mbit. New rate-fluid topology uses bytes.
+    if unit == "GB": return value * 8000.0
+    if unit == "MB": return value * 8.0
+    if unit == "Gb": return value * 1000.0
+    return value
 
 
 def parse_topology(path: str | Path) -> FluidTopology:

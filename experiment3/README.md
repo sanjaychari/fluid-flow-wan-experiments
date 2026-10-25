@@ -1,21 +1,7 @@
-# Experiment 3 — fluid vs packet-based CODES simulator throughput
+# Experiment 3 — Rate-fluid vs packet-based CODES throughput
 
-This is a **computational-granularity comparison, not a fidelity comparison**.
-Both workloads use a matched regular Dragonfly-scale platform:
+Computational-granularity comparison, not a fidelity comparison. The same 264-router/1056-endpoint Dragonfly-scale topology and matched application volumes are retained. The fluid side now uses `model-net-rate-fluid-wan`; each host contributes one finite flow whose size equals the matched packet workload volume. Runtime, event count, events/Gbit, and simulated Gbit/wall-second remain the primary metrics.
 
-- 264 routers/switches, 1056 endpoints, 4 endpoints/router
-- 33 groups × 8 routers/group
-- local and terminal links: 42 Gbps
-- global links: 37.6 Gbps
-- minimal routing
-- deterministic nearest-group traffic in logical host numbering: `dst=(src+32)%1056`
-- sequential execution
+Run: `./experiment3/setup.sh && ./experiment3/run_all.sh`.
 
-The packet baseline keeps the stock 512-byte packet and 32-byte chunk settings.
-The matched volume points use 1, 2, and 4 messages/host with 262144-byte
-application messages, corresponding to 2.214592512, 4.429185024, and
-8.858370048 aggregate Gbit.
-
-`run_all.sh` performs one warm-up and at least three measured runs per model and
-point. The analyzer uses `target_gbit` from `cases.csv` for both models so the
-throughput denominator is exactly the matched offered application volume.
+The rate-fluid side uses the common 5-ms one-way per-link latency; this experiment is computational, not a fidelity comparison.

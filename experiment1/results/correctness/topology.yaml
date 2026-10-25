@@ -1,34 +1,18 @@
-# ESnet testbed logical topology.
-# terminal links: 200 Gbps
-# inter-switch links: 400 Gbps
-# shared buffer: 909.28 Mbit
+# Controlled mixed-transfer WAN topology.
+# All flows have equal three-link path length and share S0->S1.
 
 topology:
   switches:
-    VLAN4012:
-      terminals: 4
+    S0:
+      terminals: 6
       terminal_bandwidth: "200 Gbps"
-      switch_buffer: "909.28 Mb"
-      connections: {}
-
-    LBNL_VLAN3002:
-      terminals: 2
-      terminal_bandwidth: "200 Gbps"
-      switch_buffer: "909.28 Mb"
+      switch_buffer: "2.0 GB"
       connections:
-        STARLIGHT: "400 Gbps"
+        S1: "200 Gbps"
 
-    STARLIGHT:
-      terminals: 0
+    S1:
+      terminals: 6
       terminal_bandwidth: "200 Gbps"
-      switch_buffer: "909.28 Mb"
+      switch_buffer: "2.0 GB"
       connections:
-        LBNL_VLAN3002: "400 Gbps"
-        LBNL_VLAN3001: "400 Gbps"
-
-    LBNL_VLAN3001:
-      terminals: 2
-      terminal_bandwidth: "200 Gbps"
-      switch_buffer: "909.28 Mb"
-      connections:
-        STARLIGHT: "400 Gbps"
+        S0: "200 Gbps"

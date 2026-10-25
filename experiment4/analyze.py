@@ -1,87 +1,47 @@
 #!/usr/bin/env python3
-
-import argparse
-import re
-import statistics
+from __future__ import annotations
+import csv,re,statistics,sys
+from collections import defaultdict
 from pathlib import Path
 
+r=Path(sys.argv[1])
+groups=defaultdict(list)
+for x in csv.DictReader((r/'runtime.csv').open()):
+    groups[(x['flow_density'],x['model'])].append(float(x['runtime_sec']))
 
-SCALES = (32, 64, 128)
-REPEATS = (1, 2, 3)
-FLOW_GBIT = 500.0
-TERMINALS_PER_SWITCH = 2
+order={'very_sparse':0,'sparse':1,'medium':2,'dense':3}
+rows=[]
+for density in sorted({k[0] for k in groups},key=lambda x:order[x]):
+    case=r/density
+    meta=next(csv.DictReader((case/'workload-metadata.csv').open()))
+    codes=groups[(density,'codes')]; simgrid=groups[(density,'simgrid')]
+    events=[]
+    for i in range(1,len(codes)+1):
+        text=(case/f'codes-{i}.out').read_text(errors='replace')
+        m=re.search(r'Net Events Processed\s+([0-9]+)',text)
+        if not m:
+            raise RuntimeError(f'missing ROSS event count in {case/f"codes-{i}.out"}')
+        events.append(int(m.group(1)))
+    cm=statistics.mean(codes); sm=statistics.mean(simgrid)
+    rows.append({
+        'flow_density':density,
+        'switches':int(meta['switches']),
+        'flows':int(meta['flows']),
+        'start_span_s':float(meta['start_span_s']),
+        'offered_GB':float(meta['offered_GB']),
+        'codes_runtime_sec_mean':cm,
+        'codes_runtime_sec_std':statistics.stdev(codes) if len(codes)>1 else 0.0,
+        'simgrid_runtime_sec_mean':sm,
+        'simgrid_runtime_sec_std':statistics.stdev(simgrid) if len(simgrid)>1 else 0.0,
+        'codes_over_simgrid_runtime_ratio':cm/sm,
+        'codes_net_events_mean':statistics.mean(events),
+        'codes_events_per_flow':statistics.mean(events)/int(meta['flows']),
+    })
 
-
-def parse_codes_runtime(path: Path) -> float:
-    text = path.read_text(errors="replace")
-    match = re.search(
-        r"Running Time\s*[:=]\s*([0-9.eE+-]+)",
-        text,
-    )
-    if not match:
-        raise RuntimeError(f"could not find CODES runtime in {path}")
-    return float(match.group(1))
-
-
-def parse_simgrid_runtime(path: Path) -> float:
-    text = path.read_text(errors="replace")
-    match = re.search(
-        r"SIMGRID_WALL_RUNTIME_SEC=([0-9.eE+-]+)",
-        text,
-    )
-    if not match:
-        raise RuntimeError(f"could not find SimGrid runtime in {path}")
-    return float(match.group(1))
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("root", type=Path)
-    args = parser.parse_args()
-
-    print(
-        "switches,terminals,"
-        "codes_runtime_mean_sec,codes_runtime_std_sec,"
-        "simgrid_runtime_mean_sec,simgrid_runtime_std_sec,"
-        "codes_gbit_per_wall_sec,simgrid_gbit_per_wall_sec,"
-        "codes_over_simgrid_runtime"
-    )
-
-    for switches in SCALES:
-        case = args.root / str(switches)
-
-        codes = [
-            parse_codes_runtime(
-                case / f"codes-performance-{r}.out"
-            )
-            for r in REPEATS
-        ]
-
-        simgrid = [
-            parse_simgrid_runtime(
-                case / f"simgrid-performance-{r}.out"
-            )
-            for r in REPEATS
-        ]
-
-        terminals = switches * TERMINALS_PER_SWITCH
-        total_gbit = terminals * FLOW_GBIT
-
-        cmean = statistics.mean(codes)
-        cstd = statistics.stdev(codes)
-
-        smean = statistics.mean(simgrid)
-        sstd = statistics.stdev(simgrid)
-
-        print(
-            f"{switches},{terminals},"
-            f"{cmean:.9f},{cstd:.9f},"
-            f"{smean:.9f},{sstd:.9f},"
-            f"{total_gbit / cmean:.9f},"
-            f"{total_gbit / smean:.9f},"
-            f"{cmean / smean:.9f}"
-        )
-
-
-if __name__ == "__main__":
-    main()
+out=r/'experiment4-flow-density-summary.csv'
+with out.open('w',newline='') as f:
+    w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n'); w.writeheader(); w.writerows(rows)
+print(out)
+print(','.join(rows[0].keys()))
+for row in rows:
+    print(','.join(str(row[k]) for k in rows[0]))

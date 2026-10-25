@@ -1,46 +1,673 @@
-/home/anonymous/Documents/RPI/Kitware_Research/codes/build/src/model-net-fluid-flow-wan-trace-traffic --sync=1 -- /workspace/fluid-flow-wan-experiments/experiment1/results/correctness/codes.yaml 
+/Users/sanjaychari/Documents/RPI/Kitware_Research/codes/build/src/model-net-rate-fluid-wan --sync=1 -- codes.yaml 
 
-Fri Aug  7 21:35:04 2026
+Sun Oct 25 10:32:53 2026
 
 ROSS Version: 8.1.1-53-gdc3a6a0
 
 tw_net_start: Found world size to be 1 
-fluid-flow-wan config: workload=trace-traffic switches=4 terminals=8 interval_seconds=0.100000 num_send_intervals=11 num_drain_intervals=40 backpressure_delay_ms=1.000000 pause_enabled=0 trace_records=3 traffic_trace_file=/workspace/fluid-flow-wan-experiments/experiment1/results/correctness/traffic.csv output_data_unit=Mb buffer_mode=shared egress_model=pdes csv_logs=buffered-forward ross_message_size=32768 fluid_msg_size=30752
+rate-fluid-wan: switches=2 terminals=12 flows=9 latency=5.000000 ms rate_unit=Gbps data_unit=GB time_unit=s pause=1 debug=1
 
 ROSS Core Configuration: 
 	Total PEs                                                    1
 	Total KPs                                          [Nodes (1) x KPs (16)] 16
-	Total LPs                                                   12
-	Simulation End Time                                31536000000000000.00
+	Total LPs                                                   14
+	Simulation End Time                                120000000000.00
 	LP-to-PE Mapping                                   model defined
 
 
 ROSS Event Memory Allocation:
-	Model events                                             12289
+	Model events                                             14337
 	Network events                                              16
-	Total events                                             12304
+	Total events                                             14352
 
 *** START SEQUENTIAL SIMULATION ***
 
+FLOW START(F1001) at terminal T0 at 0.000000 s
+FLOW START(F1002) at terminal T1 at 0.000000 s
+FLOW REGISTER(F1002) at switch S0 at 0.005000 s rate=200.000000 Gbps
+FLOW REGISTER(F1001) at switch S0 at 0.005000 s rate=200.000000 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 0.010000 s rate=100.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 0.010000 s rate=200.000000 Gbps
+FLOW REGISTER(F1002) at switch S1 at 0.010000 s rate=200.000000 Gbps
+FLOW REGISTER(F1001) at switch S1 at 0.010000 s rate=100.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 0.010000 s rate=100.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 0.010000 s rate=100.000000 Gbps
+FLOW REGISTER(F1002) at terminal T7 at 0.015000 s rate=200.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 0.015000 s occupancy=0.250000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 0.015000 s rate=100.000000 Gbps
+FLOW REGISTER(F1001) at terminal T6 at 0.015000 s rate=100.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 0.015000 s rate=100.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 0.015000 s occupancy=0.250000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1002) at switch S0 at 0.015000 s rate=100.000000 Gbps
+BUFFER THRESHOLD at switch S0 at 0.069000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 0.123000 s threshold=HIGH
+GVT #0: simulation 4% complete, max event queue size 18 (GVT = 5000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW START(F1003) at terminal T2 at 5.000000 s
+GVT #0: simulation 4% complete, max event queue size 18 (GVT = 5005000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F1003) at switch S0 at 5.005000 s rate=200.000000 Gbps
+GVT #0: simulation 4% complete, max event queue size 19 (GVT = 5010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F1001) at terminal T0 at 5.010000 s rate=66.666667 Gbps
+GVT #0: simulation 4% complete, max event queue size 20 (GVT = 5010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F1002) at terminal T1 at 5.010000 s rate=66.666667 Gbps
+FLOW REGISTER(F1003) at switch S1 at 5.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 5.010000 s rate=66.666667 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 5.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 5.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 5.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 5.015000 s rate=66.666667 Gbps
+BUFFER OCCUPANCY at switch S0 at 5.015000 s occupancy=0.500000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 5.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 5.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at switch S0 at 5.015000 s rate=66.666667 Gbps
+FLOW REGISTER(F1003) at terminal T8 at 5.015000 s rate=66.666667 Gbps
+BUFFER THRESHOLD at switch S0 at 5.059000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 5.067800 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 5.081000 s threshold=HIGH
+GVT #0: simulation 10% complete, max event queue size 22 (GVT = 12000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW START(F2001) at terminal T3 at 12.000000 s
+GVT #0: simulation 10% complete, max event queue size 22 (GVT = 12005000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2001) at switch S0 at 12.005000 s rate=200.000000 Gbps
+GVT #0: simulation 10% complete, max event queue size 24 (GVT = 12010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F2001) at terminal T3 at 12.010000 s rate=50.000000 Gbps
+GVT #0: simulation 10% complete, max event queue size 25 (GVT = 12010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F1003) at terminal T2 at 12.010000 s rate=50.000000 Gbps
+GVT #0: simulation 10% complete, max event queue size 26 (GVT = 12010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F1002) at switch S1 at 12.010000 s rate=50.000000 Gbps
+GVT #0: simulation 10% complete, max event queue size 26 (GVT = 12010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F1001) at terminal T0 at 12.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 12.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 12.010000 s rate=50.000000 Gbps
+FLOW REGISTER(F2001) at switch S1 at 12.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 12.010000 s rate=50.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 12.015000 s occupancy=0.750000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 12.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 12.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S0 at 12.015000 s rate=50.000000 Gbps
+FLOW REGISTER(F2001) at terminal T9 at 12.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 12.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 12.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2001) at switch S0 at 12.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 12.015000 s rate=50.000000 Gbps
+BUFFER THRESHOLD at switch S0 at 12.049000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 12.052091 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 12.055800 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 12.423000 s threshold=HIGH
+FLOW COMPLETE(F2001) at terminal T3 at 13.000000 s
+GVT #0: simulation 13% complete, max event queue size 28 (GVT = 15970000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2001) at terminal T3 at 15.970000 s
+GVT #0: simulation 13% complete, max event queue size 28 (GVT = 15975000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F2001) at switch S0 at 15.975000 s rate=0.000000 Gbps
+GVT #0: simulation 13% complete, max event queue size 28 (GVT = 15975000001.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+BUFFER OCCUPANCY at switch S0 at 15.975000 s occupancy=0.750000 GB capacity=2.000000 GB
+FLOW COMPLETE(F2001) at switch S0 at 15.975000 s
+RATE FEEDBACK(F1003) at terminal T2 at 15.980000 s rate=66.666667 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 15.980000 s rate=66.666667 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 15.980000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2001) at switch S1 at 15.980000 s
+BUFFER OCCUPANCY at switch S0 at 15.985000 s occupancy=0.687500 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1003) at switch S0 at 15.985000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2001) at terminal T9 at 15.985000 s
+DATA RATE UPDATE(F1002) at switch S0 at 15.985000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 15.985000 s rate=66.666667 Gbps
+QUEUE DRAIN(F2001) at switch S0 at 16.005000 s
+QUEUE DRAIN(F2001) at switch S0 at 16.005000 s
+QUEUE DRAIN(F2001) at switch S0 at 16.005000 s
+QUEUE DRAIN(F2001) at switch S0 at 16.005000 s
+QUEUE DRAIN(F2001) at switch S0 at 16.005000 s
+DATA RATE UPDATE(F1002) at switch S1 at 16.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 16.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 16.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2001) at switch S1 at 16.010000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 16.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 16.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 16.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2001) at terminal T9 at 16.015000 s rate=0.000000 Gbps
+GVT #0: simulation 20% complete, max event queue size 28 (GVT = 24000000001.0050) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 24.000000 s
+GVT #0: simulation 20% complete, max event queue size 28 (GVT = 24000000001.0050) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 24.000000 s
+GVT #0: simulation 20% complete, max event queue size 28 (GVT = 25000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW START(F2002) at terminal T4 at 25.000000 s
+GVT #0: simulation 20% complete, max event queue size 28 (GVT = 25000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW START(F2003) at terminal T5 at 25.000000 s
+GVT #0: simulation 20% complete, max event queue size 28 (GVT = 25000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 25.000000 s
+GVT #0: simulation 20% complete, max event queue size 28 (GVT = 25005000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2003) at switch S0 at 25.005000 s rate=200.000000 Gbps
+GVT #0: simulation 20% complete, max event queue size 28 (GVT = 25005000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2002) at switch S0 at 25.005000 s rate=200.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 25.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 25.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 25.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F2003) at terminal T5 at 25.010000 s rate=50.000000 Gbps
+FLOW REGISTER(F2003) at switch S1 at 25.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 25.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F2002) at terminal T4 at 25.010000 s rate=40.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 25.010000 s rate=50.000000 Gbps
+FLOW REGISTER(F2002) at switch S1 at 25.010000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 25.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 25.010000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F2003) at switch S1 at 25.010000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 25.010000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 25.010000 s rate=40.000000 Gbps
+RATE FEEDBACK(F2003) at terminal T5 at 25.010000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 25.010000 s rate=40.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 25.010000 s rate=40.000000 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 25.010000 s rate=40.000000 Gbps
+FLOW REGISTER(F2003) at terminal T11 at 25.015000 s rate=50.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 25.015000 s occupancy=1.187500 GB capacity=2.000000 GB
+DATA RATE UPDATE(F2002) at switch S0 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 25.015000 s rate=50.000000 Gbps
+FLOW REGISTER(F2002) at terminal T10 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S0 at 25.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2003) at switch S0 at 25.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 25.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 25.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 25.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 25.015000 s rate=50.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 25.015000 s occupancy=1.187500 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1003) at switch S0 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F2003) at switch S0 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F2003) at terminal T11 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 25.015000 s rate=40.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 25.015000 s rate=40.000000 Gbps
+BUFFER THRESHOLD at switch S0 at 25.023250 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.028750 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.029776 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.041500 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.060000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.073235 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.097500 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.125000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 25.180000 s threshold=HIGH
+GVT #0: simulation 21% complete, max event queue size 45 (GVT = 25344999992.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+BUFFER THRESHOLD at switch S0 at 25.345000 s threshold=HIGH
+FLOW COMPLETE(F2003) at terminal T5 at 25.800000 s
+GVT #0: simulation 22% complete, max event queue size 45 (GVT = 26500000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2002) at terminal T4 at 26.500000 s
+GVT #0: simulation 23% complete, max event queue size 45 (GVT = 28170000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2003) at terminal T5 at 28.170000 s
+GVT #0: simulation 24% complete, max event queue size 45 (GVT = 28959999999.7500) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2003) at terminal T5 at 28.960000 s
+DATA RATE UPDATE(F2003) at switch S0 at 28.965000 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 28.965000 s occupancy=1.187500 GB capacity=2.000000 GB
+FLOW COMPLETE(F2003) at switch S0 at 28.965000 s
+RATE FEEDBACK(F1001) at terminal T0 at 28.970000 s rate=50.000000 Gbps
+RATE FEEDBACK(F2002) at terminal T4 at 28.970000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 28.970000 s rate=50.000000 Gbps
+FLOW COMPLETE(F2003) at switch S1 at 28.970000 s
+RATE FEEDBACK(F1002) at terminal T1 at 28.970000 s rate=50.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 28.975000 s occupancy=1.137500 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1002) at switch S0 at 28.975000 s rate=50.000000 Gbps
+FLOW COMPLETE(F2003) at terminal T11 at 28.975000 s
+DATA RATE UPDATE(F1003) at switch S0 at 28.975000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2002) at switch S0 at 28.975000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 28.975000 s rate=50.000000 Gbps
+QUEUE DRAIN(F2003) at switch S0 at 29.005000 s
+QUEUE DRAIN(F2003) at switch S0 at 29.005000 s
+QUEUE DRAIN(F2003) at switch S0 at 29.005000 s
+QUEUE DRAIN(F2003) at switch S0 at 29.005000 s
+QUEUE DRAIN(F2003) at switch S0 at 29.005000 s
+QUEUE DRAIN(F2003) at switch S0 at 29.005000 s
+DATA RATE UPDATE(F1002) at switch S1 at 29.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 29.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 29.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2002) at switch S1 at 29.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2003) at switch S1 at 29.010000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 29.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 29.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 29.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2002) at terminal T10 at 29.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2003) at terminal T11 at 29.015000 s rate=0.000000 Gbps
+GVT #0: simulation 25% complete, max event queue size 45 (GVT = 30000000001.0050) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 30.000000 s
+GVT #0: simulation 26% complete, max event queue size 45 (GVT = 31762000000.1500) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2002) at terminal T4 at 31.762000 s
+DATA RATE UPDATE(F2002) at switch S0 at 31.767000 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 31.767000 s occupancy=1.137500 GB capacity=2.000000 GB
+FLOW COMPLETE(F2002) at switch S0 at 31.767000 s
+RATE FEEDBACK(F1003) at terminal T2 at 31.772000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2002) at switch S1 at 31.772000 s
+RATE FEEDBACK(F1002) at terminal T1 at 31.772000 s rate=66.666667 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 31.772000 s rate=66.666667 Gbps
+BUFFER OCCUPANCY at switch S0 at 31.777000 s occupancy=1.075000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1002) at switch S0 at 31.777000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 31.777000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2002) at terminal T10 at 31.777000 s
+DATA RATE UPDATE(F1003) at switch S0 at 31.777000 s rate=66.666667 Gbps
+QUEUE DRAIN(F2002) at switch S0 at 31.805000 s
+QUEUE DRAIN(F2002) at switch S0 at 31.805000 s
+QUEUE DRAIN(F2002) at switch S0 at 31.805000 s
+QUEUE DRAIN(F2002) at switch S0 at 31.805000 s
+QUEUE DRAIN(F2002) at switch S0 at 31.805000 s
+DATA RATE UPDATE(F2002) at switch S1 at 31.810000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 31.810000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 31.810000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 31.810000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 31.815000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 31.815000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2002) at terminal T10 at 31.815000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 31.815000 s rate=66.666667 Gbps
+GVT #0: simulation 27% complete, max event queue size 45 (GVT = 32460000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2002) at terminal T4 at 32.460000 s
+GVT #0: simulation 33% complete, max event queue size 45 (GVT = 40000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW START(F2004) at terminal T3 at 40.000000 s
+GVT #0: simulation 33% complete, max event queue size 45 (GVT = 40005000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2004) at switch S0 at 40.005000 s rate=200.000000 Gbps
+GVT #0: simulation 33% complete, max event queue size 45 (GVT = 40010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2004) at switch S1 at 40.010000 s rate=50.000000 Gbps
+GVT #0: simulation 33% complete, max event queue size 45 (GVT = 40010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F1002) at switch S1 at 40.010000 s rate=50.000000 Gbps
+GVT #0: simulation 33% complete, max event queue size 45 (GVT = 40010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F1003) at switch S1 at 40.010000 s rate=50.000000 Gbps
+GVT #0: simulation 33% complete, max event queue size 45 (GVT = 40010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F2004) at terminal T3 at 40.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 40.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 40.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 40.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 40.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 40.015000 s rate=50.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 40.015000 s occupancy=1.325000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1003) at switch S0 at 40.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 40.015000 s rate=50.000000 Gbps
+FLOW REGISTER(F2004) at terminal T9 at 40.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2004) at switch S0 at 40.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 40.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 40.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 40.015000 s rate=50.000000 Gbps
+BUFFER THRESHOLD at switch S0 at 40.026000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 40.027000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 40.028200 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 40.147000 s threshold=HIGH
+GVT #0: simulation 34% complete, max event queue size 45 (GVT = 41250000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2004) at terminal T3 at 41.250000 s
+GVT #0: simulation 37% complete, max event queue size 45 (GVT = 44970000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2004) at terminal T3 at 44.970000 s
+GVT #0: simulation 37% complete, max event queue size 45 (GVT = 44975000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F2004) at switch S0 at 44.975000 s rate=0.000000 Gbps
+GVT #0: simulation 37% complete, max event queue size 45 (GVT = 44975000001.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+BUFFER OCCUPANCY at switch S0 at 44.975000 s occupancy=1.325000 GB capacity=2.000000 GB
+FLOW COMPLETE(F2004) at switch S0 at 44.975000 s
+RATE FEEDBACK(F1001) at terminal T0 at 44.980000 s rate=66.666667 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 44.980000 s rate=66.666667 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 44.980000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2004) at switch S1 at 44.980000 s
+BUFFER OCCUPANCY at switch S0 at 44.985000 s occupancy=1.262500 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 44.985000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at switch S0 at 44.985000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2004) at terminal T9 at 44.985000 s
+DATA RATE UPDATE(F1002) at switch S0 at 44.985000 s rate=66.666667 Gbps
+QUEUE DRAIN(F2004) at switch S0 at 45.005000 s
+QUEUE DRAIN(F2004) at switch S0 at 45.005000 s
+QUEUE DRAIN(F2004) at switch S0 at 45.005000 s
+QUEUE DRAIN(F2004) at switch S0 at 45.005000 s
+QUEUE DRAIN(F2004) at switch S0 at 45.005000 s
+DATA RATE UPDATE(F1001) at switch S1 at 45.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2004) at switch S1 at 45.010000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 45.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 45.010000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 45.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 45.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 45.015000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2004) at terminal T9 at 45.015000 s rate=0.000000 Gbps
+GVT #0: simulation 39% complete, max event queue size 45 (GVT = 47990000000.0050) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 47.990000 s
+GVT #0: simulation 45% complete, max event queue size 45 (GVT = 55000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW START(F2005) at terminal T4 at 55.000000 s
+GVT #0: simulation 45% complete, max event queue size 45 (GVT = 55005000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2005) at switch S0 at 55.005000 s rate=200.000000 Gbps
+GVT #0: simulation 45% complete, max event queue size 45 (GVT = 55010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F1003) at switch S1 at 55.010000 s rate=50.000000 Gbps
+GVT #0: simulation 45% complete, max event queue size 45 (GVT = 55010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F1002) at switch S1 at 55.010000 s rate=50.000000 Gbps
+GVT #0: simulation 45% complete, max event queue size 45 (GVT = 55010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F1003) at terminal T2 at 55.010000 s rate=50.000000 Gbps
+GVT #0: simulation 45% complete, max event queue size 45 (GVT = 55010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2005) at switch S1 at 55.010000 s rate=50.000000 Gbps
+GVT #0: simulation 45% complete, max event queue size 45 (GVT = 55010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F1001) at switch S1 at 55.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F2005) at terminal T4 at 55.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 55.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 55.010000 s rate=50.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 55.015000 s occupancy=1.512500 GB capacity=2.000000 GB
+DATA RATE UPDATE(F2005) at switch S0 at 55.015000 s rate=50.000000 Gbps
+FLOW REGISTER(F2005) at terminal T10 at 55.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 55.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 55.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S0 at 55.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 55.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 55.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 55.015000 s rate=50.000000 Gbps
+BUFFER THRESHOLD at switch S0 at 55.018500 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 55.029000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 55.036000 s threshold=HIGH
+BUFFER THRESHOLD at switch S0 at 55.057000 s threshold=HIGH
+GVT #0: simulation 46% complete, max event queue size 45 (GVT = 55800000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2005) at terminal T4 at 55.800000 s
+GVT #0: simulation 48% complete, max event queue size 45 (GVT = 58170000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2005) at terminal T4 at 58.170000 s
+GVT #0: simulation 48% complete, max event queue size 45 (GVT = 58175000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+DATA RATE UPDATE(F2005) at switch S0 at 58.175000 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 58.175000 s occupancy=1.512500 GB capacity=2.000000 GB
+FLOW COMPLETE(F2005) at switch S0 at 58.175000 s
+RATE FEEDBACK(F1002) at terminal T1 at 58.180000 s rate=66.666667 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 58.180000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2005) at switch S1 at 58.180000 s
+RATE FEEDBACK(F1001) at terminal T0 at 58.180000 s rate=66.666667 Gbps
+BUFFER OCCUPANCY at switch S0 at 58.185000 s occupancy=1.450000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 58.185000 s rate=66.666667 Gbps
+FLOW COMPLETE(F2005) at terminal T10 at 58.185000 s
+DATA RATE UPDATE(F1003) at switch S0 at 58.185000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 58.185000 s rate=66.666667 Gbps
+QUEUE DRAIN(F2005) at switch S0 at 58.205000 s
+QUEUE DRAIN(F2005) at switch S0 at 58.205000 s
+QUEUE DRAIN(F2005) at switch S0 at 58.205000 s
+QUEUE DRAIN(F2005) at switch S0 at 58.205000 s
+QUEUE DRAIN(F2005) at switch S0 at 58.205000 s
+DATA RATE UPDATE(F1003) at switch S1 at 58.210000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 58.210000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2005) at switch S1 at 58.210000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 58.210000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 58.215000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2005) at terminal T10 at 58.215000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 58.215000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 58.215000 s rate=66.666667 Gbps
+GVT #0: simulation 49% complete, max event queue size 45 (GVT = 59990000001.0050) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 59.990000 s
+GVT #0: simulation 54% complete, max event queue size 45 (GVT = 64980000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 64.980000 s
+GVT #0: simulation 54% complete, max event queue size 45 (GVT = 65972500000.2500) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 65.972500 s
+GVT #0: simulation 56% complete, max event queue size 45 (GVT = 68257000000.5000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 68.257000 s
+GVT #0: simulation 57% complete, max event queue size 45 (GVT = 69480000000.0075) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 69.480000 s
+GVT #0: simulation 57% complete, max event queue size 45 (GVT = 69499500000.7500) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 69.499500 s
+GVT #0: simulation 58% complete, max event queue size 45 (GVT = 70000000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW START(F2006) at terminal T5 at 70.000000 s
+GVT #0: simulation 58% complete, max event queue size 45 (GVT = 70005000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2006) at switch S0 at 70.005000 s rate=200.000000 Gbps
+GVT #0: simulation 58% complete, max event queue size 45 (GVT = 70010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+RATE FEEDBACK(F1001) at terminal T0 at 70.010000 s rate=50.000000 Gbps
+GVT #0: simulation 58% complete, max event queue size 45 (GVT = 70010000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW REGISTER(F2006) at switch S1 at 70.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 70.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 70.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1002) at terminal T1 at 70.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F2006) at terminal T5 at 70.010000 s rate=50.000000 Gbps
+RATE FEEDBACK(F1003) at terminal T2 at 70.010000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 70.010000 s rate=50.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 70.011000 s occupancy=1.600000 GB capacity=2.000000 GB
+BUFFER THRESHOLD at switch S0 at 70.011000 s threshold=HIGH
+BUFFER OCCUPANCY at switch S0 at 70.015000 s occupancy=1.700000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1002) at switch S0 at 70.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 70.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2006) at switch S0 at 70.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S0 at 70.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 70.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S0 at 70.015000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 70.015000 s rate=50.000000 Gbps
+FLOW REGISTER(F2006) at terminal T11 at 70.015000 s rate=50.000000 Gbps
+PAUSE UPDATE(F2006) at terminal T5 at 70.016000 s state=PAUSE
+DATA RATE UPDATE(F2006) at switch S0 at 70.021000 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 70.051000 s occupancy=1.512500 GB capacity=2.000000 GB
+QUEUE DRAIN(F2006) at switch S0 at 70.051000 s
+DATA RATE UPDATE(F2006) at switch S1 at 70.056000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 70.056000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 70.056000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 70.056000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 70.061000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 70.061000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2006) at terminal T11 at 70.061000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 70.061000 s rate=66.666667 Gbps
+BUFFER OCCUPANCY at switch S0 at 70.229000 s occupancy=0.400000 GB capacity=2.000000 GB
+BUFFER THRESHOLD at switch S0 at 70.229000 s threshold=LOW
+PAUSE UPDATE(F2006) at terminal T5 at 70.234000 s state=RESUME
+BUFFER OCCUPANCY at switch S0 at 70.239000 s occupancy=0.337500 GB capacity=2.000000 GB
+DATA RATE UPDATE(F2006) at switch S0 at 70.239000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 70.244000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2006) at switch S1 at 70.244000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 70.244000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at switch S1 at 70.244000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 70.249000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 70.249000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F2006) at terminal T11 at 70.249000 s rate=50.000000 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 70.249000 s rate=50.000000 Gbps
+FLOW COMPLETE(F1003) at terminal T2 at 70.292000 s
+QUEUE DRAIN(F1001) at switch S0 at 70.293000 s
+FLOW COMPLETE(F1003) at terminal T2 at 70.386000 s
+DATA RATE UPDATE(F1003) at switch S0 at 70.391000 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 70.391000 s occupancy=0.337500 GB capacity=2.000000 GB
+FLOW COMPLETE(F1003) at switch S0 at 70.391000 s
+RATE FEEDBACK(F1001) at terminal T0 at 70.396000 s rate=66.666667 Gbps
+RATE FEEDBACK(F2006) at terminal T5 at 70.396000 s rate=66.666667 Gbps
+FLOW COMPLETE(F1003) at switch S1 at 70.396000 s
+RATE FEEDBACK(F1002) at terminal T1 at 70.396000 s rate=66.666667 Gbps
+BUFFER OCCUPANCY at switch S0 at 70.401000 s occupancy=0.275000 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 70.401000 s rate=66.666667 Gbps
+FLOW COMPLETE(F1003) at terminal T8 at 70.401000 s
+DATA RATE UPDATE(F2006) at switch S0 at 70.401000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 70.401000 s rate=66.666667 Gbps
+QUEUE DRAIN(F1003) at switch S0 at 70.409000 s
+QUEUE DRAIN(F1003) at switch S0 at 70.409000 s
+QUEUE DRAIN(F1003) at switch S0 at 70.409000 s
+QUEUE DRAIN(F1003) at switch S0 at 70.409000 s
+QUEUE DRAIN(F1003) at switch S0 at 70.409000 s
+DATA RATE UPDATE(F1003) at switch S1 at 70.414000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F2006) at switch S1 at 70.414000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 70.414000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 70.414000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 70.419000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 70.419000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F2006) at terminal T11 at 70.419000 s rate=66.666667 Gbps
+DATA RATE UPDATE(F1003) at terminal T8 at 70.419000 s rate=0.000000 Gbps
+FLOW COMPLETE(F1002) at terminal T1 at 70.472500 s
+GVT #0: simulation 59% complete, max event queue size 45 (GVT = 71250000000.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2006) at terminal T5 at 71.250000 s
+GVT #0: simulation 60% complete, max event queue size 45 (GVT = 72757000000.5075) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 72.757000 s
+GVT #0: simulation 61% complete, max event queue size 45 (GVT = 73989999999.0833) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F2006) at terminal T5 at 73.990000 s
+DATA RATE UPDATE(F2006) at switch S0 at 73.995000 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 73.995000 s occupancy=0.275000 GB capacity=2.000000 GB
+FLOW COMPLETE(F2006) at switch S0 at 73.995000 s
+BUFFER OCCUPANCY at switch S0 at 73.997000 s occupancy=0.258333 GB capacity=2.000000 GB
+QUEUE DRAIN(F2006) at switch S0 at 73.997000 s
+QUEUE DRAIN(F2006) at switch S0 at 73.997000 s
+FLOW COMPLETE(F1002) at terminal T1 at 73.999500 s
+RATE FEEDBACK(F1002) at terminal T1 at 74.000000 s rate=100.000000 Gbps
+RATE FEEDBACK(F1001) at terminal T0 at 74.000000 s rate=100.000000 Gbps
+FLOW COMPLETE(F2006) at switch S1 at 74.000000 s
+DATA RATE UPDATE(F1002) at switch S1 at 74.002000 s rate=100.000000 Gbps
+DATA RATE UPDATE(F2006) at switch S1 at 74.002000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1001) at switch S1 at 74.002000 s rate=100.000000 Gbps
+FLOW COMPLETE(F2006) at terminal T11 at 74.005000 s
+BUFFER OCCUPANCY at switch S0 at 74.005000 s occupancy=0.191667 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 74.005000 s rate=100.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S0 at 74.005000 s rate=100.000000 Gbps
+DATA RATE UPDATE(F2006) at terminal T11 at 74.007000 s rate=0.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 74.007000 s rate=100.000000 Gbps
+DATA RATE UPDATE(F1001) at terminal T6 at 74.007000 s rate=100.000000 Gbps
+QUEUE DRAIN(F1001) at switch S0 at 74.028000 s
+QUEUE DRAIN(F1002) at switch S0 at 74.028000 s
+FLOW COMPLETE(F1003) at terminal T2 at 74.329333 s
+GVT #0: simulation 62% complete, max event queue size 45 (GVT = 74592333334.4217) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 74.592333 s
+DATA RATE UPDATE(F1002) at switch S0 at 74.597333 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 74.597333 s occupancy=0.191667 GB capacity=2.000000 GB
+FLOW COMPLETE(F1002) at switch S0 at 74.597333 s
+FLOW COMPLETE(F1002) at switch S1 at 74.602333 s
+RATE FEEDBACK(F1001) at terminal T0 at 74.602333 s rate=200.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 74.605000 s occupancy=0.095833 GB capacity=2.000000 GB
+QUEUE DRAIN(F1002) at switch S0 at 74.605000 s
+QUEUE DRAIN(F1002) at switch S0 at 74.605000 s
+BUFFER OCCUPANCY at switch S0 at 74.607333 s occupancy=0.066667 GB capacity=2.000000 GB
+DATA RATE UPDATE(F1001) at switch S0 at 74.607333 s rate=200.000000 Gbps
+FLOW COMPLETE(F1002) at terminal T7 at 74.607333 s
+DATA RATE UPDATE(F1001) at switch S1 at 74.610000 s rate=200.000000 Gbps
+DATA RATE UPDATE(F1002) at switch S1 at 74.610000 s rate=0.000000 Gbps
+QUEUE DRAIN(F1001) at switch S0 at 74.612667 s
+DATA RATE UPDATE(F1001) at terminal T6 at 74.615000 s rate=200.000000 Gbps
+DATA RATE UPDATE(F1002) at terminal T7 at 74.615000 s rate=0.000000 Gbps
+FLOW COMPLETE(F1002) at terminal T1 at 74.792000 s
+FLOW COMPLETE(F1002) at terminal T1 at 74.888500 s
+FLOW COMPLETE(F2006) at terminal T5 at 74.970000 s
+FLOW COMPLETE(F2006) at terminal T5 at 75.188000 s
+GVT #0: simulation 63% complete, max event queue size 45 (GVT = 76386000001.3433) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 76.386000 s
+GVT #0: simulation 64% complete, max event queue size 45 (GVT = 77672666667.3333) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 77.672667 s
+GVT #0: simulation 66% complete, max event queue size 45 (GVT = 79626666667.0000) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 79.626667 s
+GVT #0: simulation 66% complete, max event queue size 45 (GVT = 80329333334.3433) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 80.329333 s
+GVT #0: simulation 67% complete, max event queue size 45 (GVT = 80418666666.9500) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 80.418667 s
+FLOW COMPLETE(F1001) at terminal T0 at 80.597333 s
+DATA RATE UPDATE(F1001) at switch S0 at 80.602333 s rate=0.000000 Gbps
+BUFFER OCCUPANCY at switch S0 at 80.602333 s occupancy=0.066667 GB capacity=2.000000 GB
+FLOW COMPLETE(F1001) at switch S0 at 80.602333 s
+BUFFER OCCUPANCY at switch S0 at 80.605000 s occupancy=0.000000 GB capacity=2.000000 GB
+QUEUE DRAIN(F1001) at switch S0 at 80.605000 s
+QUEUE DRAIN(F1001) at switch S0 at 80.605000 s
+FLOW COMPLETE(F1001) at switch S1 at 80.607333 s
+DATA RATE UPDATE(F1001) at switch S1 at 80.610000 s rate=0.000000 Gbps
+FLOW COMPLETE(F1001) at terminal T6 at 80.612333 s
+DATA RATE UPDATE(F1001) at terminal T6 at 80.615000 s rate=0.000000 Gbps
+GVT #0: simulation 68% complete, max event queue size 45 (GVT = 82636666666.6667) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1003) at terminal T2 at 82.636667 s
+GVT #0: simulation 69% complete, max event queue size 45 (GVT = 83672666667.3433) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 83.672667 s
+GVT #0: simulation 71% complete, max event queue size 45 (GVT = 85626666667.0100) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 85.626667 s
+GVT #0: simulation 72% complete, max event queue size 45 (GVT = 86418666666.9600) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 86.418667 s
+GVT #0: simulation 72% complete, max event queue size 45 (GVT = 86592333335.4217) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 86.592333 s
+FLOW COMPLETE(F1001) at terminal T0 at 87.480000 s
+GVT #0: simulation 73% complete, max event queue size 45 (GVT = 88472500001.7575) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 88.472500 s
+FLOW COMPLETE(F1002) at terminal T1 at 88.636667 s
+GVT #0: simulation 75% complete, max event queue size 45 (GVT = 90757000002.0075) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 90.757000 s
+GVT #0: simulation 76% complete, max event queue size 45 (GVT = 91999500002.2575) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 91.999500 s
+GVT #0: simulation 77% complete, max event queue size 45 (GVT = 92792000002.5075) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 92.792000 s
+GVT #0: simulation 77% complete, max event queue size 45 (GVT = 92888500003.0908) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 92.888500 s
+FLOW COMPLETE(F1003) at terminal T2 at 93.280833 s
+GVT #0: simulation 83% complete, max event queue size 45 (GVT = 100386000003.3433) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 100.386000 s
+GVT #0: simulation 83% complete, max event queue size 45 (GVT = 100780833333.5125) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1002) at terminal T1 at 100.780833 s
+GVT #0: simulation 86% complete, max event queue size 45 (GVT = 104329333336.3433) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 104.329333 s
+GVT #0: simulation 89% complete, max event queue size 45 (GVT = 107672666669.3433) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 107.672667 s
+GVT #0: simulation 91% complete, max event queue size 45 (GVT = 109626666669.0100) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 109.626667 s
+GVT #0: simulation 92% complete, max event queue size 45 (GVT = 110418666668.9600) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 110.418667 s
+GVT #0: simulation 93% complete, max event queue size 45 (GVT = 112636666668.6767) at Sun Oct 25 10:32:53 2026.
+AVL tree size: 0
+FLOW COMPLETE(F1001) at terminal T0 at 112.636667 s
 *** END SIMULATION ***
 
-fluid-flow-wan gid=0 switch=0 name=VLAN4012 ports=4 shared_buffer_mbit=909.280000 received_fragments=61 sent_fragments=120 buffered_residual_mbit=25199.993000 sent_mbit=740000.000000 local_delivery_mbit=740000.000000 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=1 switch=1 name=LBNL_VLAN3002 ports=3 shared_buffer_mbit=909.280000 received_fragments=0 sent_fragments=0 buffered_residual_mbit=0.000000 sent_mbit=0.000000 local_delivery_mbit=0.000000 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=2 switch=2 name=STARLIGHT ports=2 shared_buffer_mbit=909.280000 received_fragments=0 sent_fragments=0 buffered_residual_mbit=0.000000 sent_mbit=0.000000 local_delivery_mbit=0.000000 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan gid=3 switch=3 name=LBNL_VLAN3001 ports=3 shared_buffer_mbit=909.280000 received_fragments=0 sent_fragments=0 buffered_residual_mbit=0.000000 sent_mbit=0.000000 local_delivery_mbit=0.000000 dropped_mbit=0.000000 ready_queue_mbit=0.000000 shared_buffer_occupied_mbit=0.000000 pause_asserted=0 pause_updates_sent=0 pause_frames_sent=0 resume_frames_sent=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000
-fluid-flow-wan-terminal gid=4 terminal=0 switch=0 generated_mbit=500000.000000 sent_mbit=500000.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=4 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
-fluid-flow-wan-terminal gid=5 terminal=1 switch=0 generated_mbit=40000.000000 sent_mbit=40000.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
-fluid-flow-wan-terminal gid=6 terminal=2 switch=0 generated_mbit=200000.000000 sent_mbit=200000.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=1 rate_cache_entries=1 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=1 received_fragments=0
-fluid-flow-wan-terminal gid=7 terminal=3 switch=0 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=740000.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=120
-fluid-flow-wan-terminal gid=8 terminal=4 switch=1 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=9 terminal=5 switch=1 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=10 terminal=6 switch=3 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
-fluid-flow-wan-terminal gid=11 terminal=7 switch=3 generated_mbit=0.000000 sent_mbit=0.000000 source_backlog_mbit=0.000000 active_source_flows=0 received_mbit=0.000000 rate_updates_received=0 rate_cache_entries=0 pause_updates_received=0 pause_frames_received=0 resume_frames_received=0 total_pause_time_ms=0.000000 generated_flows=0 received_fragments=0
+FINAL switch S0 max_buffer=1.700000 GB dropped=0.000000 GB
+FINAL switch S1 max_buffer=0.000000 GB dropped=0.000000 GB
 
-	: Running Time = 0.0014 seconds
+	: Running Time = 0.0026 seconds
 
 TW Library Statistics:
-	Total Events Processed                                     693
+	Total Events Processed                                     436
 	Events Aborted (part of RBs)                                 0
 	Events Rolled Back                                           0
 	Event Ties Detected in PE Queues                             0
@@ -56,32 +683,32 @@ TW Library Statistics:
 	Fossil Collect Attempts                                      0
 	Total GVT Computations                                       0
 
-	Net Events Processed                                       693
-	Event Rate (events/sec)                               496774.2
-	Total Events Scheduled Past End Time                         0
+	Net Events Processed                                       436
+	Event Rate (events/sec)                               165214.1
+	Total Events Scheduled Past End Time                         1
 
 TW Memory Statistics:
-	Events Allocated                                         12305
-	Memory Allocated                                        421343
-	Memory Wasted                                              154
+	Events Allocated                                         14353
+	Memory Allocated                                        923963
+	Memory Wasted                                              473
 
 TW Data Structure sizes in bytes (sizeof):
 	PE struct                                                 1328
 	KP struct                                                  320
 	LP struct                                                  320
-	LP Model struct                                          37000
+	LP Model struct                                          34832
 	LP RNGs                                                     80
-	Total LP                                                 37400
+	Total LP                                                 35232
 	Event struct                                               344
-	Event struct with Model                                  33112
+	Event struct with Model                                  65880
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          0.0690
-	Priority Queue (enq/deq)                                0.0000
+	Initialization                                          0.0601
+	Priority Queue (enq/deq)                                0.0001
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.0014
+	Event Processing                                        0.0024
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -92,7 +719,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0014
+	Total Time (Note: Using Running Time above for Speedup)      0.0026
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

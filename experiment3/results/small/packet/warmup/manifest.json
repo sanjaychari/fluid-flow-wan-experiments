@@ -1,5 +1,5 @@
 {
-  "codes_commit": "d518d2ea9ced7fa7407678594dbfbbeba51d7823",
+  "codes_commit": "7cecb6a7d042dcc2ca11c140b4f1b32b5f630d39",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=1 --payload_size=262144 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -14,12 +14,12 @@
     "config.yaml"
   ],
   "compiler": [
-    "Apple clang version 21.0.0 (clang-2100.1.1.101)"
+    "Apple clang version 21.0.0 (clang-2100.3.34.2)"
   ],
-  "created_utc": "2026-08-08T03:01:03.175469+00:00",
+  "created_utc": "2026-10-24T15:38:27.490435+00:00",
   "host": "anonymous-host",
   "input_sha256": {
-    "/workspace/fluid-flow-wan-experiments/experiment3/results/small/packet/warmup/config.yaml": "683b428a5e83c62d622128dde72abb2e696850228f03792235b39eb7bf6e9496"
+    "/workspace/fluid-flow-wan-experiments/experiment3/results/small/packet/warmup/config.yaml": "06c028c9064111f97400566a6ed22b270e9da835265ef9e90754ae23e6d37375"
   },
   "interval_seconds": "0",
   "mode": "packet",
@@ -30,11 +30,11 @@
   "notes": [
     "target_gbit=2.214592512000"
   ],
-  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
   "rank_count": 1,
   "return_code": 0,
   "ross_commit": "",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 28.219454
+  "wall_clock_sec": 65.565823
 }

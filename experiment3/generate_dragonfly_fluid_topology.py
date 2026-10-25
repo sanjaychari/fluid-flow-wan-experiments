@@ -10,7 +10,7 @@ GLOBAL_CHANNELS=4
 LOCAL_MBPS=42000
 GLOBAL_MBPS=37600
 TERMINAL_MBPS=42000
-BUFFER_GB=100
+BUFFER_GB=12.5
 
 
 def global_targets(router_id: int):
@@ -41,7 +41,7 @@ def main():
         local_targets=[x for x in range(local_start,local_start+ROUTERS_PER_GROUP) if x!=rid]
         targets=[(x,LOCAL_MBPS) for x in local_targets]+[(x,GLOBAL_MBPS) for x in global_targets(rid)]
         lines += [f"    R{rid:03d}:", f"      terminals: {TERMINALS_PER_ROUTER}",
-                  f'      terminal_bandwidth: "{TERMINAL_MBPS} Mbps"', f'      switch_buffer: "{BUFFER_GB} Gb"',
+                  f'      terminal_bandwidth: "{TERMINAL_MBPS} Mbps"', f'      switch_buffer: "{BUFFER_GB} GB"',
                   "      connections:"]
         for dst,bw in targets:
             lines.append(f'        R{dst:03d}: "{bw} Mbps"')

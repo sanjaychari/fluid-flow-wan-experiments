@@ -1,0 +1,1026 @@
+topology:
+  switches:
+    S0:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S1: "27.0559 Gbps"
+        S121: "28.4412 Gbps"
+        S127: "17.6031 Gbps"
+    S1:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S0: "14.7894 Gbps"
+        S2: "15.2568 Gbps"
+    S2:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S1: "24.2109 Gbps"
+        S3: "16.7175 Gbps"
+    S3:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S2: "13.3444 Gbps"
+        S4: "28.5324 Gbps"
+    S4:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S3: "10.6079 Gbps"
+        S5: "24.5417 Gbps"
+        S117: "16.2211 Gbps"
+        S123: "10.0442 Gbps"
+    S5:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S4: "10.9555 Gbps"
+        S6: "16.8867 Gbps"
+    S6:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S5: "19.5594 Gbps"
+        S7: "12.1088 Gbps"
+    S7:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S6: "27.6457 Gbps"
+        S8: "12.4421 Gbps"
+        S13: "14.2351 Gbps"
+        S14: "11.9325 Gbps"
+        S70: "27.1376 Gbps"
+    S8:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S7: "14.0762 Gbps"
+        S9: "27.0598 Gbps"
+        S19: "17.6309 Gbps"
+    S9:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S7: "19.2825 Gbps"
+        S8: "26.3315 Gbps"
+        S10: "29.6183 Gbps"
+        S44: "24.0322 Gbps"
+        S68: "25.5885 Gbps"
+        S86: "16.5550 Gbps"
+        S107: "26.6319 Gbps"
+    S10:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S9: "12.1215 Gbps"
+        S11: "12.8037 Gbps"
+    S11:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S10: "13.0651 Gbps"
+        S12: "20.7748 Gbps"
+    S12:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S11: "18.1679 Gbps"
+        S13: "13.2596 Gbps"
+    S13:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S12: "22.6214 Gbps"
+        S14: "27.8833 Gbps"
+        S34: "26.4867 Gbps"
+    S14:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S13: "22.0875 Gbps"
+        S15: "21.2205 Gbps"
+    S15:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S14: "21.2406 Gbps"
+        S16: "11.2321 Gbps"
+        S96: "25.0646 Gbps"
+    S16:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S15: "28.2863 Gbps"
+        S17: "15.7199 Gbps"
+        S41: "22.6307 Gbps"
+    S17:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S16: "17.4108 Gbps"
+        S18: "13.2321 Gbps"
+    S18:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S17: "24.6064 Gbps"
+        S19: "23.1950 Gbps"
+    S19:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S18: "25.8636 Gbps"
+        S20: "18.5321 Gbps"
+        S72: "15.4595 Gbps"
+    S20:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S19: "14.6982 Gbps"
+        S21: "21.1508 Gbps"
+    S21:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S20: "22.6360 Gbps"
+        S22: "21.3235 Gbps"
+        S77: "11.4567 Gbps"
+    S22:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S21: "29.6136 Gbps"
+        S23: "26.9033 Gbps"
+        S49: "27.4835 Gbps"
+        S95: "12.4011 Gbps"
+        S121: "29.3168 Gbps"
+    S23:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S22: "29.0060 Gbps"
+        S24: "17.5109 Gbps"
+        S50: "12.4540 Gbps"
+    S24:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S23: "17.4439 Gbps"
+        S25: "27.4762 Gbps"
+        S116: "16.2801 Gbps"
+    S25:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S12: "17.5596 Gbps"
+        S24: "22.4454 Gbps"
+        S26: "20.5484 Gbps"
+        S71: "16.1560 Gbps"
+        S86: "17.0357 Gbps"
+    S26:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S7: "29.5110 Gbps"
+        S25: "23.8032 Gbps"
+        S27: "18.1050 Gbps"
+        S80: "22.3918 Gbps"
+        S94: "10.4386 Gbps"
+        S114: "11.8381 Gbps"
+    S27:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S26: "26.5191 Gbps"
+        S28: "28.1169 Gbps"
+    S28:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S27: "15.8967 Gbps"
+        S29: "21.9842 Gbps"
+        S98: "14.3403 Gbps"
+    S29:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S28: "16.9063 Gbps"
+        S30: "16.2445 Gbps"
+        S96: "14.3199 Gbps"
+    S30:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S29: "24.0818 Gbps"
+        S31: "13.4749 Gbps"
+        S119: "26.1760 Gbps"
+    S31:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S30: "12.3895 Gbps"
+        S32: "25.4143 Gbps"
+        S43: "10.2770 Gbps"
+    S32:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S31: "23.4798 Gbps"
+        S33: "27.1976 Gbps"
+    S33:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S32: "25.7924 Gbps"
+        S34: "23.7432 Gbps"
+        S62: "15.0110 Gbps"
+        S114: "15.0639 Gbps"
+    S34:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S33: "20.9614 Gbps"
+        S35: "20.2915 Gbps"
+        S101: "17.2316 Gbps"
+    S35:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S34: "16.9272 Gbps"
+        S36: "22.5968 Gbps"
+        S102: "28.7009 Gbps"
+    S36:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S18: "18.6419 Gbps"
+        S24: "21.6450 Gbps"
+        S35: "10.9296 Gbps"
+        S37: "18.5895 Gbps"
+    S37:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S36: "14.0956 Gbps"
+        S38: "20.6504 Gbps"
+        S43: "28.2553 Gbps"
+    S38:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S37: "11.4242 Gbps"
+        S39: "27.3916 Gbps"
+    S39:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S38: "20.4128 Gbps"
+        S40: "29.9287 Gbps"
+    S40:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S39: "13.2011 Gbps"
+        S41: "22.6404 Gbps"
+        S106: "20.8102 Gbps"
+    S41:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S40: "11.0507 Gbps"
+        S42: "29.3583 Gbps"
+    S42:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S41: "17.6697 Gbps"
+        S43: "16.2827 Gbps"
+    S43:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S42: "26.0774 Gbps"
+        S44: "12.0539 Gbps"
+    S44:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S23: "13.8991 Gbps"
+        S43: "28.7187 Gbps"
+        S45: "12.9029 Gbps"
+    S45:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S44: "18.1922 Gbps"
+        S46: "27.0181 Gbps"
+    S46:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S45: "11.6239 Gbps"
+        S47: "17.3155 Gbps"
+    S47:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S3: "25.5820 Gbps"
+        S46: "14.8826 Gbps"
+        S48: "29.9170 Gbps"
+    S48:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S47: "18.5495 Gbps"
+        S49: "23.4409 Gbps"
+        S96: "24.3591 Gbps"
+        S119: "20.9193 Gbps"
+    S49:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S48: "20.7485 Gbps"
+        S50: "26.9556 Gbps"
+    S50:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S49: "11.8403 Gbps"
+        S51: "25.4932 Gbps"
+        S74: "28.9140 Gbps"
+    S51:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S50: "27.5172 Gbps"
+        S52: "21.5954 Gbps"
+        S59: "20.3497 Gbps"
+    S52:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S51: "10.4502 Gbps"
+        S53: "15.7535 Gbps"
+        S73: "29.7111 Gbps"
+    S53:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S46: "27.6254 Gbps"
+        S52: "15.7889 Gbps"
+        S54: "13.4959 Gbps"
+        S113: "28.7260 Gbps"
+    S54:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S53: "22.5994 Gbps"
+        S55: "27.4112 Gbps"
+    S55:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S9: "15.7298 Gbps"
+        S54: "11.1088 Gbps"
+        S56: "24.1854 Gbps"
+        S85: "23.5114 Gbps"
+    S56:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S55: "22.3979 Gbps"
+        S57: "21.4858 Gbps"
+        S123: "25.8525 Gbps"
+    S57:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S56: "13.2093 Gbps"
+        S58: "20.9266 Gbps"
+    S58:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S57: "11.1357 Gbps"
+        S59: "24.1731 Gbps"
+    S59:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S35: "21.9504 Gbps"
+        S58: "12.6551 Gbps"
+        S60: "13.5544 Gbps"
+        S101: "15.8799 Gbps"
+    S60:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S59: "19.6011 Gbps"
+        S61: "25.3050 Gbps"
+        S96: "13.3108 Gbps"
+    S61:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S48: "13.8563 Gbps"
+        S60: "17.9126 Gbps"
+        S62: "26.9753 Gbps"
+        S116: "21.0499 Gbps"
+    S62:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S8: "11.1203 Gbps"
+        S24: "22.5023 Gbps"
+        S49: "20.9853 Gbps"
+        S61: "13.0733 Gbps"
+        S63: "27.6499 Gbps"
+    S63:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S19: "19.4942 Gbps"
+        S43: "10.3291 Gbps"
+        S62: "10.8203 Gbps"
+        S64: "26.7175 Gbps"
+        S107: "23.3016 Gbps"
+    S64:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S63: "10.2034 Gbps"
+        S65: "25.6231 Gbps"
+    S65:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S64: "21.9952 Gbps"
+        S66: "23.0435 Gbps"
+    S66:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S44: "13.5536 Gbps"
+        S65: "10.7538 Gbps"
+        S67: "26.4590 Gbps"
+    S67:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S66: "25.7400 Gbps"
+        S68: "22.9295 Gbps"
+    S68:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S67: "10.6908 Gbps"
+        S69: "20.6323 Gbps"
+    S69:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S68: "10.9149 Gbps"
+        S70: "18.7279 Gbps"
+        S97: "23.5854 Gbps"
+    S70:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S50: "24.8069 Gbps"
+        S69: "22.8865 Gbps"
+        S71: "19.6233 Gbps"
+    S71:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S70: "27.7668 Gbps"
+        S72: "26.7093 Gbps"
+        S73: "13.5587 Gbps"
+        S110: "23.5711 Gbps"
+    S72:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S71: "19.3194 Gbps"
+        S73: "18.3539 Gbps"
+    S73:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S3: "21.8298 Gbps"
+        S72: "18.7146 Gbps"
+        S74: "28.8901 Gbps"
+        S96: "25.9119 Gbps"
+        S111: "10.9927 Gbps"
+    S74:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S33: "18.5214 Gbps"
+        S73: "19.0795 Gbps"
+        S75: "16.3888 Gbps"
+    S75:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S74: "25.7200 Gbps"
+        S76: "26.2481 Gbps"
+    S76:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S32: "14.3883 Gbps"
+        S40: "20.0374 Gbps"
+        S75: "14.1838 Gbps"
+        S77: "11.4632 Gbps"
+    S77:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S75: "19.4249 Gbps"
+        S76: "17.7748 Gbps"
+        S78: "19.1428 Gbps"
+        S111: "29.5488 Gbps"
+    S78:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S77: "25.3818 Gbps"
+        S79: "13.9222 Gbps"
+    S79:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S78: "18.9402 Gbps"
+        S80: "23.1860 Gbps"
+    S80:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S79: "15.1410 Gbps"
+        S81: "16.2127 Gbps"
+        S95: "29.8332 Gbps"
+    S81:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S79: "11.1820 Gbps"
+        S80: "23.6992 Gbps"
+        S82: "20.9493 Gbps"
+    S82:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S81: "14.6229 Gbps"
+        S83: "16.7386 Gbps"
+        S102: "13.1778 Gbps"
+    S83:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S82: "29.2923 Gbps"
+        S84: "19.3417 Gbps"
+        S119: "10.8028 Gbps"
+    S84:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S12: "27.9461 Gbps"
+        S13: "27.0991 Gbps"
+        S26: "13.8566 Gbps"
+        S83: "22.6808 Gbps"
+        S85: "18.5778 Gbps"
+    S85:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S84: "25.3473 Gbps"
+        S86: "29.8012 Gbps"
+    S86:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S85: "26.0648 Gbps"
+        S87: "24.4399 Gbps"
+    S87:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S23: "10.0711 Gbps"
+        S46: "25.2464 Gbps"
+        S86: "24.1279 Gbps"
+        S88: "27.9778 Gbps"
+        S91: "29.8879 Gbps"
+    S88:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S87: "22.0786 Gbps"
+        S89: "26.2557 Gbps"
+    S89:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S88: "18.5551 Gbps"
+        S90: "24.1501 Gbps"
+    S90:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S23: "19.5006 Gbps"
+        S89: "20.9964 Gbps"
+        S91: "28.2791 Gbps"
+        S116: "17.7075 Gbps"
+    S91:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S90: "23.0513 Gbps"
+        S92: "24.4977 Gbps"
+    S92:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S22: "28.5130 Gbps"
+        S26: "19.4253 Gbps"
+        S91: "25.5259 Gbps"
+        S93: "11.3885 Gbps"
+    S93:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S92: "17.7057 Gbps"
+        S94: "18.3280 Gbps"
+    S94:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S93: "23.2743 Gbps"
+        S95: "22.8726 Gbps"
+    S95:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S94: "28.1524 Gbps"
+        S96: "27.9224 Gbps"
+    S96:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S95: "15.1111 Gbps"
+        S97: "18.5491 Gbps"
+        S110: "17.4618 Gbps"
+    S97:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S96: "27.1212 Gbps"
+        S98: "27.7568 Gbps"
+    S98:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S78: "15.5014 Gbps"
+        S97: "12.0889 Gbps"
+        S99: "21.3230 Gbps"
+    S99:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S76: "14.9210 Gbps"
+        S98: "23.5462 Gbps"
+        S100: "16.3514 Gbps"
+        S113: "10.9303 Gbps"
+    S100:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S51: "15.3176 Gbps"
+        S93: "22.8043 Gbps"
+        S99: "10.1343 Gbps"
+        S101: "19.2794 Gbps"
+        S106: "15.4235 Gbps"
+    S101:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S30: "22.4907 Gbps"
+        S85: "12.2802 Gbps"
+        S100: "22.4226 Gbps"
+        S102: "19.3874 Gbps"
+    S102:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S36: "14.9826 Gbps"
+        S101: "15.7664 Gbps"
+        S103: "20.5480 Gbps"
+    S103:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S102: "16.0931 Gbps"
+        S104: "23.2642 Gbps"
+    S104:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S97: "22.4553 Gbps"
+        S103: "20.3782 Gbps"
+        S105: "17.4680 Gbps"
+    S105:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S104: "12.9311 Gbps"
+        S106: "21.3908 Gbps"
+    S106:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S80: "29.1444 Gbps"
+        S95: "11.3525 Gbps"
+        S105: "23.9417 Gbps"
+        S107: "13.6513 Gbps"
+    S107:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S35: "15.1366 Gbps"
+        S102: "19.6419 Gbps"
+        S106: "23.2278 Gbps"
+        S108: "24.8413 Gbps"
+    S108:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S107: "28.8966 Gbps"
+        S109: "19.1969 Gbps"
+    S109:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S108: "15.3209 Gbps"
+        S110: "13.2353 Gbps"
+    S110:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S109: "28.0831 Gbps"
+        S111: "22.2261 Gbps"
+    S111:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S22: "13.4537 Gbps"
+        S86: "23.8847 Gbps"
+        S102: "28.1517 Gbps"
+        S110: "20.5444 Gbps"
+        S112: "27.5920 Gbps"
+    S112:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S90: "16.9318 Gbps"
+        S111: "24.9890 Gbps"
+        S113: "25.0470 Gbps"
+    S113:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S19: "19.2402 Gbps"
+        S39: "18.7074 Gbps"
+        S61: "29.5966 Gbps"
+        S102: "25.2029 Gbps"
+        S112: "21.0961 Gbps"
+        S114: "25.3082 Gbps"
+    S114:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S43: "23.8772 Gbps"
+        S113: "17.6275 Gbps"
+        S115: "24.4290 Gbps"
+    S115:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S57: "10.9073 Gbps"
+        S80: "10.4649 Gbps"
+        S114: "19.7261 Gbps"
+        S116: "29.6012 Gbps"
+        S123: "15.4832 Gbps"
+    S116:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S14: "21.9383 Gbps"
+        S20: "15.2451 Gbps"
+        S79: "26.1806 Gbps"
+        S115: "10.7309 Gbps"
+        S117: "21.0729 Gbps"
+    S117:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S53: "18.4805 Gbps"
+        S116: "20.0321 Gbps"
+        S118: "29.6719 Gbps"
+    S118:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S30: "16.9664 Gbps"
+        S110: "17.3882 Gbps"
+        S117: "13.7330 Gbps"
+        S119: "26.6501 Gbps"
+    S119:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S12: "27.2907 Gbps"
+        S70: "25.0863 Gbps"
+        S118: "20.5709 Gbps"
+        S120: "19.4387 Gbps"
+    S120:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S119: "20.0580 Gbps"
+        S121: "15.0038 Gbps"
+    S121:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S120: "13.0462 Gbps"
+        S122: "28.4784 Gbps"
+    S122:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S121: "19.5784 Gbps"
+        S123: "17.0953 Gbps"
+    S123:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S122: "27.7876 Gbps"
+        S124: "13.4118 Gbps"
+    S124:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S123: "24.2930 Gbps"
+        S125: "26.7418 Gbps"
+    S125:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S1: "28.9995 Gbps"
+        S57: "16.6365 Gbps"
+        S124: "23.4715 Gbps"
+        S126: "22.0603 Gbps"
+    S126:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S125: "14.3658 Gbps"
+        S127: "26.5156 Gbps"
+    S127:
+      terminals: 2
+      terminal_bandwidth: "100 Gbps"
+      switch_buffer: "125 GB"
+      connections:
+        S0: "28.6815 Gbps"
+        S126: "16.8274 Gbps"

@@ -6,23 +6,69 @@
     <host id="T1" speed="1Gf"/>
     <host id="T2" speed="1Gf"/>
     <host id="T3" speed="1Gf"/>
-
-    <link id="T0_access" bandwidth="25GBps" latency="0s"/>
-    <link id="T1_access" bandwidth="25GBps" latency="0s"/>
-    <link id="T2_access" bandwidth="25GBps" latency="0s"/>
-    <link id="T3_shared" bandwidth="25GBps" latency="0s"/>
-
-    <route src="T0" dst="T3" symmetrical="NO">
-      <link_ctn id="T0_access"/>
-      <link_ctn id="T3_shared"/>
+    <host id="T4" speed="1Gf"/>
+    <host id="T5" speed="1Gf"/>
+    <host id="T6" speed="1Gf"/>
+    <host id="T7" speed="1Gf"/>
+    <host id="T8" speed="1Gf"/>
+    <host id="T9" speed="1Gf"/>
+    <host id="T10" speed="1Gf"/>
+    <host id="T11" speed="1Gf"/>
+    <link id="T0_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T0_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T1_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T1_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T2_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T2_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T3_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T3_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T4_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T4_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T5_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T5_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T6_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T6_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T7_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T7_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T8_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T8_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T9_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T9_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T10_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T10_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T11_up" bandwidth="25GBps" latency="0.005s"/>
+    <link id="T11_down" bandwidth="25GBps" latency="0.005s"/>
+    <link id="S0_S1" bandwidth="25GBps" latency="0.005s"/>
+    <link id="S1_S0" bandwidth="25GBps" latency="0.005s"/>
+    <route src="T0" dst="T6" symmetrical="NO">
+      <link_ctn id="T0_up"/>
+      <link_ctn id="S0_S1"/>
+      <link_ctn id="T6_down"/>
     </route>
-    <route src="T1" dst="T3" symmetrical="NO">
-      <link_ctn id="T1_access"/>
-      <link_ctn id="T3_shared"/>
+    <route src="T1" dst="T7" symmetrical="NO">
+      <link_ctn id="T1_up"/>
+      <link_ctn id="S0_S1"/>
+      <link_ctn id="T7_down"/>
     </route>
-    <route src="T2" dst="T3" symmetrical="NO">
-      <link_ctn id="T2_access"/>
-      <link_ctn id="T3_shared"/>
+    <route src="T2" dst="T8" symmetrical="NO">
+      <link_ctn id="T2_up"/>
+      <link_ctn id="S0_S1"/>
+      <link_ctn id="T8_down"/>
+    </route>
+    <route src="T3" dst="T9" symmetrical="NO">
+      <link_ctn id="T3_up"/>
+      <link_ctn id="S0_S1"/>
+      <link_ctn id="T9_down"/>
+    </route>
+    <route src="T4" dst="T10" symmetrical="NO">
+      <link_ctn id="T4_up"/>
+      <link_ctn id="S0_S1"/>
+      <link_ctn id="T10_down"/>
+    </route>
+    <route src="T5" dst="T11" symmetrical="NO">
+      <link_ctn id="T5_up"/>
+      <link_ctn id="S0_S1"/>
+      <link_ctn id="T11_down"/>
     </route>
   </zone>
 </platform>

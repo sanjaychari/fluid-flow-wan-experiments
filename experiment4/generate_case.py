@@ -1,277 +1,137 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-
-import argparse
-import csv
-import re
-import subprocess
+import argparse,csv,random,sys
 from collections import deque
 from pathlib import Path
-from xml.sax.saxutils import escape
+ROOT=Path(__file__).resolve().parent
+sys.path.insert(0,str(ROOT.parent/'common'))
+from fluid_topology import parse_topology
+from rate_fluid import DEFAULT_LINK_LATENCY_MS, write_config,write_flow_csv
+
+SWITCHES=128
+BASE_START_SPAN_S=60.0
+BASE_SIZE_GB=(5.0,20.0)
+FLOW_COUNTS={'very_sparse':8,'sparse':32,'medium':128,'dense':256}
+WORKLOAD_SEED=44004
 
 
-SIMGRID_HOP_LATENCY_SECONDS = 1.0
+def write_topology(path:Path,n:int=SWITCHES,seed=12345):
+    rng=random.Random(seed+n); edges={i:{(i-1)%n,(i+1)%n} for i in range(n)}
+    while sum(map(len,edges.values())) < 3*n:
+        a=rng.randrange(n); b=rng.randrange(n)
+        if a!=b: edges[a].add(b)
+    lines=['topology:','  switches:']
+    for s in range(n):
+        lines += [f'    S{s}:','      terminals: 2','      terminal_bandwidth: "100 Gbps"','      switch_buffer: "125 GB"','      connections:']
+        for d in sorted(edges[s]): lines.append(f'        S{d}: "{rng.uniform(10,30):.4f} Gbps"')
+    path.write_text('\n'.join(lines)+'\n')
 
 
-def parse_quantity_mbps(raw: str) -> float:
-    raw = raw.strip().strip('"\'')
-    m = re.fullmatch(r"([0-9.eE+-]+)\s*(Mbps|Gbps)", raw)
-    if not m:
-        raise ValueError(f"unsupported bandwidth: {raw}")
-    value = float(m.group(1))
-    return value * (1000.0 if m.group(2) == "Gbps" else 1.0)
-
-
-def parse_topology(path: Path):
-    # Match model-net-fluid-flow-wan.cxx exactly: a switch ID is assigned on
-    # first mention, including when it first appears as a connection target.
-    switches = []
-    sw_index = {}
-    terminal_counts = []
-    terminal_bw_mbps = []
-    adj = []
-    edge_bw = {}
-
-    def get_or_add(name: str) -> int:
-        if name in sw_index:
-            return sw_index[name]
-        idx = len(switches)
-        sw_index[name] = idx
-        switches.append(name)
-        terminal_counts.append(0)
-        terminal_bw_mbps.append(0.0)
-        adj.append([])
-        return idx
-
-    current = None
-    in_connections = False
-    for raw in path.read_text().splitlines():
-        line_no_comment = raw.split('#', 1)[0].rstrip()
-        if not line_no_comment.strip():
-            continue
-        indent = len(line_no_comment) - len(line_no_comment.lstrip(' '))
-        line = line_no_comment.strip()
-        if ':' not in line:
-            continue
-        key, value = [x.strip() for x in line.split(':', 1)]
-
-        if indent == 4 and value == '' and key != 'switches':
-            current = get_or_add(key)
-            in_connections = False
-            continue
-
-        if current is None:
-            continue
-        if indent == 6 and key == 'connections':
-            in_connections = True
-            continue
-        if indent == 6 and not in_connections:
-            if key == 'terminals':
-                terminal_counts[current] = int(value.strip('"\''))
-            elif key == 'terminal_bandwidth':
-                terminal_bw_mbps[current] = parse_quantity_mbps(value)
-            continue
-        if indent == 8 and in_connections:
-            dst = get_or_add(key)
-            # add_or_update_link() preserves the first insertion position.
-            if dst not in adj[current]:
-                adj[current].append(dst)
-            edge_bw[(switches[current], switches[dst])] = parse_quantity_mbps(value)
-
-    if not switches:
-        raise RuntimeError(f"no switches parsed from {path}")
-    if any(c <= 0 for c in terminal_counts):
-        raise RuntimeError(f"one or more switches have no terminal count in {path}")
-    return switches, terminal_counts, terminal_bw_mbps, adj, edge_bw
-
-def bfs_path(adj, src: int, dst: int):
-    if src == dst:
-        return [src]
-    prev = [-1] * len(adj)
-    seen = [False] * len(adj)
-    q = deque([src])
-    seen[src] = True
+def bfs(adj,s,d):
+    q=deque([s]); prev={s:None}
     while q:
-        u = q.popleft()
+        u=q.popleft()
+        if u==d: break
         for v in adj[u]:
-            if not seen[v]:
-                seen[v] = True
-                prev[v] = u
-                q.append(v)
-    if not seen[dst]:
-        raise RuntimeError(f"no route {src}->{dst}")
-    out = [dst]
-    cur = dst
-    while cur != src:
-        cur = prev[cur]
-        out.append(cur)
-    out.reverse()
-    return out
+            if v not in prev: prev[v]=u; q.append(v)
+    if d not in prev: raise RuntimeError(f'no route {s}->{d}')
+    out=[]; u=d
+    while u is not None: out.append(u); u=prev[u]
+    return out[::-1]
 
 
-def write_traffic(path: Path, terminals: int, flow_gbit: float):
-    with path.open('w', newline='') as f:
-        w = csv.writer(f, lineterminator='\n')
-        w.writerow(['interval', 'flow_id', 'source_terminal', 'destination_terminal', 'offered_gbit'])
-        shift = terminals // 2
-        for src in range(terminals):
-            dst = (src + shift) % terminals
-            w.writerow([0, src + 1, src, dst, f"{flow_gbit:.9f}"])
+def write_platform(path:Path,topology_path:Path,flows,lat_ms:float):
+    topo=parse_topology(topology_path); t2s=topo.terminal_to_switch
+    lines=["<?xml version='1.0'?>",'<!DOCTYPE platform SYSTEM "https://simgrid.org/simgrid.dtd">','<platform version="4.1">','  <zone id="AS0" routing="Full">']
+    for t in range(len(t2s)): lines.append(f'    <host id="T{t}" speed="1Gf"/>')
+    for t,sid in enumerate(t2s):
+        gbps=topo.terminal_bandwidth_mbps[sid]/1000.0
+        lines.append(f'    <link id="T{t}_up" bandwidth="{gbps/8:g}GBps" latency="{lat_ms/1000:g}s"/>')
+        lines.append(f'    <link id="T{t}_down" bandwidth="{gbps/8:g}GBps" latency="{lat_ms/1000:g}s"/>')
+    for (a,b),mbps in sorted(topo.edge_mbps.items()):
+        lines.append(f'    <link id="S{a}_S{b}" bandwidth="{mbps/8000:g}GBps" latency="{lat_ms/1000:g}s"/>')
+    seen=set()
+    for _,_,src,dst,_ in flows:
+        if (src,dst) in seen: continue
+        seen.add((src,dst))
+        path_sw=bfs(topo.adjacency,t2s[src],t2s[dst])
+        lines.append(f'    <route src="T{src}" dst="T{dst}" symmetrical="NO">'); lines.append(f'      <link_ctn id="T{src}_up"/>')
+        for a,b in zip(path_sw,path_sw[1:]): lines.append(f'      <link_ctn id="S{a}_S{b}"/>')
+        lines.append(f'      <link_ctn id="T{dst}_down"/>'); lines.append('    </route>')
+    lines += ['  </zone>','</platform>','']; path.write_text('\n'.join(lines))
 
 
-def write_platform(path: Path, topology_path: Path, traffic_path: Path):
-    switches, terminal_counts, terminal_bw, adj, edge_bw = parse_topology(topology_path)
-
-    terminal_to_switch = []
-    terminal_bws = []
-    for s, count in enumerate(terminal_counts):
-        for _ in range(count):
-            terminal_to_switch.append(s)
-            terminal_bws.append(terminal_bw[s])
-
-    flows = []
-    with traffic_path.open(newline='') as f:
-        for row in csv.DictReader(f):
-            flows.append((int(row['source_terminal']), int(row['destination_terminal'])))
-
-    lines = [
-        "<?xml version='1.0'?>",
-        '<!DOCTYPE platform SYSTEM "https://simgrid.org/simgrid.dtd">',
-        '<platform version="4.1">',
-        '  <zone id="AS0" routing="Full">',
-    ]
-    for t in range(len(terminal_to_switch)):
-        lines.append(f'    <host id="T{t}" speed="1Gf"/>')
-
-    # Separate directional terminal links match the source and destination access capacities.
-    for t, bw_mbps in enumerate(terminal_bws):
-        mbps_bytes = bw_mbps / 8.0
-        lines.append(f'    <link id="T{t}_up" bandwidth="{mbps_bytes:.9f}MBps" latency="0s"/>')
-        lines.append(
-            f'    <link id="T{t}_down" bandwidth="{mbps_bytes:.9f}MBps" '
-            f'latency="{SIMGRID_HOP_LATENCY_SECONDS:g}s"/>'
-        )
-
-    for s, nbrs in enumerate(adj):
-        for d in nbrs:
-            bw_mbps = edge_bw[(switches[s], switches[d])]
-            mbps_bytes = bw_mbps / 8.0
-            # Keep the SimGrid reference platform fixed across the CODES
-            # interval sweep. The CODES fluid interval is an aggregation
-            # granularity parameter, not physical link latency.
-            lines.append(
-                f'    <link id="S{s}_S{d}" bandwidth="{mbps_bytes:.9f}MBps" '
-                f'latency="{SIMGRID_HOP_LATENCY_SECONDS:g}s"/>'
-            )
-
-    seen_pairs = set()
-    for src_t, dst_t in flows:
-        pair = (src_t, dst_t)
-        if pair in seen_pairs:
-            continue
-        seen_pairs.add(pair)
-        src_s = terminal_to_switch[src_t]
-        dst_s = terminal_to_switch[dst_t]
-        path_sw = bfs_path(adj, src_s, dst_s)
-        lines.append(f'    <route src="T{src_t}" dst="T{dst_t}" symmetrical="NO">')
-        lines.append(f'      <link_ctn id="T{src_t}_up"/>')
-        for a, b in zip(path_sw, path_sw[1:]):
-            lines.append(f'      <link_ctn id="S{a}_S{b}"/>')
-        lines.append(f'      <link_ctn id="T{dst_t}_down"/>')
-        lines.append('    </route>')
-
-    lines += ['  </zone>', '</platform>', '']
-    path.write_text('\n'.join(lines))
+def dense_workload(nt:int):
+    rng=random.Random(WORKLOAD_SEED)
+    flows=[]
+    for i in range(nt):
+        src=i
+        dst=(i+nt//2)%nt
+        start=rng.random()*BASE_START_SPAN_S
+        size_gbit=rng.uniform(*BASE_SIZE_GB)*8.0
+        flows.append((start,i+1,src,dst,size_gbit))
+    flows.sort(key=lambda x:(x[0],x[1]))
+    return flows
 
 
-def write_codes_config(path: Path, topology: Path, traffic: Path, switches: int, terminals: int,
-                       drain_intervals: int, terminal_log: Path | None,
-                       interval_seconds: float):
-    log_line = f'    terminal_log_path: "{terminal_log.name}"\n' if terminal_log else ''
-    path.write_text(f'''schema_version: 1
+def evenly_spaced_subset(items,n:int):
+    if n == len(items):
+        return list(items)
+    if n < 1 or n > len(items):
+        raise ValueError(f'invalid subset size {n} for {len(items)} items')
+    idx=[round(i*(len(items)-1)/(n-1)) for i in range(n)] if n > 1 else [0]
+    return [items[i] for i in idx]
 
-topology:
-  format: groups
-  params:
-    message_size: 32768
-    pe_mem_factor: 1024
-  groups:
-    FLUID_FLOW_WAN_GRP:
-      repetitions: 1
-      lps:
-        fluid-flow-wan-switch-lp: {switches}
-        fluid-flow-wan-terminal-lp: {terminals}
 
-sections:
-  fluid_flow_wan:
-    topology_yaml_file: "{topology.name}"
-    traffic_trace_file: "{traffic.name}"
-    interval_seconds: {interval_seconds:g}
-    num_send_intervals: 1
-    num_drain_intervals: {drain_intervals}
-    egress_model: pdes
-    debug_prints: 0
-    backpressure_delay_ms: 1.0
-    pause_enabled: 1
-    pause_high_watermark_fraction: 0.999999
-    pause_low_watermark_fraction: 0.999998
-{log_line}''')
+def build_flows(nt:int,density:str):
+    dense=dense_workload(nt)
+    target_n=FLOW_COUNTS[density]
+    selected=evenly_spaced_subset(dense,target_n)
+    dense_total=sum(x[4] for x in dense)
+    selected_total=sum(x[4] for x in selected)
+    size_scale=dense_total/selected_total
+    flows=[(st,fid,src,dst,gbit*size_scale) for st,fid,src,dst,gbit in selected]
+    return flows,size_scale,dense_total
 
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument('--codes-root', type=Path, required=True)
-    ap.add_argument('--case-dir', type=Path, required=True)
-    ap.add_argument('--switches', type=int, required=True, choices=(32, 64, 128))
-    ap.add_argument('--flow-gbit', type=float, default=500.0)
-    ap.add_argument('--pilot-drain', type=int, default=1000)
-    ap.add_argument('--performance-drain', type=int)
-    ap.add_argument('--interval-seconds', type=float, default=1.0)
-    args = ap.parse_args()
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--case-dir',type=Path,required=True)
+    ap.add_argument('--density',choices=tuple(FLOW_COUNTS),required=True)
+    ap.add_argument('--link-latency-ms',type=float,default=DEFAULT_LINK_LATENCY_MS)
+    a=ap.parse_args()
 
-    if args.interval_seconds <= 0:
-        raise SystemExit('--interval-seconds must be positive')
+    c=a.case_dir; c.mkdir(parents=True,exist_ok=True)
+    write_topology(c/'topology.yaml')
+    topo=parse_topology(c/'topology.yaml'); nt=len(topo.terminal_to_switch)
+    flows,size_scale,dense_total=build_flows(nt,a.density)
+    write_flow_csv(c/'flows.csv',flows)
 
-    case = args.case_dir.resolve()
-    case.mkdir(parents=True, exist_ok=True)
-    topology = case / 'topology.yaml'
-    traffic = case / 'traffic.csv'
+    min_edge_gbps=min(topo.edge_mbps.values())/1000.0
+    max_start=max(x[0] for x in flows)
+    total_gbit=sum(x[4] for x in flows)
+    end_time_s=max_start + total_gbit/min_edge_gbps + 60.0
+    write_config(c/'codes.yaml',switches=SWITCHES,terminals=nt,end_time_s=end_time_s,
+                 latency_ms=a.link_latency_ms,pause_enabled=0,debug=0)
 
-    if args.performance_drain is None:
-        generator = args.codes_root / 'src/network-workloads/generate-fluid-flow-wan-topology.py'
-        subprocess.run([
-            'python3', str(generator),
-            '--switches', str(args.switches),
-            '--terminals-per-switch', '2',
-            '--avg-switch-degree', '3',
-            '--reverse-link-probability', '0.35',
-            '--switch-link-min-mbps', '10000',
-            '--switch-link-max-mbps', '30000',
-            '--terminal-link-min-mbps', '100000',
-            '--terminal-link-max-mbps', '100000',
-            '--switch-buffer-min-mb', '1000000000',
-            '--switch-buffer-max-mb', '1000000000',
-            '--seed', '12345',
-            '--output', str(topology),
-        ], check=True)
-        terminals = args.switches * 2
-        write_traffic(traffic, terminals, args.flow_gbit)
-        write_platform(case / 'platform.xml', topology, traffic)
-        write_codes_config(
-            case / 'codes-correctness.yaml', topology, traffic,
-            args.switches, terminals, args.pilot_drain,
-            case / 'terminal-events.csv', args.interval_seconds,
-        )
-    else:
-        terminals = args.switches * 2
-        if not topology.exists() or not traffic.exists():
-            raise SystemExit('generate the case before creating the performance config')
-        write_codes_config(
-            case / 'codes-performance.yaml', topology, traffic,
-            args.switches, terminals, args.performance_drain, None,
-            args.interval_seconds,
-        )
+    with (c/'traffic.csv').open('w',newline='') as f:
+        w=csv.writer(f,lineterminator='\n')
+        w.writerow(['start_time_sec','flow_id','source_terminal','destination_terminal','offered_gbit'])
+        for st,fid,s,d,z in flows: w.writerow([f'{st:.12g}',fid,s,d,f'{z:.12g}'])
+
+    with (c/'workload-metadata.csv').open('w',newline='') as f:
+        w=csv.writer(f,lineterminator='\n')
+        w.writerow(['flow_density','switches','flows','start_span_s','offered_GB','size_scale_vs_selected_subset'])
+        starts=[x[0] for x in flows]
+        w.writerow([a.density,SWITCHES,len(flows),f'{max(starts)-min(starts):.9f}',f'{total_gbit/8.0:.9f}',f'{size_scale:.9f}'])
+
+    if abs(total_gbit-dense_total) > 1e-6:
+        raise RuntimeError(f'offered-volume mismatch for {a.density}: {total_gbit} vs {dense_total}')
+
+    write_platform(c/'platform.xml',c/'topology.yaml',flows,a.link_latency_ms)
+    print(f'density={a.density} switches={SWITCHES} flows={len(flows)} '
+          f'start_span_s={max(starts)-min(starts):.6f} offered_GB={total_gbit/8.0:.6f} '
+          f'size_scale={size_scale:.6f}')
 
 
-if __name__ == '__main__':
-    main()
+if __name__=='__main__':main()

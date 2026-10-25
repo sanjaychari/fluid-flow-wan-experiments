@@ -3,7 +3,7 @@ topology:
     R000:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R001: "42000 Mbps"
         R002: "42000 Mbps"
@@ -19,7 +19,7 @@ topology:
     R001:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R000: "42000 Mbps"
         R002: "42000 Mbps"
@@ -35,7 +35,7 @@ topology:
     R002:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R000: "42000 Mbps"
         R001: "42000 Mbps"
@@ -51,7 +51,7 @@ topology:
     R003:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R000: "42000 Mbps"
         R001: "42000 Mbps"
@@ -67,7 +67,7 @@ topology:
     R004:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R000: "42000 Mbps"
         R001: "42000 Mbps"
@@ -83,7 +83,7 @@ topology:
     R005:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R000: "42000 Mbps"
         R001: "42000 Mbps"
@@ -99,7 +99,7 @@ topology:
     R006:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R000: "42000 Mbps"
         R001: "42000 Mbps"
@@ -115,7 +115,7 @@ topology:
     R007:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R000: "42000 Mbps"
         R001: "42000 Mbps"
@@ -131,7 +131,7 @@ topology:
     R008:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R009: "42000 Mbps"
         R010: "42000 Mbps"
@@ -147,7 +147,7 @@ topology:
     R009:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R008: "42000 Mbps"
         R010: "42000 Mbps"
@@ -163,7 +163,7 @@ topology:
     R010:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R008: "42000 Mbps"
         R009: "42000 Mbps"
@@ -179,7 +179,7 @@ topology:
     R011:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R008: "42000 Mbps"
         R009: "42000 Mbps"
@@ -195,7 +195,7 @@ topology:
     R012:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R008: "42000 Mbps"
         R009: "42000 Mbps"
@@ -211,7 +211,7 @@ topology:
     R013:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R008: "42000 Mbps"
         R009: "42000 Mbps"
@@ -227,7 +227,7 @@ topology:
     R014:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R008: "42000 Mbps"
         R009: "42000 Mbps"
@@ -243,7 +243,7 @@ topology:
     R015:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R008: "42000 Mbps"
         R009: "42000 Mbps"
@@ -259,7 +259,7 @@ topology:
     R016:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R017: "42000 Mbps"
         R018: "42000 Mbps"
@@ -275,7 +275,7 @@ topology:
     R017:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R016: "42000 Mbps"
         R018: "42000 Mbps"
@@ -291,7 +291,7 @@ topology:
     R018:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R016: "42000 Mbps"
         R017: "42000 Mbps"
@@ -307,7 +307,7 @@ topology:
     R019:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R016: "42000 Mbps"
         R017: "42000 Mbps"
@@ -323,7 +323,7 @@ topology:
     R020:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R016: "42000 Mbps"
         R017: "42000 Mbps"
@@ -339,7 +339,7 @@ topology:
     R021:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R016: "42000 Mbps"
         R017: "42000 Mbps"
@@ -355,7 +355,7 @@ topology:
     R022:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R016: "42000 Mbps"
         R017: "42000 Mbps"
@@ -371,7 +371,7 @@ topology:
     R023:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R016: "42000 Mbps"
         R017: "42000 Mbps"
@@ -387,7 +387,7 @@ topology:
     R024:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R025: "42000 Mbps"
         R026: "42000 Mbps"
@@ -403,7 +403,7 @@ topology:
     R025:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R024: "42000 Mbps"
         R026: "42000 Mbps"
@@ -419,7 +419,7 @@ topology:
     R026:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R024: "42000 Mbps"
         R025: "42000 Mbps"
@@ -435,7 +435,7 @@ topology:
     R027:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R024: "42000 Mbps"
         R025: "42000 Mbps"
@@ -451,7 +451,7 @@ topology:
     R028:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R024: "42000 Mbps"
         R025: "42000 Mbps"
@@ -467,7 +467,7 @@ topology:
     R029:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R024: "42000 Mbps"
         R025: "42000 Mbps"
@@ -483,7 +483,7 @@ topology:
     R030:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R024: "42000 Mbps"
         R025: "42000 Mbps"
@@ -499,7 +499,7 @@ topology:
     R031:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R024: "42000 Mbps"
         R025: "42000 Mbps"
@@ -515,7 +515,7 @@ topology:
     R032:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R033: "42000 Mbps"
         R034: "42000 Mbps"
@@ -531,7 +531,7 @@ topology:
     R033:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R032: "42000 Mbps"
         R034: "42000 Mbps"
@@ -547,7 +547,7 @@ topology:
     R034:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R032: "42000 Mbps"
         R033: "42000 Mbps"
@@ -563,7 +563,7 @@ topology:
     R035:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R032: "42000 Mbps"
         R033: "42000 Mbps"
@@ -579,7 +579,7 @@ topology:
     R036:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R032: "42000 Mbps"
         R033: "42000 Mbps"
@@ -595,7 +595,7 @@ topology:
     R037:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R032: "42000 Mbps"
         R033: "42000 Mbps"
@@ -611,7 +611,7 @@ topology:
     R038:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R032: "42000 Mbps"
         R033: "42000 Mbps"
@@ -627,7 +627,7 @@ topology:
     R039:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R032: "42000 Mbps"
         R033: "42000 Mbps"
@@ -643,7 +643,7 @@ topology:
     R040:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R041: "42000 Mbps"
         R042: "42000 Mbps"
@@ -659,7 +659,7 @@ topology:
     R041:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R040: "42000 Mbps"
         R042: "42000 Mbps"
@@ -675,7 +675,7 @@ topology:
     R042:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R040: "42000 Mbps"
         R041: "42000 Mbps"
@@ -691,7 +691,7 @@ topology:
     R043:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R040: "42000 Mbps"
         R041: "42000 Mbps"
@@ -707,7 +707,7 @@ topology:
     R044:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R040: "42000 Mbps"
         R041: "42000 Mbps"
@@ -723,7 +723,7 @@ topology:
     R045:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R040: "42000 Mbps"
         R041: "42000 Mbps"
@@ -739,7 +739,7 @@ topology:
     R046:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R040: "42000 Mbps"
         R041: "42000 Mbps"
@@ -755,7 +755,7 @@ topology:
     R047:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R040: "42000 Mbps"
         R041: "42000 Mbps"
@@ -771,7 +771,7 @@ topology:
     R048:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R049: "42000 Mbps"
         R050: "42000 Mbps"
@@ -787,7 +787,7 @@ topology:
     R049:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R048: "42000 Mbps"
         R050: "42000 Mbps"
@@ -803,7 +803,7 @@ topology:
     R050:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R048: "42000 Mbps"
         R049: "42000 Mbps"
@@ -819,7 +819,7 @@ topology:
     R051:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R048: "42000 Mbps"
         R049: "42000 Mbps"
@@ -835,7 +835,7 @@ topology:
     R052:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R048: "42000 Mbps"
         R049: "42000 Mbps"
@@ -851,7 +851,7 @@ topology:
     R053:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R048: "42000 Mbps"
         R049: "42000 Mbps"
@@ -867,7 +867,7 @@ topology:
     R054:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R048: "42000 Mbps"
         R049: "42000 Mbps"
@@ -883,7 +883,7 @@ topology:
     R055:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R048: "42000 Mbps"
         R049: "42000 Mbps"
@@ -899,7 +899,7 @@ topology:
     R056:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R057: "42000 Mbps"
         R058: "42000 Mbps"
@@ -915,7 +915,7 @@ topology:
     R057:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R056: "42000 Mbps"
         R058: "42000 Mbps"
@@ -931,7 +931,7 @@ topology:
     R058:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R056: "42000 Mbps"
         R057: "42000 Mbps"
@@ -947,7 +947,7 @@ topology:
     R059:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R056: "42000 Mbps"
         R057: "42000 Mbps"
@@ -963,7 +963,7 @@ topology:
     R060:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R056: "42000 Mbps"
         R057: "42000 Mbps"
@@ -979,7 +979,7 @@ topology:
     R061:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R056: "42000 Mbps"
         R057: "42000 Mbps"
@@ -995,7 +995,7 @@ topology:
     R062:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R056: "42000 Mbps"
         R057: "42000 Mbps"
@@ -1011,7 +1011,7 @@ topology:
     R063:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R056: "42000 Mbps"
         R057: "42000 Mbps"
@@ -1027,7 +1027,7 @@ topology:
     R064:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R065: "42000 Mbps"
         R066: "42000 Mbps"
@@ -1043,7 +1043,7 @@ topology:
     R065:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R064: "42000 Mbps"
         R066: "42000 Mbps"
@@ -1059,7 +1059,7 @@ topology:
     R066:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R064: "42000 Mbps"
         R065: "42000 Mbps"
@@ -1075,7 +1075,7 @@ topology:
     R067:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R064: "42000 Mbps"
         R065: "42000 Mbps"
@@ -1091,7 +1091,7 @@ topology:
     R068:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R064: "42000 Mbps"
         R065: "42000 Mbps"
@@ -1107,7 +1107,7 @@ topology:
     R069:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R064: "42000 Mbps"
         R065: "42000 Mbps"
@@ -1123,7 +1123,7 @@ topology:
     R070:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R064: "42000 Mbps"
         R065: "42000 Mbps"
@@ -1139,7 +1139,7 @@ topology:
     R071:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R064: "42000 Mbps"
         R065: "42000 Mbps"
@@ -1155,7 +1155,7 @@ topology:
     R072:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R073: "42000 Mbps"
         R074: "42000 Mbps"
@@ -1171,7 +1171,7 @@ topology:
     R073:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R072: "42000 Mbps"
         R074: "42000 Mbps"
@@ -1187,7 +1187,7 @@ topology:
     R074:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R072: "42000 Mbps"
         R073: "42000 Mbps"
@@ -1203,7 +1203,7 @@ topology:
     R075:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R072: "42000 Mbps"
         R073: "42000 Mbps"
@@ -1219,7 +1219,7 @@ topology:
     R076:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R072: "42000 Mbps"
         R073: "42000 Mbps"
@@ -1235,7 +1235,7 @@ topology:
     R077:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R072: "42000 Mbps"
         R073: "42000 Mbps"
@@ -1251,7 +1251,7 @@ topology:
     R078:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R072: "42000 Mbps"
         R073: "42000 Mbps"
@@ -1267,7 +1267,7 @@ topology:
     R079:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R072: "42000 Mbps"
         R073: "42000 Mbps"
@@ -1283,7 +1283,7 @@ topology:
     R080:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R081: "42000 Mbps"
         R082: "42000 Mbps"
@@ -1299,7 +1299,7 @@ topology:
     R081:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R080: "42000 Mbps"
         R082: "42000 Mbps"
@@ -1315,7 +1315,7 @@ topology:
     R082:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R080: "42000 Mbps"
         R081: "42000 Mbps"
@@ -1331,7 +1331,7 @@ topology:
     R083:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R080: "42000 Mbps"
         R081: "42000 Mbps"
@@ -1347,7 +1347,7 @@ topology:
     R084:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R080: "42000 Mbps"
         R081: "42000 Mbps"
@@ -1363,7 +1363,7 @@ topology:
     R085:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R080: "42000 Mbps"
         R081: "42000 Mbps"
@@ -1379,7 +1379,7 @@ topology:
     R086:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R080: "42000 Mbps"
         R081: "42000 Mbps"
@@ -1395,7 +1395,7 @@ topology:
     R087:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R080: "42000 Mbps"
         R081: "42000 Mbps"
@@ -1411,7 +1411,7 @@ topology:
     R088:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R089: "42000 Mbps"
         R090: "42000 Mbps"
@@ -1427,7 +1427,7 @@ topology:
     R089:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R088: "42000 Mbps"
         R090: "42000 Mbps"
@@ -1443,7 +1443,7 @@ topology:
     R090:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R088: "42000 Mbps"
         R089: "42000 Mbps"
@@ -1459,7 +1459,7 @@ topology:
     R091:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R088: "42000 Mbps"
         R089: "42000 Mbps"
@@ -1475,7 +1475,7 @@ topology:
     R092:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R088: "42000 Mbps"
         R089: "42000 Mbps"
@@ -1491,7 +1491,7 @@ topology:
     R093:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R088: "42000 Mbps"
         R089: "42000 Mbps"
@@ -1507,7 +1507,7 @@ topology:
     R094:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R088: "42000 Mbps"
         R089: "42000 Mbps"
@@ -1523,7 +1523,7 @@ topology:
     R095:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R088: "42000 Mbps"
         R089: "42000 Mbps"
@@ -1539,7 +1539,7 @@ topology:
     R096:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R097: "42000 Mbps"
         R098: "42000 Mbps"
@@ -1555,7 +1555,7 @@ topology:
     R097:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R096: "42000 Mbps"
         R098: "42000 Mbps"
@@ -1571,7 +1571,7 @@ topology:
     R098:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R096: "42000 Mbps"
         R097: "42000 Mbps"
@@ -1587,7 +1587,7 @@ topology:
     R099:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R096: "42000 Mbps"
         R097: "42000 Mbps"
@@ -1603,7 +1603,7 @@ topology:
     R100:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R096: "42000 Mbps"
         R097: "42000 Mbps"
@@ -1619,7 +1619,7 @@ topology:
     R101:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R096: "42000 Mbps"
         R097: "42000 Mbps"
@@ -1635,7 +1635,7 @@ topology:
     R102:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R096: "42000 Mbps"
         R097: "42000 Mbps"
@@ -1651,7 +1651,7 @@ topology:
     R103:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R096: "42000 Mbps"
         R097: "42000 Mbps"
@@ -1667,7 +1667,7 @@ topology:
     R104:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R105: "42000 Mbps"
         R106: "42000 Mbps"
@@ -1683,7 +1683,7 @@ topology:
     R105:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R104: "42000 Mbps"
         R106: "42000 Mbps"
@@ -1699,7 +1699,7 @@ topology:
     R106:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R104: "42000 Mbps"
         R105: "42000 Mbps"
@@ -1715,7 +1715,7 @@ topology:
     R107:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R104: "42000 Mbps"
         R105: "42000 Mbps"
@@ -1731,7 +1731,7 @@ topology:
     R108:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R104: "42000 Mbps"
         R105: "42000 Mbps"
@@ -1747,7 +1747,7 @@ topology:
     R109:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R104: "42000 Mbps"
         R105: "42000 Mbps"
@@ -1763,7 +1763,7 @@ topology:
     R110:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R104: "42000 Mbps"
         R105: "42000 Mbps"
@@ -1779,7 +1779,7 @@ topology:
     R111:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R104: "42000 Mbps"
         R105: "42000 Mbps"
@@ -1795,7 +1795,7 @@ topology:
     R112:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R113: "42000 Mbps"
         R114: "42000 Mbps"
@@ -1811,7 +1811,7 @@ topology:
     R113:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R112: "42000 Mbps"
         R114: "42000 Mbps"
@@ -1827,7 +1827,7 @@ topology:
     R114:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R112: "42000 Mbps"
         R113: "42000 Mbps"
@@ -1843,7 +1843,7 @@ topology:
     R115:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R112: "42000 Mbps"
         R113: "42000 Mbps"
@@ -1859,7 +1859,7 @@ topology:
     R116:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R112: "42000 Mbps"
         R113: "42000 Mbps"
@@ -1875,7 +1875,7 @@ topology:
     R117:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R112: "42000 Mbps"
         R113: "42000 Mbps"
@@ -1891,7 +1891,7 @@ topology:
     R118:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R112: "42000 Mbps"
         R113: "42000 Mbps"
@@ -1907,7 +1907,7 @@ topology:
     R119:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R112: "42000 Mbps"
         R113: "42000 Mbps"
@@ -1923,7 +1923,7 @@ topology:
     R120:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R121: "42000 Mbps"
         R122: "42000 Mbps"
@@ -1939,7 +1939,7 @@ topology:
     R121:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R120: "42000 Mbps"
         R122: "42000 Mbps"
@@ -1955,7 +1955,7 @@ topology:
     R122:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R120: "42000 Mbps"
         R121: "42000 Mbps"
@@ -1971,7 +1971,7 @@ topology:
     R123:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R120: "42000 Mbps"
         R121: "42000 Mbps"
@@ -1987,7 +1987,7 @@ topology:
     R124:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R120: "42000 Mbps"
         R121: "42000 Mbps"
@@ -2003,7 +2003,7 @@ topology:
     R125:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R120: "42000 Mbps"
         R121: "42000 Mbps"
@@ -2019,7 +2019,7 @@ topology:
     R126:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R120: "42000 Mbps"
         R121: "42000 Mbps"
@@ -2035,7 +2035,7 @@ topology:
     R127:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R120: "42000 Mbps"
         R121: "42000 Mbps"
@@ -2051,7 +2051,7 @@ topology:
     R128:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R129: "42000 Mbps"
         R130: "42000 Mbps"
@@ -2067,7 +2067,7 @@ topology:
     R129:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R128: "42000 Mbps"
         R130: "42000 Mbps"
@@ -2083,7 +2083,7 @@ topology:
     R130:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R128: "42000 Mbps"
         R129: "42000 Mbps"
@@ -2099,7 +2099,7 @@ topology:
     R131:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R128: "42000 Mbps"
         R129: "42000 Mbps"
@@ -2115,7 +2115,7 @@ topology:
     R132:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R128: "42000 Mbps"
         R129: "42000 Mbps"
@@ -2131,7 +2131,7 @@ topology:
     R133:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R128: "42000 Mbps"
         R129: "42000 Mbps"
@@ -2147,7 +2147,7 @@ topology:
     R134:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R128: "42000 Mbps"
         R129: "42000 Mbps"
@@ -2163,7 +2163,7 @@ topology:
     R135:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R128: "42000 Mbps"
         R129: "42000 Mbps"
@@ -2179,7 +2179,7 @@ topology:
     R136:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R137: "42000 Mbps"
         R138: "42000 Mbps"
@@ -2195,7 +2195,7 @@ topology:
     R137:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R136: "42000 Mbps"
         R138: "42000 Mbps"
@@ -2211,7 +2211,7 @@ topology:
     R138:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R136: "42000 Mbps"
         R137: "42000 Mbps"
@@ -2227,7 +2227,7 @@ topology:
     R139:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R136: "42000 Mbps"
         R137: "42000 Mbps"
@@ -2243,7 +2243,7 @@ topology:
     R140:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R136: "42000 Mbps"
         R137: "42000 Mbps"
@@ -2259,7 +2259,7 @@ topology:
     R141:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R136: "42000 Mbps"
         R137: "42000 Mbps"
@@ -2275,7 +2275,7 @@ topology:
     R142:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R136: "42000 Mbps"
         R137: "42000 Mbps"
@@ -2291,7 +2291,7 @@ topology:
     R143:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R136: "42000 Mbps"
         R137: "42000 Mbps"
@@ -2307,7 +2307,7 @@ topology:
     R144:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R145: "42000 Mbps"
         R146: "42000 Mbps"
@@ -2323,7 +2323,7 @@ topology:
     R145:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R144: "42000 Mbps"
         R146: "42000 Mbps"
@@ -2339,7 +2339,7 @@ topology:
     R146:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R144: "42000 Mbps"
         R145: "42000 Mbps"
@@ -2355,7 +2355,7 @@ topology:
     R147:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R144: "42000 Mbps"
         R145: "42000 Mbps"
@@ -2371,7 +2371,7 @@ topology:
     R148:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R144: "42000 Mbps"
         R145: "42000 Mbps"
@@ -2387,7 +2387,7 @@ topology:
     R149:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R144: "42000 Mbps"
         R145: "42000 Mbps"
@@ -2403,7 +2403,7 @@ topology:
     R150:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R144: "42000 Mbps"
         R145: "42000 Mbps"
@@ -2419,7 +2419,7 @@ topology:
     R151:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R144: "42000 Mbps"
         R145: "42000 Mbps"
@@ -2435,7 +2435,7 @@ topology:
     R152:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R153: "42000 Mbps"
         R154: "42000 Mbps"
@@ -2451,7 +2451,7 @@ topology:
     R153:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R152: "42000 Mbps"
         R154: "42000 Mbps"
@@ -2467,7 +2467,7 @@ topology:
     R154:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R152: "42000 Mbps"
         R153: "42000 Mbps"
@@ -2483,7 +2483,7 @@ topology:
     R155:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R152: "42000 Mbps"
         R153: "42000 Mbps"
@@ -2499,7 +2499,7 @@ topology:
     R156:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R152: "42000 Mbps"
         R153: "42000 Mbps"
@@ -2515,7 +2515,7 @@ topology:
     R157:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R152: "42000 Mbps"
         R153: "42000 Mbps"
@@ -2531,7 +2531,7 @@ topology:
     R158:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R152: "42000 Mbps"
         R153: "42000 Mbps"
@@ -2547,7 +2547,7 @@ topology:
     R159:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R152: "42000 Mbps"
         R153: "42000 Mbps"
@@ -2563,7 +2563,7 @@ topology:
     R160:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R161: "42000 Mbps"
         R162: "42000 Mbps"
@@ -2579,7 +2579,7 @@ topology:
     R161:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R160: "42000 Mbps"
         R162: "42000 Mbps"
@@ -2595,7 +2595,7 @@ topology:
     R162:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R160: "42000 Mbps"
         R161: "42000 Mbps"
@@ -2611,7 +2611,7 @@ topology:
     R163:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R160: "42000 Mbps"
         R161: "42000 Mbps"
@@ -2627,7 +2627,7 @@ topology:
     R164:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R160: "42000 Mbps"
         R161: "42000 Mbps"
@@ -2643,7 +2643,7 @@ topology:
     R165:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R160: "42000 Mbps"
         R161: "42000 Mbps"
@@ -2659,7 +2659,7 @@ topology:
     R166:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R160: "42000 Mbps"
         R161: "42000 Mbps"
@@ -2675,7 +2675,7 @@ topology:
     R167:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R160: "42000 Mbps"
         R161: "42000 Mbps"
@@ -2691,7 +2691,7 @@ topology:
     R168:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R169: "42000 Mbps"
         R170: "42000 Mbps"
@@ -2707,7 +2707,7 @@ topology:
     R169:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R168: "42000 Mbps"
         R170: "42000 Mbps"
@@ -2723,7 +2723,7 @@ topology:
     R170:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R168: "42000 Mbps"
         R169: "42000 Mbps"
@@ -2739,7 +2739,7 @@ topology:
     R171:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R168: "42000 Mbps"
         R169: "42000 Mbps"
@@ -2755,7 +2755,7 @@ topology:
     R172:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R168: "42000 Mbps"
         R169: "42000 Mbps"
@@ -2771,7 +2771,7 @@ topology:
     R173:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R168: "42000 Mbps"
         R169: "42000 Mbps"
@@ -2787,7 +2787,7 @@ topology:
     R174:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R168: "42000 Mbps"
         R169: "42000 Mbps"
@@ -2803,7 +2803,7 @@ topology:
     R175:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R168: "42000 Mbps"
         R169: "42000 Mbps"
@@ -2819,7 +2819,7 @@ topology:
     R176:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R177: "42000 Mbps"
         R178: "42000 Mbps"
@@ -2835,7 +2835,7 @@ topology:
     R177:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R176: "42000 Mbps"
         R178: "42000 Mbps"
@@ -2851,7 +2851,7 @@ topology:
     R178:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R176: "42000 Mbps"
         R177: "42000 Mbps"
@@ -2867,7 +2867,7 @@ topology:
     R179:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R176: "42000 Mbps"
         R177: "42000 Mbps"
@@ -2883,7 +2883,7 @@ topology:
     R180:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R176: "42000 Mbps"
         R177: "42000 Mbps"
@@ -2899,7 +2899,7 @@ topology:
     R181:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R176: "42000 Mbps"
         R177: "42000 Mbps"
@@ -2915,7 +2915,7 @@ topology:
     R182:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R176: "42000 Mbps"
         R177: "42000 Mbps"
@@ -2931,7 +2931,7 @@ topology:
     R183:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R176: "42000 Mbps"
         R177: "42000 Mbps"
@@ -2947,7 +2947,7 @@ topology:
     R184:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R185: "42000 Mbps"
         R186: "42000 Mbps"
@@ -2963,7 +2963,7 @@ topology:
     R185:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R184: "42000 Mbps"
         R186: "42000 Mbps"
@@ -2979,7 +2979,7 @@ topology:
     R186:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R184: "42000 Mbps"
         R185: "42000 Mbps"
@@ -2995,7 +2995,7 @@ topology:
     R187:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R184: "42000 Mbps"
         R185: "42000 Mbps"
@@ -3011,7 +3011,7 @@ topology:
     R188:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R184: "42000 Mbps"
         R185: "42000 Mbps"
@@ -3027,7 +3027,7 @@ topology:
     R189:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R184: "42000 Mbps"
         R185: "42000 Mbps"
@@ -3043,7 +3043,7 @@ topology:
     R190:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R184: "42000 Mbps"
         R185: "42000 Mbps"
@@ -3059,7 +3059,7 @@ topology:
     R191:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R184: "42000 Mbps"
         R185: "42000 Mbps"
@@ -3075,7 +3075,7 @@ topology:
     R192:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R193: "42000 Mbps"
         R194: "42000 Mbps"
@@ -3091,7 +3091,7 @@ topology:
     R193:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R192: "42000 Mbps"
         R194: "42000 Mbps"
@@ -3107,7 +3107,7 @@ topology:
     R194:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R192: "42000 Mbps"
         R193: "42000 Mbps"
@@ -3123,7 +3123,7 @@ topology:
     R195:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R192: "42000 Mbps"
         R193: "42000 Mbps"
@@ -3139,7 +3139,7 @@ topology:
     R196:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R192: "42000 Mbps"
         R193: "42000 Mbps"
@@ -3155,7 +3155,7 @@ topology:
     R197:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R192: "42000 Mbps"
         R193: "42000 Mbps"
@@ -3171,7 +3171,7 @@ topology:
     R198:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R192: "42000 Mbps"
         R193: "42000 Mbps"
@@ -3187,7 +3187,7 @@ topology:
     R199:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R192: "42000 Mbps"
         R193: "42000 Mbps"
@@ -3203,7 +3203,7 @@ topology:
     R200:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R201: "42000 Mbps"
         R202: "42000 Mbps"
@@ -3219,7 +3219,7 @@ topology:
     R201:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R200: "42000 Mbps"
         R202: "42000 Mbps"
@@ -3235,7 +3235,7 @@ topology:
     R202:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R200: "42000 Mbps"
         R201: "42000 Mbps"
@@ -3251,7 +3251,7 @@ topology:
     R203:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R200: "42000 Mbps"
         R201: "42000 Mbps"
@@ -3267,7 +3267,7 @@ topology:
     R204:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R200: "42000 Mbps"
         R201: "42000 Mbps"
@@ -3283,7 +3283,7 @@ topology:
     R205:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R200: "42000 Mbps"
         R201: "42000 Mbps"
@@ -3299,7 +3299,7 @@ topology:
     R206:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R200: "42000 Mbps"
         R201: "42000 Mbps"
@@ -3315,7 +3315,7 @@ topology:
     R207:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R200: "42000 Mbps"
         R201: "42000 Mbps"
@@ -3331,7 +3331,7 @@ topology:
     R208:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R209: "42000 Mbps"
         R210: "42000 Mbps"
@@ -3347,7 +3347,7 @@ topology:
     R209:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R208: "42000 Mbps"
         R210: "42000 Mbps"
@@ -3363,7 +3363,7 @@ topology:
     R210:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R208: "42000 Mbps"
         R209: "42000 Mbps"
@@ -3379,7 +3379,7 @@ topology:
     R211:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R208: "42000 Mbps"
         R209: "42000 Mbps"
@@ -3395,7 +3395,7 @@ topology:
     R212:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R208: "42000 Mbps"
         R209: "42000 Mbps"
@@ -3411,7 +3411,7 @@ topology:
     R213:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R208: "42000 Mbps"
         R209: "42000 Mbps"
@@ -3427,7 +3427,7 @@ topology:
     R214:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R208: "42000 Mbps"
         R209: "42000 Mbps"
@@ -3443,7 +3443,7 @@ topology:
     R215:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R208: "42000 Mbps"
         R209: "42000 Mbps"
@@ -3459,7 +3459,7 @@ topology:
     R216:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R217: "42000 Mbps"
         R218: "42000 Mbps"
@@ -3475,7 +3475,7 @@ topology:
     R217:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R216: "42000 Mbps"
         R218: "42000 Mbps"
@@ -3491,7 +3491,7 @@ topology:
     R218:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R216: "42000 Mbps"
         R217: "42000 Mbps"
@@ -3507,7 +3507,7 @@ topology:
     R219:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R216: "42000 Mbps"
         R217: "42000 Mbps"
@@ -3523,7 +3523,7 @@ topology:
     R220:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R216: "42000 Mbps"
         R217: "42000 Mbps"
@@ -3539,7 +3539,7 @@ topology:
     R221:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R216: "42000 Mbps"
         R217: "42000 Mbps"
@@ -3555,7 +3555,7 @@ topology:
     R222:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R216: "42000 Mbps"
         R217: "42000 Mbps"
@@ -3571,7 +3571,7 @@ topology:
     R223:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R216: "42000 Mbps"
         R217: "42000 Mbps"
@@ -3587,7 +3587,7 @@ topology:
     R224:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R225: "42000 Mbps"
         R226: "42000 Mbps"
@@ -3603,7 +3603,7 @@ topology:
     R225:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R224: "42000 Mbps"
         R226: "42000 Mbps"
@@ -3619,7 +3619,7 @@ topology:
     R226:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R224: "42000 Mbps"
         R225: "42000 Mbps"
@@ -3635,7 +3635,7 @@ topology:
     R227:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R224: "42000 Mbps"
         R225: "42000 Mbps"
@@ -3651,7 +3651,7 @@ topology:
     R228:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R224: "42000 Mbps"
         R225: "42000 Mbps"
@@ -3667,7 +3667,7 @@ topology:
     R229:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R224: "42000 Mbps"
         R225: "42000 Mbps"
@@ -3683,7 +3683,7 @@ topology:
     R230:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R224: "42000 Mbps"
         R225: "42000 Mbps"
@@ -3699,7 +3699,7 @@ topology:
     R231:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R224: "42000 Mbps"
         R225: "42000 Mbps"
@@ -3715,7 +3715,7 @@ topology:
     R232:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R233: "42000 Mbps"
         R234: "42000 Mbps"
@@ -3731,7 +3731,7 @@ topology:
     R233:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R232: "42000 Mbps"
         R234: "42000 Mbps"
@@ -3747,7 +3747,7 @@ topology:
     R234:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R232: "42000 Mbps"
         R233: "42000 Mbps"
@@ -3763,7 +3763,7 @@ topology:
     R235:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R232: "42000 Mbps"
         R233: "42000 Mbps"
@@ -3779,7 +3779,7 @@ topology:
     R236:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R232: "42000 Mbps"
         R233: "42000 Mbps"
@@ -3795,7 +3795,7 @@ topology:
     R237:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R232: "42000 Mbps"
         R233: "42000 Mbps"
@@ -3811,7 +3811,7 @@ topology:
     R238:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R232: "42000 Mbps"
         R233: "42000 Mbps"
@@ -3827,7 +3827,7 @@ topology:
     R239:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R232: "42000 Mbps"
         R233: "42000 Mbps"
@@ -3843,7 +3843,7 @@ topology:
     R240:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R241: "42000 Mbps"
         R242: "42000 Mbps"
@@ -3859,7 +3859,7 @@ topology:
     R241:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R240: "42000 Mbps"
         R242: "42000 Mbps"
@@ -3875,7 +3875,7 @@ topology:
     R242:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R240: "42000 Mbps"
         R241: "42000 Mbps"
@@ -3891,7 +3891,7 @@ topology:
     R243:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R240: "42000 Mbps"
         R241: "42000 Mbps"
@@ -3907,7 +3907,7 @@ topology:
     R244:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R240: "42000 Mbps"
         R241: "42000 Mbps"
@@ -3923,7 +3923,7 @@ topology:
     R245:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R240: "42000 Mbps"
         R241: "42000 Mbps"
@@ -3939,7 +3939,7 @@ topology:
     R246:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R240: "42000 Mbps"
         R241: "42000 Mbps"
@@ -3955,7 +3955,7 @@ topology:
     R247:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R240: "42000 Mbps"
         R241: "42000 Mbps"
@@ -3971,7 +3971,7 @@ topology:
     R248:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R249: "42000 Mbps"
         R250: "42000 Mbps"
@@ -3987,7 +3987,7 @@ topology:
     R249:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R248: "42000 Mbps"
         R250: "42000 Mbps"
@@ -4003,7 +4003,7 @@ topology:
     R250:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R248: "42000 Mbps"
         R249: "42000 Mbps"
@@ -4019,7 +4019,7 @@ topology:
     R251:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R248: "42000 Mbps"
         R249: "42000 Mbps"
@@ -4035,7 +4035,7 @@ topology:
     R252:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R248: "42000 Mbps"
         R249: "42000 Mbps"
@@ -4051,7 +4051,7 @@ topology:
     R253:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R248: "42000 Mbps"
         R249: "42000 Mbps"
@@ -4067,7 +4067,7 @@ topology:
     R254:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R248: "42000 Mbps"
         R249: "42000 Mbps"
@@ -4083,7 +4083,7 @@ topology:
     R255:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R248: "42000 Mbps"
         R249: "42000 Mbps"
@@ -4099,7 +4099,7 @@ topology:
     R256:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R257: "42000 Mbps"
         R258: "42000 Mbps"
@@ -4115,7 +4115,7 @@ topology:
     R257:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R256: "42000 Mbps"
         R258: "42000 Mbps"
@@ -4131,7 +4131,7 @@ topology:
     R258:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R256: "42000 Mbps"
         R257: "42000 Mbps"
@@ -4147,7 +4147,7 @@ topology:
     R259:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R256: "42000 Mbps"
         R257: "42000 Mbps"
@@ -4163,7 +4163,7 @@ topology:
     R260:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R256: "42000 Mbps"
         R257: "42000 Mbps"
@@ -4179,7 +4179,7 @@ topology:
     R261:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R256: "42000 Mbps"
         R257: "42000 Mbps"
@@ -4195,7 +4195,7 @@ topology:
     R262:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R256: "42000 Mbps"
         R257: "42000 Mbps"
@@ -4211,7 +4211,7 @@ topology:
     R263:
       terminals: 4
       terminal_bandwidth: "42000 Mbps"
-      switch_buffer: "100 Gb"
+      switch_buffer: "12.5 GB"
       connections:
         R256: "42000 Mbps"
         R257: "42000 Mbps"
