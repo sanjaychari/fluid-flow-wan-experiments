@@ -1,8 +1,8 @@
 /Users/sanjaychari/Documents/RPI/Kitware_Research/codes/build/src/model-net-rate-fluid-wan --sync=1 -- config.yaml 
 
-Sat Oct 24 11:34:34 2026
+Wed Nov  4 11:13:32 2026
 
-ROSS Version: 8.1.1-53-gdc3a6a0
+ROSS Version: 8.1.1-126-gd96c80a
 
 tw_net_start: Found world size to be 1 
 rate-fluid-wan: switches=64 terminals=128 flows=4 latency=5.000000 ms rate_unit=Gbps data_unit=GB time_unit=s pause=1 debug=1
@@ -102,8 +102,6 @@ BUFFER OCCUPANCY at switch S49 at 0.113642 s occupancy=0.000000 GB capacity=12.5
 QUEUE DRAIN(F700800) at switch S49 at 0.113642 s
 BUFFER OCCUPANCY at switch S33 at 0.118642 s occupancy=0.053445 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700800) at switch S33 at 0.118642 s rate=11.912900 Gbps
-QUEUE DRAIN(F700803) at switch S10 at 0.154625 s
-QUEUE DRAIN(F700803) at switch S10 at 0.154625 s
 BUFFER OCCUPANCY at switch S11 at 0.182904 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700803) at switch S11 at 0.182904 s
 BUFFER OCCUPANCY at switch S04 at 0.187904 s occupancy=0.036031 GB capacity=12.500000 GB
@@ -112,9 +110,6 @@ BUFFER OCCUPANCY at switch S33 at 0.195571 s occupancy=0.000000 GB capacity=12.5
 QUEUE DRAIN(F700800) at switch S33 at 0.195571 s
 BUFFER OCCUPANCY at switch S27 at 0.200571 s occupancy=0.128923 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700800) at switch S27 at 0.200571 s rate=11.912900 Gbps
-QUEUE DRAIN(F700803) at switch S10 at 0.201055 s
-QUEUE DRAIN(F700803) at switch S10 at 0.201055 s
-QUEUE DRAIN(F700800) at switch S49 at 0.224704 s
 BUFFER OCCUPANCY at switch S15 at 0.239193 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700802) at switch S15 at 0.239193 s
 DATA RATE UPDATE(F700802) at switch S21 at 0.244193 s rate=10.165200 Gbps
@@ -128,27 +123,12 @@ BUFFER OCCUPANCY at switch S26 at 0.382940 s occupancy=0.000000 GB capacity=12.5
 QUEUE DRAIN(F700801) at switch S26 at 0.382940 s
 BUFFER OCCUPANCY at switch S22 at 0.387940 s occupancy=0.238166 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700801) at switch S22 at 0.387940 s rate=10.165200 Gbps
-BUFFER THRESHOLD at switch S26 at 0.920755 s threshold=HIGH
-BUFFER THRESHOLD at switch S15 at 0.939135 s threshold=HIGH
-FLOW COMPLETE(F700802) at terminal T41 at 1.000000 s
-FLOW COMPLETE(F700800) at terminal T83 at 1.000000 s
-FLOW COMPLETE(F700803) at terminal T5 at 1.000000 s
-FLOW COMPLETE(F700801) at terminal T98 at 1.000000 s
-BUFFER THRESHOLD at switch S49 at 1.022893 s threshold=HIGH
-BUFFER THRESHOLD at switch S10 at 1.062911 s threshold=HIGH
-BUFFER THRESHOLD at switch S10 at 1.062911 s threshold=HIGH
-GVT #0: simulation 2% complete, max event queue size 39 (GVT = 4070822091.8772) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 2% complete, max event queue size 39 (GVT = 4070822091.8772) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-FLOW COMPLETE(F700803) at terminal T5 at 4.070822 s
-GVT #0: simulation 2% complete, max event queue size 39 (GVT = 4634806716.7849) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 2% complete, max event queue size 39 (GVT = 4634806716.7849) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-FLOW COMPLETE(F700800) at terminal T83 at 4.634807 s
-FLOW COMPLETE(F700803) at terminal T5 at 4.937158 s
-FLOW COMPLETE(F700803) at terminal T5 at 5.381355 s
-FLOW COMPLETE(F700800) at terminal T83 at 5.674345 s
-GVT #0: simulation 3% complete, max event queue size 39 (GVT = 6904486501.0433) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 3% complete, max event queue size 39 (GVT = 6904486501.0433) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-FLOW COMPLETE(F700802) at terminal T41 at 6.904487 s
 FLOW COMPLETE(F700803) at terminal T5 at 7.130736 s
 DATA RATE UPDATE(F700803) at switch S10 at 7.135736 s rate=0.000000 Gbps
 FLOW COMPLETE(F700803) at switch S10 at 7.135736 s
@@ -164,12 +144,10 @@ FLOW COMPLETE(F700803) at switch S00 at 7.160736 s
 FLOW COMPLETE(F700803) at terminal T0 at 7.165736 s
 BUFFER OCCUPANCY at switch S02 at 7.228142 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700803) at switch S02 at 7.228142 s
-QUEUE DRAIN(F700803) at switch S02 at 7.228142 s
 DATA RATE UPDATE(F700803) at switch S01 at 7.233142 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700803) at switch S00 at 7.238142 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700803) at terminal T0 at 7.243142 s rate=0.000000 Gbps
-FLOW COMPLETE(F700801) at terminal T98 at 7.842031 s
-GVT #0: simulation 4% complete, max event queue size 39 (GVT = 8307684611.8051) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 4% complete, max event queue size 39 (GVT = 8307684611.8051) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
 FLOW COMPLETE(F700800) at terminal T83 at 8.307685 s
 DATA RATE UPDATE(F700800) at switch S49 at 8.312685 s rate=0.000000 Gbps
@@ -182,7 +160,6 @@ FLOW COMPLETE(F700800) at switch S27 at 8.322685 s
 FLOW COMPLETE(F700800) at switch S00 at 8.327685 s
 FLOW COMPLETE(F700800) at terminal T0 at 8.332685 s
 BUFFER OCCUPANCY at switch S27 at 8.409262 s occupancy=0.000000 GB capacity=12.500000 GB
-QUEUE DRAIN(F700800) at switch S27 at 8.409262 s
 QUEUE DRAIN(F700800) at switch S27 at 8.409262 s
 DATA RATE UPDATE(F700800) at switch S00 at 8.414262 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700800) at terminal T0 at 8.419262 s rate=0.000000 Gbps
@@ -208,9 +185,6 @@ FLOW COMPLETE(F700801) at terminal T0 at 9.765457 s
 FLOW COMPLETE(F700802) at terminal T0 at 9.765858 s
 BUFFER OCCUPANCY at switch S22 at 9.846267 s occupancy=0.007900 GB capacity=12.500000 GB
 QUEUE DRAIN(F700801) at switch S22 at 9.846267 s
-QUEUE DRAIN(F700801) at switch S22 at 9.846267 s
-QUEUE DRAIN(F700801) at switch S22 at 9.846267 s
-QUEUE DRAIN(F700801) at switch S22 at 9.846267 s
 BUFFER OCCUPANCY at switch S22 at 9.849376 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700802) at switch S22 at 9.849376 s
 DATA RATE UPDATE(F700802) at switch S00 at 9.851267 s rate=20.330400 Gbps
@@ -219,35 +193,24 @@ DATA RATE UPDATE(F700802) at switch S00 at 9.854376 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700802) at terminal T0 at 9.856267 s rate=20.330400 Gbps
 DATA RATE UPDATE(F700801) at terminal T0 at 9.856267 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700802) at terminal T0 at 9.859376 s rate=0.000000 Gbps
-GVT #0: simulation 6% complete, max event queue size 39 (GVT = 12010261872.5657) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 6% complete, max event queue size 39 (GVT = 12010261872.5657) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S22 at 12.010262 s threshold=HIGH
-GVT #0: simulation 7% complete, max event queue size 39 (GVT = 14408925764.3329) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 7% complete, max event queue size 39 (GVT = 14408925764.3329) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S27 at 14.408926 s threshold=HIGH
-GVT #0: simulation 8% complete, max event queue size 39 (GVT = 17626796224.3472) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 8% complete, max event queue size 39 (GVT = 17626796224.3472) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S02 at 17.626796 s threshold=HIGH
-GVT #0: simulation 9% complete, max event queue size 39 (GVT = 18635008731.4778) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 9% complete, max event queue size 39 (GVT = 18635008731.4778) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S11 at 18.635009 s threshold=HIGH
-GVT #0: simulation 9% complete, max event queue size 39 (GVT = 18635008731.4778) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 9% complete, max event queue size 39 (GVT = 18635008731.4778) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S11 at 18.635009 s threshold=HIGH
-BUFFER THRESHOLD at switch S11 at 18.635009 s threshold=HIGH
-GVT #0: simulation 10% complete, max event queue size 39 (GVT = 20337785542.8675) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 10% complete, max event queue size 39 (GVT = 20337785542.8675) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S33 at 20.337786 s threshold=HIGH
-BUFFER THRESHOLD at switch S33 at 20.337786 s threshold=HIGH
-GVT #0: simulation 15% complete, max event queue size 39 (GVT = 31938792017.8117) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 15% complete, max event queue size 39 (GVT = 31938792017.8117) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S22 at 31.938792 s threshold=HIGH
-GVT #0: simulation 24% complete, max event queue size 39 (GVT = 48002523244.9615) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 24% complete, max event queue size 39 (GVT = 48002523244.9615) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S04 at 48.002523 s threshold=HIGH
-GVT #0: simulation 24% complete, max event queue size 39 (GVT = 48002523244.9615) at Sat Oct 24 11:34:34 2026.
+GVT #0: simulation 24% complete, max event queue size 39 (GVT = 48002523244.9615) at Wed Nov  4 11:13:32 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S04 at 48.002523 s threshold=HIGH
 *** END SIMULATION ***
 
 FINAL switch S00 max_buffer=0.000000 GB dropped=0.000000 GB
@@ -335,7 +298,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                       166
-	Event Rate (events/sec)                               200483.1
+	Event Rate (events/sec)                               202686.2
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -354,7 +317,7 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  65880
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          0.5755
+	Initialization                                          0.5530
 	Priority Queue (enq/deq)                                0.0000
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000

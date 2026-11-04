@@ -1,8 +1,8 @@
 /Users/sanjaychari/Documents/RPI/Kitware_Research/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=1 --payload_size=262144 -- config.yaml 
 
-Sat Oct 24 11:38:30 2026
+Wed Nov  4 12:09:39 2026
 
-ROSS Version: 8.1.1-53-gdc3a6a0
+ROSS Version: 8.1.1-126-gd96c80a
 
 tw_net_start: Found world size to be 1 
 NIC num injection port not specified, setting to 1
@@ -1090,7 +1090,7 @@ server 2368 recvd 262144 bytes in 0.001795 seconds, 139.266015 MiB/s sent_count 
 server 2369 recvd 262144 bytes in 0.001794 seconds, 139.356130 MiB/s sent_count 1 recvd_count 1 local_count 1 
 server 2370 recvd 262144 bytes in 0.001794 seconds, 139.353050 MiB/s sent_count 1 recvd_count 1 local_count 1 
 
-	: Running Time = 66.1518 seconds
+	: Running Time = 63.8075 seconds
 
 TW Library Statistics:
 	Total Events Processed                               124889416
@@ -1110,7 +1110,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                 124889416
-	Event Rate (events/sec)                              1887922.9
+	Event Rate (events/sec)                              1957285.5
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -1129,12 +1129,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                    856
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          0.4485
-	Priority Queue (enq/deq)                               22.9670
+	Initialization                                          0.4380
+	Priority Queue (enq/deq)                               22.5600
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                       59.9594
+	Event Processing                                       57.9324
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -1145,7 +1145,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)     66.1515
+	Total Time (Note: Using Running Time above for Speedup)     63.8076
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

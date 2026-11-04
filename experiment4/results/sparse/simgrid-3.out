@@ -1,2 +1,2 @@
 [0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'raw'
-SIMGRID_WALL_RUNTIME_SEC=0.000537583
+SIMGRID_WALL_RUNTIME_SEC=0.000541583

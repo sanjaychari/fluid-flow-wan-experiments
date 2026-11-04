@@ -1,0 +1,2 @@
+switches,terminals,flows,start_span_s,offered_GB,link_latency_ms,topology_seed,workload_seed
+512,1024,4096,119.982342696,51085.496145824,5.000000000,55005,55006

@@ -1,5 +1,5 @@
 {
-  "codes_commit": "7cecb6a7d042dcc2ca11c140b4f1b32b5f630d39",
+  "codes_commit": "85ed12bae11c5419039d1a8d9f5e23fba3286ced",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-rate-fluid-wan --sync=1 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -13,7 +13,7 @@
   "compiler": [
     "Apple clang version 21.0.0 (clang-2100.3.34.2)"
   ],
-  "created_utc": "2026-10-24T15:41:59.190579+00:00",
+  "created_utc": "2026-11-04T17:13:02.458274+00:00",
   "host": "anonymous-host",
   "input_sha256": {
     "/workspace/fluid-flow-wan-experiments/experiment3/results/medium/fluid/warmup/config.yaml": "89dfa8d04b839d114c5a0483a98a90a69e9e6b5aabee0f951677c48b20ac75f7",
@@ -35,5 +35,5 @@
   "ross_commit": "",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 2.357892
+  "wall_clock_sec": 2.294796
 }

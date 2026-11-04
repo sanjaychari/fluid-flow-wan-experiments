@@ -20,6 +20,7 @@ These paths can be overridden with environment variables.
 - `experiment2/` — congestion, finite buffering, PAUSE, incast, and victim-flow experiments
 - `experiment3/` — fluid-versus-packet CODES simulator-throughput comparison
 - `experiment4/` — fixed-128-switch CODES-versus-SimGrid flow-density runtime comparison
+- `experiment5/` — sequential-versus-conservative ROSS parallel scalability
 - `common/` — shared topology, manifest, and CSV utilities
 
 Generated results may be committed after anonymization. Before staging new
@@ -203,6 +204,25 @@ experiment4/results/experiment4-flow-density-summary.csv
 It reports CODES and SimGrid simulation runtime, their runtime ratio,
 flow count, represented start-time span and offered volume, and the CODES event
 count.
+
+
+## 10. Run Experiment 5
+
+Experiment 5 holds one deterministic rate-fluid workload fixed and compares
+sequential ROSS execution with conservative execution across increasing MPI rank
+counts. It uses ROSS internal runtime, reports speedup and parallel efficiency,
+and verifies canonical final flow-summary parity across execution modes.
+
+```bash
+cd "$HOME/fluid-flow-wan-experiments"
+REPEATS=3 PARALLEL_RANKS="2 4 8" ./experiment5/run.sh
+```
+
+The primary summary is:
+
+```text
+experiment5/results/experiment5-parallel-scaling-summary.csv
+```
 
 ## Re-running and preserving outputs
 

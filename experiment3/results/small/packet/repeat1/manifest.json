@@ -1,5 +1,5 @@
 {
-  "codes_commit": "7cecb6a7d042dcc2ca11c140b4f1b32b5f630d39",
+  "codes_commit": "85ed12bae11c5419039d1a8d9f5e23fba3286ced",
   "command": "mpirun -np 1 /workspace/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=1 --payload_size=262144 -- config.yaml",
   "command_argv": [
     "mpirun",
@@ -16,7 +16,7 @@
   "compiler": [
     "Apple clang version 21.0.0 (clang-2100.3.34.2)"
   ],
-  "created_utc": "2026-10-24T15:39:37.169875+00:00",
+  "created_utc": "2026-11-04T17:10:43.910300+00:00",
   "host": "anonymous-host",
   "input_sha256": {
     "/workspace/fluid-flow-wan-experiments/experiment3/results/small/packet/repeat1/config.yaml": "06c028c9064111f97400566a6ed22b270e9da835265ef9e90754ae23e6d37375"
@@ -36,5 +36,5 @@
   "ross_commit": "",
   "seed": "",
   "sync_mode": 1,
-  "wall_clock_sec": 66.818514
+  "wall_clock_sec": 64.448614
 }

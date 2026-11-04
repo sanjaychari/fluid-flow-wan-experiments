@@ -1,8 +1,8 @@
 /Users/sanjaychari/Documents/RPI/Kitware_Research/codes/build/src/model-net-rate-fluid-wan --sync=1 -- config.yaml 
 
-Sat Oct 24 11:34:50 2026
+Wed Nov  4 11:13:48 2026
 
-ROSS Version: 8.1.1-53-gdc3a6a0
+ROSS Version: 8.1.1-126-gd96c80a
 
 tw_net_start: Found world size to be 1 
 rate-fluid-wan: switches=64 terminals=128 flows=16 latency=5.000000 ms rate_unit=Gbps data_unit=GB time_unit=s pause=1 debug=1
@@ -616,29 +616,14 @@ DATA RATE UPDATE(F700901) at switch S41 at 0.055000 s rate=6.666667 Gbps
 DATA RATE UPDATE(F700901) at switch S41 at 0.055000 s rate=6.250000 Gbps
 BUFFER OCCUPANCY at switch S14 at 0.059258 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700913) at switch S14 at 0.059258 s
-QUEUE DRAIN(F700913) at switch S14 at 0.059357 s
-QUEUE DRAIN(F700913) at switch S14 at 0.059357 s
-QUEUE DRAIN(F700913) at switch S14 at 0.059357 s
-QUEUE DRAIN(F700913) at switch S14 at 0.059391 s
-QUEUE DRAIN(F700913) at switch S14 at 0.061412 s
 BUFFER OCCUPANCY at switch S35 at 0.062525 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700904) at switch S35 at 0.062525 s
-QUEUE DRAIN(F700904) at switch S35 at 0.063131 s
-QUEUE DRAIN(F700904) at switch S35 at 0.063131 s
-QUEUE DRAIN(F700904) at switch S35 at 0.063131 s
 BUFFER OCCUPANCY at switch S55 at 0.063574 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700909) at switch S55 at 0.063574 s
-QUEUE DRAIN(F700904) at switch S35 at 0.063771 s
 BUFFER OCCUPANCY at switch S62 at 0.064258 s occupancy=0.203591 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700913) at switch S62 at 0.064258 s rate=6.250000 Gbps
 BUFFER OCCUPANCY at switch S31 at 0.066089 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700903) at switch S31 at 0.066089 s
-QUEUE DRAIN(F700913) at switch S14 at 0.066472 s
-QUEUE DRAIN(F700913) at switch S14 at 0.066472 s
-QUEUE DRAIN(F700913) at switch S14 at 0.066472 s
-QUEUE DRAIN(F700913) at switch S14 at 0.066472 s
-QUEUE DRAIN(F700909) at switch S55 at 0.067119 s
-QUEUE DRAIN(F700909) at switch S55 at 0.067119 s
 BUFFER OCCUPANCY at switch S36 at 0.067525 s occupancy=0.256844 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700904) at switch S36 at 0.067525 s rate=5.087700 Gbps
 BUFFER OCCUPANCY at switch S29 at 0.068574 s occupancy=0.122024 GB capacity=12.500000 GB
@@ -649,11 +634,8 @@ BUFFER OCCUPANCY at switch S32 at 0.071089 s occupancy=0.279252 GB capacity=12.5
 DATA RATE UPDATE(F700903) at switch S32 at 0.071089 s rate=5.165500 Gbps
 BUFFER OCCUPANCY at switch S18 at 0.073446 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700914) at switch S18 at 0.073446 s
-QUEUE DRAIN(F700913) at switch S14 at 0.073930 s
 BUFFER OCCUPANCY at switch S56 at 0.074246 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700910) at switch S56 at 0.074246 s
-QUEUE DRAIN(F700910) at switch S56 at 0.074515 s
-QUEUE DRAIN(F700910) at switch S56 at 0.074515 s
 BUFFER OCCUPANCY at switch S33 at 0.075873 s occupancy=0.050255 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700912) at switch S33 at 0.075873 s rate=3.970967 Gbps
 BUFFER OCCUPANCY at switch S17 at 0.078446 s occupancy=0.000375 GB capacity=12.500000 GB
@@ -664,19 +646,10 @@ BUFFER OCCUPANCY at switch S61 at 0.078890 s occupancy=0.000000 GB capacity=12.5
 QUEUE DRAIN(F700907) at switch S61 at 0.078890 s
 BUFFER OCCUPANCY at switch S57 at 0.079246 s occupancy=0.108055 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700910) at switch S57 at 0.079246 s rate=6.250000 Gbps
-QUEUE DRAIN(F700903) at switch S31 at 0.079498 s
-QUEUE DRAIN(F700907) at switch S61 at 0.079770 s
-QUEUE DRAIN(F700907) at switch S61 at 0.080833 s
-QUEUE DRAIN(F700907) at switch S61 at 0.082143 s
-QUEUE DRAIN(F700907) at switch S61 at 0.082885 s
-QUEUE DRAIN(F700907) at switch S61 at 0.082885 s
-QUEUE DRAIN(F700907) at switch S61 at 0.082885 s
 BUFFER OCCUPANCY at switch S32 at 0.083600 s occupancy=0.309782 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700914) at switch S32 at 0.083600 s rate=5.165500 Gbps
 BUFFER OCCUPANCY at switch S01 at 0.083890 s occupancy=0.168502 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700907) at switch S01 at 0.083890 s rate=6.250000 Gbps
-QUEUE DRAIN(F700910) at switch S56 at 0.086010 s
-QUEUE DRAIN(F700910) at switch S56 at 0.086010 s
 BUFFER OCCUPANCY at switch S46 at 0.098985 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700915) at switch S46 at 0.098985 s
 BUFFER OCCUPANCY at switch S25 at 0.100160 s occupancy=0.000000 GB capacity=12.500000 GB
@@ -689,70 +662,38 @@ QUEUE DRAIN(F700912) at switch S33 at 0.105655 s
 DATA RATE UPDATE(F700915) at switch S38 at 0.108985 s rate=5.087700 Gbps
 BUFFER OCCUPANCY at switch S27 at 0.110655 s occupancy=0.375827 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700912) at switch S27 at 0.110655 s rate=3.970967 Gbps
-QUEUE DRAIN(F700900) at switch S25 at 0.111381 s
-QUEUE DRAIN(F700907) at switch S61 at 0.112822 s
-QUEUE DRAIN(F700907) at switch S61 at 0.112822 s
 BUFFER OCCUPANCY at switch S37 at 0.113985 s occupancy=0.318931 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700915) at switch S37 at 0.113985 s rate=5.087700 Gbps
 BUFFER OCCUPANCY at switch S20 at 0.127563 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700908) at switch S20 at 0.127563 s
 BUFFER OCCUPANCY at switch S20 at 0.127563 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700911) at switch S20 at 0.127563 s
-QUEUE DRAIN(F700911) at switch S20 at 0.127563 s
 BUFFER OCCUPANCY at switch S27 at 0.132563 s occupancy=0.423036 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700908) at switch S27 at 0.132563 s rate=3.970967 Gbps
 DATA RATE UPDATE(F700911) at switch S27 at 0.132563 s rate=21.209633 Gbps
 BUFFER OCCUPANCY at switch S27 at 0.132563 s occupancy=0.423036 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700911) at switch S27 at 0.132563 s rate=3.970967 Gbps
-QUEUE DRAIN(F700907) at switch S61 at 0.139588 s
-QUEUE DRAIN(F700907) at switch S61 at 0.139588 s
-QUEUE DRAIN(F700907) at switch S61 at 0.139588 s
-QUEUE DRAIN(F700907) at switch S61 at 0.139588 s
-QUEUE DRAIN(F700912) at switch S34 at 0.150221 s
-QUEUE DRAIN(F700912) at switch S34 at 0.150221 s
-QUEUE DRAIN(F700900) at switch S25 at 0.154138 s
-QUEUE DRAIN(F700908) at switch S20 at 0.156763 s
-QUEUE DRAIN(F700908) at switch S20 at 0.156763 s
 BUFFER OCCUPANCY at switch S41 at 0.170461 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700901) at switch S41 at 0.170461 s
 DATA RATE UPDATE(F700901) at switch S40 at 0.175461 s rate=6.250000 Gbps
-QUEUE DRAIN(F700901) at switch S41 at 0.177715 s
 DATA RATE UPDATE(F700901) at switch S02 at 0.180461 s rate=6.250000 Gbps
 BUFFER OCCUPANCY at switch S01 at 0.185461 s occupancy=0.213907 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700901) at switch S01 at 0.185461 s rate=6.250000 Gbps
-QUEUE DRAIN(F700901) at switch S41 at 0.187207 s
 BUFFER OCCUPANCY at switch S62 at 0.187485 s occupancy=0.028492 GB capacity=12.500000 GB
-QUEUE DRAIN(F700905) at switch S62 at 0.187485 s
 QUEUE DRAIN(F700905) at switch S62 at 0.187485 s
 BUFFER OCCUPANCY at switch S63 at 0.192485 s occupancy=0.462661 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700913) at switch S63 at 0.192485 s rate=17.617600 Gbps
 DATA RATE UPDATE(F700905) at switch S63 at 0.192485 s rate=6.250000 Gbps
 BUFFER OCCUPANCY at switch S62 at 0.193820 s occupancy=0.019489 GB capacity=12.500000 GB
-QUEUE DRAIN(F700905) at switch S62 at 0.193820 s
-QUEUE DRAIN(F700905) at switch S62 at 0.193820 s
-QUEUE DRAIN(F700905) at switch S62 at 0.193820 s
-QUEUE DRAIN(F700905) at switch S62 at 0.193820 s
-QUEUE DRAIN(F700905) at switch S62 at 0.193820 s
-QUEUE DRAIN(F700905) at switch S62 at 0.193820 s
 BUFFER OCCUPANCY at switch S62 at 0.196059 s occupancy=0.016307 GB capacity=12.500000 GB
-QUEUE DRAIN(F700905) at switch S62 at 0.196059 s
 BUFFER OCCUPANCY at switch S62 at 0.198756 s occupancy=0.012475 GB capacity=12.500000 GB
-QUEUE DRAIN(F700905) at switch S62 at 0.198756 s
-QUEUE DRAIN(F700901) at switch S41 at 0.200163 s
 BUFFER OCCUPANCY at switch S62 at 0.207536 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700913) at switch S62 at 0.207536 s
-QUEUE DRAIN(F700901) at switch S41 at 0.208199 s
-QUEUE DRAIN(F700901) at switch S41 at 0.208199 s
-QUEUE DRAIN(F700901) at switch S41 at 0.208199 s
-QUEUE DRAIN(F700901) at switch S41 at 0.208199 s
-QUEUE DRAIN(F700901) at switch S41 at 0.208199 s
-QUEUE DRAIN(F700901) at switch S41 at 0.208199 s
 BUFFER OCCUPANCY at switch S29 at 0.210264 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700909) at switch S29 at 0.210264 s
 BUFFER OCCUPANCY at switch S63 at 0.212536 s occupancy=0.501519 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700913) at switch S63 at 0.212536 s rate=6.250000 Gbps
 DATA RATE UPDATE(F700909) at switch S28 at 0.215264 s rate=6.250000 Gbps
-QUEUE DRAIN(F700901) at switch S41 at 0.217176 s
 DATA RATE UPDATE(F700909) at switch S22 at 0.220264 s rate=6.250000 Gbps
 DATA RATE UPDATE(F700909) at switch S00 at 0.225264 s rate=6.250000 Gbps
 DATA RATE UPDATE(F700909) at terminal T0 at 0.230264 s rate=6.250000 Gbps
@@ -761,10 +702,7 @@ QUEUE DRAIN(F700910) at switch S57 at 0.248608 s
 DATA RATE UPDATE(F700910) at switch S58 at 0.253608 s rate=6.250000 Gbps
 BUFFER OCCUPANCY at switch S63 at 0.258608 s occupancy=0.525340 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700910) at switch S63 at 0.258608 s rate=6.250000 Gbps
-QUEUE DRAIN(F700905) at switch S62 at 0.298672 s
-BUFFER THRESHOLD at switch S20 at 0.462615 s threshold=HIGH
 BUFFER OCCUPANCY at switch S01 at 0.664745 s occupancy=0.005850 GB capacity=12.500000 GB
-QUEUE DRAIN(F700907) at switch S01 at 0.664745 s
 QUEUE DRAIN(F700907) at switch S01 at 0.664745 s
 DATA RATE UPDATE(F700901) at switch S00 at 0.669745 s rate=9.722800 Gbps
 DATA RATE UPDATE(F700907) at switch S00 at 0.669745 s rate=6.250000 Gbps
@@ -775,157 +713,26 @@ QUEUE DRAIN(F700901) at switch S01 at 0.678221 s
 DATA RATE UPDATE(F700901) at switch S00 at 0.683221 s rate=6.250000 Gbps
 DATA RATE UPDATE(F700901) at terminal T0 at 0.688221 s rate=6.250000 Gbps
 BUFFER OCCUPANCY at switch S36 at 0.707893 s occupancy=0.172388 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S36 at 0.707893 s threshold=HIGH
-BUFFER THRESHOLD at switch S36 at 0.707893 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 0.767013 s threshold=HIGH
 BUFFER OCCUPANCY at switch S63 at 0.823382 s occupancy=0.457009 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 0.823382 s threshold=HIGH
 BUFFER OCCUPANCY at switch S36 at 0.906210 s occupancy=0.146232 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S36 at 0.906210 s threshold=HIGH
-BUFFER THRESHOLD at switch S20 at 0.910230 s threshold=HIGH
-BUFFER THRESHOLD at switch S20 at 0.910230 s threshold=HIGH
-BUFFER THRESHOLD at switch S20 at 0.910230 s threshold=HIGH
-BUFFER THRESHOLD at switch S41 at 0.927711 s threshold=HIGH
-BUFFER THRESHOLD at switch S25 at 0.964592 s threshold=HIGH
-FLOW COMPLETE(F700912) at terminal T67 at 1.000000 s
-FLOW COMPLETE(F700905) at terminal T63 at 1.000000 s
-FLOW COMPLETE(F700903) at terminal T108 at 1.000000 s
-FLOW COMPLETE(F700906) at terminal T10 at 1.000000 s
-FLOW COMPLETE(F700915) at terminal T123 at 1.000000 s
-FLOW COMPLETE(F700901) at terminal T118 at 1.000000 s
-FLOW COMPLETE(F700908) at terminal T84 at 1.000000 s
-FLOW COMPLETE(F700909) at terminal T107 at 1.000000 s
-FLOW COMPLETE(F700902) at terminal T112 at 1.000000 s
-FLOW COMPLETE(F700911) at terminal T85 at 1.000000 s
-FLOW COMPLETE(F700900) at terminal T95 at 1.000000 s
-FLOW COMPLETE(F700913) at terminal T61 at 1.000000 s
-FLOW COMPLETE(F700907) at terminal T21 at 1.000000 s
-FLOW COMPLETE(F700914) at terminal T72 at 1.000000 s
-FLOW COMPLETE(F700910) at terminal T124 at 1.000000 s
-FLOW COMPLETE(F700904) at terminal T35 at 1.000000 s
-BUFFER THRESHOLD at switch S46 at 1.004017 s threshold=HIGH
-BUFFER THRESHOLD at switch S61 at 1.040159 s threshold=HIGH
-BUFFER THRESHOLD at switch S61 at 1.040159 s threshold=HIGH
-BUFFER THRESHOLD at switch S34 at 1.051766 s threshold=HIGH
-BUFFER THRESHOLD at switch S56 at 1.055388 s threshold=HIGH
-BUFFER THRESHOLD at switch S56 at 1.055388 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 1.055801 s threshold=HIGH
-BUFFER THRESHOLD at switch S31 at 1.060876 s threshold=HIGH
-BUFFER THRESHOLD at switch S31 at 1.060876 s threshold=HIGH
-BUFFER THRESHOLD at switch S18 at 1.067863 s threshold=HIGH
-BUFFER THRESHOLD at switch S20 at 1.074241 s threshold=HIGH
-BUFFER THRESHOLD at switch S35 at 1.074879 s threshold=HIGH
 BUFFER OCCUPANCY at switch S63 at 1.085612 s occupancy=0.425282 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 1.085612 s threshold=HIGH
-BUFFER THRESHOLD at switch S14 at 1.132448 s threshold=HIGH
-BUFFER THRESHOLD at switch S14 at 1.132448 s threshold=HIGH
-BUFFER THRESHOLD at switch S55 at 1.144689 s threshold=HIGH
-BUFFER THRESHOLD at switch S55 at 1.144689 s threshold=HIGH
-QUEUE DRAIN(F700908) at switch S20 at 1.315371 s
 BUFFER OCCUPANCY at switch S36 at 1.824115 s occupancy=0.025172 GB capacity=12.500000 GB
-QUEUE DRAIN(F700902) at switch S36 at 1.824115 s
 QUEUE DRAIN(F700902) at switch S36 at 1.824115 s
 BUFFER OCCUPANCY at switch S37 at 1.829115 s occupancy=0.545135 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700904) at switch S37 at 1.829115 s rate=6.142800 Gbps
 DATA RATE UPDATE(F700902) at switch S37 at 1.829115 s rate=5.087700 Gbps
-GVT #0: simulation 1% complete, max event queue size 345 (GVT = 2014973464.2361) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 1% complete, max event queue size 345 (GVT = 2014973464.2361) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
 BUFFER OCCUPANCY at switch S36 at 2.014973 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700904) at switch S36 at 2.014973 s
 BUFFER OCCUPANCY at switch S37 at 2.019973 s occupancy=0.570307 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700904) at switch S37 at 2.019973 s rate=5.087700 Gbps
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 2.086259 s threshold=HIGH
 BUFFER OCCUPANCY at switch S63 at 2.225538 s occupancy=0.287366 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 2.225538 s threshold=HIGH
 BUFFER OCCUPANCY at switch S63 at 2.263532 s occupancy=0.282769 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 2.263532 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 2.615441 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 2.738295 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 2.738295 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 2.738295 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 2.738295 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 2.933543 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 3.103820 s threshold=HIGH
-BUFFER THRESHOLD at switch S36 at 3.146241 s threshold=HIGH
 BUFFER OCCUPANCY at switch S63 at 3.330806 s occupancy=0.153642 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 3.330806 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 3.330806 s threshold=HIGH
-FLOW COMPLETE(F700909) at terminal T107 at 3.331546 s
-FLOW COMPLETE(F700913) at terminal T61 at 3.418704 s
 BUFFER OCCUPANCY at switch S63 at 3.573462 s occupancy=0.124284 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 3.573462 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 3.573462 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 3.573462 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 3.573462 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 3.573462 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 3.573462 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 3.573462 s threshold=HIGH
 BUFFER OCCUPANCY at switch S63 at 3.793587 s occupancy=0.097651 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 3.793587 s threshold=HIGH
-FLOW COMPLETE(F700906) at terminal T10 at 3.822399 s
 BUFFER OCCUPANCY at switch S63 at 3.904367 s occupancy=0.084248 GB capacity=12.500000 GB
-QUEUE DRAIN(F700906) at switch S63 at 3.904367 s
-QUEUE DRAIN(F700906) at switch S63 at 3.904367 s
-QUEUE DRAIN(F700906) at switch S63 at 3.904367 s
 QUEUE DRAIN(F700906) at switch S63 at 3.904367 s
 DATA RATE UPDATE(F700905) at switch S00 at 3.909367 s rate=6.572633 Gbps
 DATA RATE UPDATE(F700910) at switch S00 at 3.909367 s rate=6.572633 Gbps
@@ -935,35 +742,8 @@ DATA RATE UPDATE(F700913) at terminal T0 at 3.914367 s rate=6.572633 Gbps
 DATA RATE UPDATE(F700910) at terminal T0 at 3.914367 s rate=6.572633 Gbps
 DATA RATE UPDATE(F700905) at terminal T0 at 3.914367 s rate=6.572633 Gbps
 DATA RATE UPDATE(F700906) at terminal T0 at 3.914367 s rate=6.250000 Gbps
-FLOW COMPLETE(F700904) at terminal T35 at 3.934647 s
-FLOW COMPLETE(F700911) at terminal T85 at 3.941598 s
-GVT #0: simulation 2% complete, max event queue size 345 (GVT = 4007973897.6493) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 2% complete, max event queue size 345 (GVT = 4007973897.6493) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 4.007974 s threshold=HIGH
-FLOW COMPLETE(F700914) at terminal T72 at 4.012976 s
-FLOW COMPLETE(F700914) at terminal T72 at 4.020060 s
-BUFFER THRESHOLD at switch S36 at 4.041431 s threshold=HIGH
-BUFFER THRESHOLD at switch S36 at 4.041431 s threshold=HIGH
-BUFFER THRESHOLD at switch S36 at 4.041431 s threshold=HIGH
-BUFFER THRESHOLD at switch S36 at 4.041431 s threshold=HIGH
-BUFFER THRESHOLD at switch S36 at 4.041431 s threshold=HIGH
-BUFFER THRESHOLD at switch S32 at 4.054533 s threshold=HIGH
-FLOW COMPLETE(F700903) at terminal T108 at 4.095254 s
-FLOW COMPLETE(F700905) at terminal T63 at 4.157882 s
-FLOW COMPLETE(F700910) at terminal T124 at 4.163085 s
-FLOW COMPLETE(F700912) at terminal T67 at 4.209524 s
 BUFFER OCCUPANCY at switch S63 at 4.249205 s occupancy=0.042527 GB capacity=12.500000 GB
 QUEUE DRAIN(F700905) at switch S63 at 4.249205 s
 DATA RATE UPDATE(F700905) at switch S00 at 4.254205 s rate=6.250000 Gbps
@@ -972,24 +752,7 @@ DATA RATE UPDATE(F700910) at switch S00 at 4.254205 s rate=6.733950 Gbps
 DATA RATE UPDATE(F700910) at terminal T0 at 4.259205 s rate=6.733950 Gbps
 DATA RATE UPDATE(F700905) at terminal T0 at 4.259205 s rate=6.250000 Gbps
 DATA RATE UPDATE(F700913) at terminal T0 at 4.259205 s rate=6.733950 Gbps
-FLOW COMPLETE(F700907) at terminal T21 at 4.367931 s
 BUFFER OCCUPANCY at switch S63 at 4.430966 s occupancy=0.020536 GB capacity=12.500000 GB
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 4.430966 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 4.576974 s threshold=HIGH
-BUFFER THRESHOLD at switch S27 at 4.576974 s threshold=HIGH
 BUFFER OCCUPANCY at switch S63 at 4.593668 s occupancy=0.000852 GB capacity=12.500000 GB
 QUEUE DRAIN(F700910) at switch S63 at 4.593668 s
 DATA RATE UPDATE(F700910) at switch S00 at 4.598668 s rate=6.250000 Gbps
@@ -1000,93 +763,16 @@ DATA RATE UPDATE(F700910) at terminal T0 at 4.603668 s rate=6.250000 Gbps
 DATA RATE UPDATE(F700913) at terminal T0 at 4.603668 s rate=7.217900 Gbps
 DATA RATE UPDATE(F700913) at switch S00 at 4.605706 s rate=6.250000 Gbps
 DATA RATE UPDATE(F700913) at terminal T0 at 4.610706 s rate=6.250000 Gbps
-BUFFER THRESHOLD at switch S62 at 4.634293 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 4.634293 s threshold=HIGH
-BUFFER THRESHOLD at switch S62 at 4.634293 s threshold=HIGH
-BUFFER THRESHOLD at switch S29 at 4.810250 s threshold=HIGH
-BUFFER THRESHOLD at switch S29 at 4.810250 s threshold=HIGH
-FLOW COMPLETE(F700915) at terminal T123 at 4.979555 s
-BUFFER THRESHOLD at switch S63 at 4.980986 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 4.988427 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.010343 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-BUFFER THRESHOLD at switch S63 at 5.035804 s threshold=HIGH
-FLOW COMPLETE(F700912) at terminal T67 at 5.673105 s
-BUFFER THRESHOLD at switch S32 at 5.764361 s threshold=HIGH
-FLOW COMPLETE(F700900) at terminal T95 at 5.962667 s
-GVT #0: simulation 3% complete, max event queue size 345 (GVT = 6039681105.7966) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 3% complete, max event queue size 345 (GVT = 6039681105.7966) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S27 at 6.039681 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 6.106843 s threshold=HIGH
-FLOW COMPLETE(F700907) at terminal T21 at 6.203814 s
-BUFFER THRESHOLD at switch S20 at 6.230246 s threshold=HIGH
-BUFFER THRESHOLD at switch S20 at 6.230246 s threshold=HIGH
-BUFFER THRESHOLD at switch S57 at 6.418408 s threshold=HIGH
-BUFFER THRESHOLD at switch S57 at 6.418408 s threshold=HIGH
-BUFFER THRESHOLD at switch S57 at 6.418408 s threshold=HIGH
-FLOW COMPLETE(F700913) at terminal T61 at 6.511239 s
-FLOW COMPLETE(F700907) at terminal T21 at 7.252723 s
-FLOW COMPLETE(F700901) at terminal T118 at 7.454169 s
-FLOW COMPLETE(F700911) at terminal T85 at 7.472241 s
-FLOW COMPLETE(F700909) at terminal T107 at 7.531792 s
-FLOW COMPLETE(F700906) at terminal T10 at 7.629798 s
-FLOW COMPLETE(F700911) at terminal T85 at 7.873196 s
-FLOW COMPLETE(F700908) at terminal T84 at 7.873196 s
-GVT #0: simulation 4% complete, max event queue size 345 (GVT = 8033502361.0106) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 4% complete, max event queue size 345 (GVT = 8033502361.0106) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S00 at 8.033502 s threshold=HIGH
-FLOW COMPLETE(F700913) at terminal T61 at 8.291428 s
-FLOW COMPLETE(F700905) at terminal T63 at 8.300765 s
-FLOW COMPLETE(F700908) at terminal T84 at 8.319750 s
-FLOW COMPLETE(F700910) at terminal T124 at 8.718322 s
-FLOW COMPLETE(F700902) at terminal T112 at 8.825280 s
-BUFFER THRESHOLD at switch S27 at 9.021384 s threshold=HIGH
-FLOW COMPLETE(F700903) at terminal T108 at 9.579352 s
-FLOW COMPLETE(F700900) at terminal T95 at 9.733003 s
-GVT #0: simulation 5% complete, max event queue size 345 (GVT = 10661186942.6498) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 5% complete, max event queue size 345 (GVT = 10661186942.6498) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S37 at 10.661187 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 10.661187 s threshold=HIGH
-BUFFER THRESHOLD at switch S37 at 10.661187 s threshold=HIGH
-FLOW COMPLETE(F700913) at terminal T61 at 11.419858 s
-FLOW COMPLETE(F700905) at terminal T63 at 11.434624 s
-FLOW COMPLETE(F700906) at terminal T10 at 11.434697 s
-BUFFER THRESHOLD at switch S01 at 11.871693 s threshold=HIGH
-BUFFER THRESHOLD at switch S01 at 11.871693 s threshold=HIGH
-FLOW COMPLETE(F700901) at terminal T118 at 11.947984 s
-GVT #0: simulation 6% complete, max event queue size 345 (GVT = 12377628468.6917) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 6% complete, max event queue size 345 (GVT = 12377628468.6917) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-FLOW COMPLETE(F700907) at terminal T21 at 12.377628 s
-FLOW COMPLETE(F700901) at terminal T118 at 12.386117 s
-FLOW COMPLETE(F700907) at terminal T21 at 12.849321 s
-FLOW COMPLETE(F700901) at terminal T118 at 12.857752 s
-BUFFER THRESHOLD at switch S33 at 13.117663 s threshold=HIGH
-BUFFER THRESHOLD at switch S33 at 13.117663 s threshold=HIGH
-FLOW COMPLETE(F700907) at terminal T21 at 13.834653 s
-FLOW COMPLETE(F700901) at terminal T118 at 13.842963 s
-GVT #0: simulation 7% complete, max event queue size 345 (GVT = 14587004099.1240) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 7% complete, max event queue size 345 (GVT = 14587004099.1240) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-FLOW COMPLETE(F700900) at terminal T95 at 14.587004 s
-FLOW COMPLETE(F700907) at terminal T21 at 14.819985 s
-FLOW COMPLETE(F700901) at terminal T118 at 14.828175 s
-FLOW COMPLETE(F700905) at terminal T63 at 14.837969 s
-FLOW COMPLETE(F700906) at terminal T10 at 14.839556 s
-FLOW COMPLETE(F700913) at terminal T61 at 15.028649 s
-FLOW COMPLETE(F700905) at terminal T63 at 15.049680 s
-FLOW COMPLETE(F700906) at terminal T10 at 15.051362 s
-FLOW COMPLETE(F700913) at terminal T61 at 15.214810 s
-FLOW COMPLETE(F700910) at terminal T124 at 15.217899 s
-FLOW COMPLETE(F700905) at terminal T63 at 15.236165 s
-FLOW COMPLETE(F700906) at terminal T10 at 15.237930 s
 FLOW COMPLETE(F700909) at terminal T107 at 15.779241 s
 DATA RATE UPDATE(F700909) at switch S55 at 15.784241 s rate=0.000000 Gbps
 FLOW COMPLETE(F700909) at switch S55 at 15.784241 s
@@ -1169,7 +855,6 @@ RATE FEEDBACK(F700901) at switch S41 at 15.824241 s rate=6.666667 Gbps
 DATA RATE UPDATE(F700905) at switch S62 at 15.824241 s rate=6.491975 Gbps
 DATA RATE UPDATE(F700906) at switch S00 at 15.824241 s rate=6.491975 Gbps
 FLOW COMPLETE(F700905) at terminal T63 at 15.824304 s
-FLOW COMPLETE(F700905) at terminal T63 at 15.824500 s
 DATA RATE UPDATE(F700910) at switch S63 at 15.825139 s rate=0.000000 Gbps
 FLOW COMPLETE(F700910) at switch S63 at 15.825139 s
 DATA RATE UPDATE(F700907) at terminal T0 at 15.825318 s rate=0.000000 Gbps
@@ -1188,10 +873,7 @@ RATE FEEDBACK(F700910) at switch S63 at 15.825318 s rate=7.142857 Gbps
 RATE FEEDBACK(F700900) at switch S37 at 15.825318 s rate=7.142857 Gbps
 RATE FEEDBACK(F700914) at switch S32 at 15.825318 s rate=7.142857 Gbps
 RATE FEEDBACK(F700913) at switch S63 at 15.825318 s rate=7.142857 Gbps
-FLOW COMPLETE(F700906) at terminal T10 at 15.825924 s
 FLOW COMPLETE(F700906) at terminal T10 at 15.825965 s
-FLOW COMPLETE(F700906) at terminal T10 at 15.826069 s
-FLOW COMPLETE(F700906) at terminal T10 at 15.826527 s
 DATA RATE UPDATE(F700913) at terminal T0 at 15.827125 s rate=0.000000 Gbps
 RATE FEEDBACK(F700900) at switch S37 at 15.827125 s rate=7.692308 Gbps
 RATE FEEDBACK(F700910) at switch S63 at 15.827125 s rate=7.692308 Gbps
@@ -1290,16 +972,9 @@ RATE FEEDBACK(F700915) at switch S37 at 15.844304 s rate=11.375400 Gbps
 RATE FEEDBACK(F700912) at switch S27 at 15.844304 s rate=11.375400 Gbps
 RATE FEEDBACK(F700902) at switch S37 at 15.844304 s rate=11.230500 Gbps
 RATE FEEDBACK(F700908) at switch S27 at 15.844304 s rate=11.375400 Gbps
-GVT #0: simulation 8% complete, max event queue size 345 (GVT = 16096652545.4473) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 8% complete, max event queue size 345 (GVT = 16096652545.4473) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-FLOW COMPLETE(F700904) at terminal T35 at 16.096653 s
-FLOW COMPLETE(F700911) at terminal T85 at 16.619501 s
-FLOW COMPLETE(F700908) at terminal T84 at 16.619501 s
-QUEUE DRAIN(F700914) at switch S18 at 17.209566 s
-QUEUE DRAIN(F700914) at switch S18 at 17.209566 s
-FLOW COMPLETE(F700904) at terminal T35 at 17.605637 s
-FLOW COMPLETE(F700902) at terminal T112 at 17.635560 s
-GVT #0: simulation 9% complete, max event queue size 345 (GVT = 19099945988.8087) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 9% complete, max event queue size 345 (GVT = 19099945988.8087) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
 FLOW COMPLETE(F700914) at terminal T72 at 19.099946 s
 DATA RATE UPDATE(F700914) at switch S18 at 19.104946 s rate=0.000000 Gbps
@@ -1319,7 +994,6 @@ RATE FEEDBACK(F700900) at switch S37 at 19.124946 s rate=15.734650 Gbps
 FLOW COMPLETE(F700914) at terminal T0 at 19.124946 s
 FLOW COMPLETE(F700903) at terminal T108 at 19.129325 s
 DATA RATE UPDATE(F700903) at switch S31 at 19.129946 s rate=10.331000 Gbps
-FLOW COMPLETE(F700903) at terminal T108 at 19.133704 s
 DATA RATE UPDATE(F700903) at switch S31 at 19.134325 s rate=0.000000 Gbps
 FLOW COMPLETE(F700903) at switch S31 at 19.134325 s
 BUFFER OCCUPANCY at switch S32 at 19.134946 s occupancy=0.296868 GB capacity=12.500000 GB
@@ -1333,16 +1007,12 @@ RATE FEEDBACK(F700915) at switch S37 at 19.149325 s rate=19.921300 Gbps
 FLOW COMPLETE(F700903) at terminal T0 at 19.149325 s
 BUFFER OCCUPANCY at switch S32 at 19.364210 s occupancy=0.006457 GB capacity=12.500000 GB
 QUEUE DRAIN(F700903) at switch S32 at 19.364210 s
-QUEUE DRAIN(F700903) at switch S32 at 19.364210 s
 DATA RATE UPDATE(F700914) at switch S00 at 19.369210 s rate=10.331000 Gbps
 DATA RATE UPDATE(F700903) at switch S00 at 19.369210 s rate=0.000000 Gbps
 BUFFER OCCUPANCY at switch S32 at 19.369210 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700914) at switch S32 at 19.369210 s
 DATA RATE UPDATE(F700903) at terminal T0 at 19.374210 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700914) at terminal T0 at 19.374210 s rate=10.331000 Gbps
-QUEUE DRAIN(F700914) at switch S32 at 19.374210 s
-QUEUE DRAIN(F700914) at switch S32 at 19.374210 s
-QUEUE DRAIN(F700914) at switch S32 at 19.374210 s
 DATA RATE UPDATE(F700914) at switch S00 at 19.374210 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700914) at terminal T0 at 19.379210 s rate=0.000000 Gbps
 FLOW COMPLETE(F700915) at terminal T123 at 19.381227 s
@@ -1372,11 +1042,9 @@ DATA RATE UPDATE(F700900) at switch S37 at 19.421227 s rate=6.783600 Gbps
 DATA RATE UPDATE(F700902) at switch S37 at 19.421227 s rate=5.615250 Gbps
 DATA RATE UPDATE(F700904) at switch S35 at 19.421227 s rate=6.142800 Gbps
 DATA RATE UPDATE(F700904) at switch S35 at 19.421227 s rate=5.615250 Gbps
-FLOW COMPLETE(F700904) at terminal T35 at 19.425612 s
 DATA RATE UPDATE(F700904) at switch S36 at 19.426227 s rate=6.142800 Gbps
 DATA RATE UPDATE(F700904) at switch S36 at 19.426227 s rate=5.615250 Gbps
 FLOW COMPLETE(F700904) at terminal T35 at 19.426494 s
-FLOW COMPLETE(F700904) at terminal T35 at 19.427558 s
 BUFFER OCCUPANCY at switch S37 at 19.431227 s occupancy=0.554007 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700904) at switch S37 at 19.431227 s rate=5.615250 Gbps
 DATA RATE UPDATE(F700904) at switch S35 at 19.431494 s rate=0.000000 Gbps
@@ -1386,7 +1054,6 @@ DATA RATE UPDATE(F700904) at switch S36 at 19.436494 s rate=0.000000 Gbps
 FLOW COMPLETE(F700904) at switch S36 at 19.436494 s
 DATA RATE UPDATE(F700900) at switch S25 at 19.437311 s rate=0.000000 Gbps
 FLOW COMPLETE(F700900) at switch S25 at 19.437311 s
-FLOW COMPLETE(F700900) at terminal T95 at 19.439339 s
 BUFFER OCCUPANCY at switch S37 at 19.441494 s occupancy=0.551008 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700904) at switch S37 at 19.441494 s rate=0.000000 Gbps
 FLOW COMPLETE(F700904) at switch S37 at 19.441494 s
@@ -1408,14 +1075,10 @@ FLOW COMPLETE(F700904) at terminal T0 at 19.451494 s
 RATE FEEDBACK(F700902) at terminal T112 at 19.452311 s rate=11.230500 Gbps
 FLOW COMPLETE(F700900) at terminal T0 at 19.452311 s
 FLOW COMPLETE(F700902) at terminal T112 at 19.452992 s
-FLOW COMPLETE(F700902) at terminal T112 at 19.453062 s
-FLOW COMPLETE(F700902) at terminal T112 at 19.453846 s
-FLOW COMPLETE(F700902) at terminal T112 at 19.456416 s
 DATA RATE UPDATE(F700902) at switch S36 at 19.456494 s rate=10.175400 Gbps
 DATA RATE UPDATE(F700902) at switch S36 at 19.457311 s rate=11.230500 Gbps
 DATA RATE UPDATE(F700902) at switch S36 at 19.457992 s rate=0.000000 Gbps
 FLOW COMPLETE(F700902) at switch S36 at 19.457992 s
-FLOW COMPLETE(F700902) at terminal T112 at 19.461102 s
 BUFFER OCCUPANCY at switch S37 at 19.461494 s occupancy=0.516323 GB capacity=12.500000 GB
 DATA RATE UPDATE(F700902) at switch S37 at 19.461494 s rate=10.175400 Gbps
 BUFFER OCCUPANCY at switch S37 at 19.462311 s occupancy=0.515283 GB capacity=12.500000 GB
@@ -1427,12 +1090,6 @@ FLOW COMPLETE(F700902) at switch S37 at 19.462992 s
 FLOW COMPLETE(F700902) at switch S00 at 19.467992 s
 FLOW COMPLETE(F700902) at terminal T0 at 19.472992 s
 BUFFER OCCUPANCY at switch S37 at 19.657321 s occupancy=0.020163 GB capacity=12.500000 GB
-QUEUE DRAIN(F700900) at switch S37 at 19.657321 s
-QUEUE DRAIN(F700900) at switch S37 at 19.657321 s
-QUEUE DRAIN(F700900) at switch S37 at 19.657321 s
-QUEUE DRAIN(F700900) at switch S37 at 19.657321 s
-QUEUE DRAIN(F700900) at switch S37 at 19.657321 s
-QUEUE DRAIN(F700900) at switch S37 at 19.657321 s
 QUEUE DRAIN(F700900) at switch S37 at 19.657321 s
 BUFFER OCCUPANCY at switch S37 at 19.658349 s occupancy=0.017548 GB capacity=12.500000 GB
 QUEUE DRAIN(F700902) at switch S37 at 19.658349 s
@@ -1456,24 +1113,16 @@ DATA RATE UPDATE(F700902) at terminal T0 at 19.668349 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700904) at terminal T0 at 19.668349 s rate=10.175400 Gbps
 DATA RATE UPDATE(F700904) at switch S00 at 19.668867 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700915) at switch S00 at 19.668867 s rate=20.350800 Gbps
-QUEUE DRAIN(F700904) at switch S37 at 19.669729 s
-QUEUE DRAIN(F700904) at switch S37 at 19.669729 s
 DATA RATE UPDATE(F700915) at switch S00 at 19.670247 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700904) at terminal T0 at 19.673867 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700915) at terminal T0 at 19.673867 s rate=20.350800 Gbps
 DATA RATE UPDATE(F700915) at terminal T0 at 19.675247 s rate=0.000000 Gbps
-QUEUE DRAIN(F700915) at switch S37 at 19.675247 s
-QUEUE DRAIN(F700915) at switch S37 at 19.675247 s
-QUEUE DRAIN(F700915) at switch S37 at 19.675247 s
-QUEUE DRAIN(F700915) at switch S37 at 19.675247 s
-QUEUE DRAIN(F700915) at switch S37 at 19.675247 s
-GVT #0: simulation 11% complete, max event queue size 345 (GVT = 22409353338.0225) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 11% complete, max event queue size 345 (GVT = 22409353338.0225) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S00 at 22.409353 s threshold=HIGH
-GVT #0: simulation 12% complete, max event queue size 345 (GVT = 24857594709.2624) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 12% complete, max event queue size 345 (GVT = 24857594709.2624) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
 FLOW COMPLETE(F700912) at terminal T67 at 24.857595 s
-GVT #0: simulation 12% complete, max event queue size 345 (GVT = 24862594709.2624) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 12% complete, max event queue size 345 (GVT = 24862594709.2624) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
 DATA RATE UPDATE(F700912) at switch S34 at 24.862595 s rate=0.000000 Gbps
 FLOW COMPLETE(F700912) at switch S34 at 24.862595 s
@@ -1503,8 +1152,6 @@ FLOW COMPLETE(F700911) at switch S27 at 24.915366 s
 DATA RATE UPDATE(F700908) at switch S27 at 24.915366 s rate=0.000000 Gbps
 BUFFER OCCUPANCY at switch S27 at 24.915366 s occupancy=0.413109 GB capacity=12.500000 GB
 FLOW COMPLETE(F700908) at switch S27 at 24.915366 s
-FLOW COMPLETE(F700911) at terminal T85 at 24.916751 s
-FLOW COMPLETE(F700908) at terminal T84 at 24.916751 s
 RATE FEEDBACK(F700908) at switch S20 at 24.920366 s rate=11.912900 Gbps
 FLOW COMPLETE(F700911) at switch S00 at 24.920366 s
 FLOW COMPLETE(F700908) at switch S00 at 24.920366 s
@@ -1512,12 +1159,9 @@ FLOW COMPLETE(F700911) at terminal T0 at 24.925366 s
 FLOW COMPLETE(F700908) at terminal T0 at 24.925366 s
 BUFFER OCCUPANCY at switch S27 at 25.190285 s occupancy=0.003723 GB capacity=12.500000 GB
 QUEUE DRAIN(F700908) at switch S27 at 25.190285 s
-QUEUE DRAIN(F700908) at switch S27 at 25.190285 s
 BUFFER OCCUPANCY at switch S27 at 25.190285 s occupancy=0.003723 GB capacity=12.500000 GB
 QUEUE DRAIN(F700911) at switch S27 at 25.190285 s
 BUFFER OCCUPANCY at switch S27 at 25.190285 s occupancy=0.003723 GB capacity=12.500000 GB
-QUEUE DRAIN(F700911) at switch S27 at 25.190285 s
-QUEUE DRAIN(F700911) at switch S27 at 25.190285 s
 BUFFER OCCUPANCY at switch S27 at 25.192785 s occupancy=0.000000 GB capacity=12.500000 GB
 QUEUE DRAIN(F700912) at switch S27 at 25.192785 s
 DATA RATE UPDATE(F700912) at switch S00 at 25.195285 s rate=5.956450 Gbps
@@ -1525,10 +1169,6 @@ DATA RATE UPDATE(F700911) at switch S00 at 25.195285 s rate=5.956450 Gbps
 DATA RATE UPDATE(F700908) at switch S00 at 25.195285 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700911) at switch S00 at 25.195285 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700912) at switch S00 at 25.195285 s rate=11.912900 Gbps
-QUEUE DRAIN(F700912) at switch S27 at 25.197785 s
-QUEUE DRAIN(F700912) at switch S27 at 25.197785 s
-QUEUE DRAIN(F700912) at switch S27 at 25.197785 s
-QUEUE DRAIN(F700912) at switch S27 at 25.197785 s
 DATA RATE UPDATE(F700912) at switch S00 at 25.197785 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700911) at terminal T0 at 25.200285 s rate=5.956450 Gbps
 DATA RATE UPDATE(F700912) at terminal T0 at 25.200285 s rate=5.956450 Gbps
@@ -1536,30 +1176,22 @@ DATA RATE UPDATE(F700908) at terminal T0 at 25.200285 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700911) at terminal T0 at 25.200285 s rate=0.000000 Gbps
 DATA RATE UPDATE(F700912) at terminal T0 at 25.200285 s rate=11.912900 Gbps
 DATA RATE UPDATE(F700912) at terminal T0 at 25.202785 s rate=0.000000 Gbps
-GVT #0: simulation 19% complete, max event queue size 345 (GVT = 39965422204.5515) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 19% complete, max event queue size 345 (GVT = 39965422204.5515) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S00 at 39.965422 s threshold=HIGH
-GVT #0: simulation 24% complete, max event queue size 345 (GVT = 49111299590.8880) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 24% complete, max event queue size 345 (GVT = 49111299590.8880) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S00 at 49.111300 s threshold=HIGH
-GVT #0: simulation 24% complete, max event queue size 345 (GVT = 49621691783.7744) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 24% complete, max event queue size 345 (GVT = 49621691783.7744) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S37 at 49.621692 s threshold=HIGH
-GVT #0: simulation 36% complete, max event queue size 345 (GVT = 73517980287.2338) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 36% complete, max event queue size 345 (GVT = 73517980287.2338) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S37 at 73.517980 s threshold=HIGH
-GVT #0: simulation 36% complete, max event queue size 345 (GVT = 73517980287.2338) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 36% complete, max event queue size 345 (GVT = 73517980287.2338) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S37 at 73.517980 s threshold=HIGH
-GVT #0: simulation 57% complete, max event queue size 345 (GVT = 115542871254.9316) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 57% complete, max event queue size 345 (GVT = 115542871254.9316) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S20 at 115.542871 s threshold=HIGH
-GVT #0: simulation 59% complete, max event queue size 345 (GVT = 118108612342.3102) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 59% complete, max event queue size 345 (GVT = 118108612342.3102) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S27 at 118.108612 s threshold=HIGH
-GVT #0: simulation 85% complete, max event queue size 345 (GVT = 171070620975.3864) at Sat Oct 24 11:34:51 2026.
+GVT #0: simulation 85% complete, max event queue size 345 (GVT = 171070620975.3864) at Wed Nov  4 11:13:48 2026.
 AVL tree size: 0
-BUFFER THRESHOLD at switch S36 at 171.070621 s threshold=HIGH
 *** END SIMULATION ***
 
 FINAL switch S00 max_buffer=0.000000 GB dropped=0.000000 GB
@@ -1627,7 +1259,7 @@ FINAL switch S46 max_buffer=0.100098 GB dropped=0.000000 GB
 FINAL switch S56 max_buffer=0.095203 GB dropped=0.000000 GB
 FINAL switch S54 max_buffer=0.000000 GB dropped=0.000000 GB
 
-	: Running Time = 0.0076 seconds
+	: Running Time = 0.0069 seconds
 
 TW Library Statistics:
 	Total Events Processed                                    1292
@@ -1647,7 +1279,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                      1292
-	Event Rate (events/sec)                               170809.1
+	Event Rate (events/sec)                               185952.8
 	Total Events Scheduled Past End Time                         2
 
 TW Memory Statistics:
@@ -1666,12 +1298,12 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  65880
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          0.5697
-	Priority Queue (enq/deq)                                0.0003
+	Initialization                                          0.5478
+	Priority Queue (enq/deq)                                0.0002
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
 	Buddy system                                            0.0000
-	Event Processing                                        0.0074
+	Event Processing                                        0.0068
 	Event Cancel                                            0.0000
 	Event Abort                                             0.0000
 
@@ -1682,7 +1314,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0076
+	Total Time (Note: Using Running Time above for Speedup)      0.0069
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

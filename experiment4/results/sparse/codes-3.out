@@ -1,8 +1,8 @@
 /Users/sanjaychari/Documents/RPI/Kitware_Research/codes/build/src/model-net-rate-fluid-wan --sync=1 -- codes.yaml 
 
-Sun Oct 25 09:45:41 2026
+Wed Nov  4 12:43:25 2026
 
-ROSS Version: 8.1.1-53-gdc3a6a0
+ROSS Version: 8.1.1-126-gd96c80a
 
 tw_net_start: Found world size to be 1 
 rate-fluid-wan: switches=128 terminals=256 flows=32 latency=5.000000 ms rate_unit=Gbps data_unit=GB time_unit=s pause=0 debug=0
@@ -22,42 +22,42 @@ ROSS Event Memory Allocation:
 
 *** START SEQUENTIAL SIMULATION ***
 
-GVT #0: simulation 1% complete, max event queue size 74 (GVT = 26762366447.7440) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 1% complete, max event queue size 74 (GVT = 26762366447.7440) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 2% complete, max event queue size 83 (GVT = 52963816693.1000) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 2% complete, max event queue size 83 (GVT = 52963816693.1000) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 3% complete, max event queue size 102 (GVT = 79729750825.2324) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 3% complete, max event queue size 102 (GVT = 79729750825.2324) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 4% complete, max event queue size 102 (GVT = 107242118107.2542) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 4% complete, max event queue size 102 (GVT = 107242118107.2542) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 5% complete, max event queue size 102 (GVT = 134486133049.5873) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 5% complete, max event queue size 102 (GVT = 134486133049.5873) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 6% complete, max event queue size 102 (GVT = 159482239958.5803) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 6% complete, max event queue size 102 (GVT = 159482239958.5803) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 7% complete, max event queue size 102 (GVT = 192010899519.0754) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 7% complete, max event queue size 102 (GVT = 192010899519.0754) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 8% complete, max event queue size 102 (GVT = 216911696224.7524) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 8% complete, max event queue size 102 (GVT = 216911696224.7524) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 9% complete, max event queue size 102 (GVT = 242432475008.6595) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 9% complete, max event queue size 102 (GVT = 242432475008.6595) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 10% complete, max event queue size 102 (GVT = 271866133246.6256) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 10% complete, max event queue size 102 (GVT = 271866133246.6256) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 11% complete, max event queue size 102 (GVT = 299483880356.0867) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 11% complete, max event queue size 102 (GVT = 299483880356.0867) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 13% complete, max event queue size 102 (GVT = 350199746872.1887) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 13% complete, max event queue size 102 (GVT = 350199746872.1887) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 13% complete, max event queue size 102 (GVT = 353305388044.2982) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 13% complete, max event queue size 102 (GVT = 353305388044.2982) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 14% complete, max event queue size 102 (GVT = 376768677137.2445) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 14% complete, max event queue size 102 (GVT = 376768677137.2445) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 16% complete, max event queue size 102 (GVT = 438917259333.1389) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 16% complete, max event queue size 102 (GVT = 438917259333.1389) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
-GVT #0: simulation 18% complete, max event queue size 102 (GVT = 482838909845.4594) at Sun Oct 25 09:45:42 2026.
+GVT #0: simulation 18% complete, max event queue size 102 (GVT = 482838909845.4594) at Wed Nov  4 12:43:26 2026.
 AVL tree size: 0
 *** END SIMULATION ***
 
 
-	: Running Time = 0.0060 seconds
+	: Running Time = 0.0059 seconds
 
 TW Library Statistics:
 	Total Events Processed                                    2068
@@ -77,7 +77,7 @@ TW Library Statistics:
 	Total GVT Computations                                       0
 
 	Net Events Processed                                      2068
-	Event Rate (events/sec)                               346921.7
+	Event Rate (events/sec)                               347738.4
 	Total Events Scheduled Past End Time                         0
 
 TW Memory Statistics:
@@ -96,7 +96,7 @@ TW Data Structure sizes in bytes (sizeof):
 	Event struct with Model                                  65880
 
 TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
-	Initialization                                          1.0775
+	Initialization                                          1.0331
 	Priority Queue (enq/deq)                                0.0002
 	AVL Tree (insert/delete)                                0.0000
 	LZ4 (de)compression                                     0.0000
@@ -112,7 +112,7 @@ TW Clock Cycle Statistics (MAX values in secs at 1.0000 GHz):
 	Other Network                                           0.0000
 	Instrumentation (computation)                           0.0000
 	Instrumentation (write)                                 0.0000
-	Total Time (Note: Using Running Time above for Speedup)      0.0060
+	Total Time (Note: Using Running Time above for Speedup)      0.0059
 
 TW GVT Statistics: MPI AllReduce
 	GVT Interval                                                16

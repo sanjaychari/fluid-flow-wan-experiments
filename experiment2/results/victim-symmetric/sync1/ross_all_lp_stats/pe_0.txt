@@ -6,7 +6,7 @@ LPID: 3	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 4	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 5	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 6	-  Processing time: 0.000000e+00	-  Events processed: 0
-LPID: 7	-  Processing time: 6.875920e-04	-  Events processed: 55
+LPID: 7	-  Processing time: 6.027510e-04	-  Events processed: 55
 LPID: 8	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 9	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 10	-  Processing time: 0.000000e+00	-  Events processed: 0
@@ -59,7 +59,7 @@ LPID: 56	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 57	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 58	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 59	-  Processing time: 0.000000e+00	-  Events processed: 0
-LPID: 60	-  Processing time: 1.027190e-03	-  Events processed: 127
+LPID: 60	-  Processing time: 8.949870e-04	-  Events processed: 127
 LPID: 61	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 62	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 63	-  Processing time: 0.000000e+00	-  Events processed: 0
@@ -77,7 +77,7 @@ LPID: 74	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 75	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 76	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 77	-  Processing time: 0.000000e+00	-  Events processed: 0
-LPID: 78	-  Processing time: 1.175440e-04	-  Events processed: 55
+LPID: 78	-  Processing time: 9.579600e-05	-  Events processed: 55
 LPID: 79	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 80	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 81	-  Processing time: 0.000000e+00	-  Events processed: 0
@@ -183,7 +183,7 @@ LPID: 180	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 181	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 182	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 183	-  Processing time: 0.000000e+00	-  Events processed: 0
-LPID: 184	-  Processing time: 3.628890e-04	-  Events processed: 95
+LPID: 184	-  Processing time: 2.499510e-04	-  Events processed: 95
 LPID: 185	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 186	-  Processing time: 0.000000e+00	-  Events processed: 0
 LPID: 187	-  Processing time: 0.000000e+00	-  Events processed: 0
