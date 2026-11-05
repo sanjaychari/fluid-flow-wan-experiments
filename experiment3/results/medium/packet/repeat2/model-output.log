@@ -1,4 +1,4 @@
-/Users/sanjaychari/Documents/RPI/Kitware_Research/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=2 --payload_size=262144 -- config.yaml 
+/home/anonymous/Documents/RPI/Kitware_Research/codes/build/src/model-net-synthetic --sync=1 --traffic=2 --num_messages=2 --payload_size=262144 -- config.yaml 
 
 Wed Nov  4 12:17:29 2026
 

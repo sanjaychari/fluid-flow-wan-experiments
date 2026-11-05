@@ -11,3 +11,5 @@ experiment4/simgrid-flow-benchmark
 experiment3/results/**/logs/flowlet-events.csv
 experiment3/results/**/diagnostic/model-output.log
 experiment3/analysis/parity/**/*-flowlet-events.csv
+
+common/sanitize_results.py

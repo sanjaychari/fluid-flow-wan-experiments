@@ -23,16 +23,6 @@ These paths can be overridden with environment variables.
 - `experiment5/` — sequential-versus-conservative ROSS parallel scalability
 - `common/` — shared topology, manifest, and CSV utilities
 
-Generated results may be committed after anonymization. Before staging new
-or rerun outputs, run:
-
-```bash
-python3 common/anonymize_repository.py --apply
-```
-
-The sanitizer canonicalizes local checkout paths and manifest host fields, then
-audits the repository for remaining machine-specific identifiers.
-
 ## 1. System prerequisites
 
 The commands below target a recent Ubuntu system with OpenMPI. Equivalent
@@ -230,13 +220,3 @@ Each experiment can be rerun independently. Setup scripts regenerate
 configuration/topology inputs where applicable, while run scripts place raw
 outputs in the corresponding `results/` directory and analysis scripts write
 compact CSV summaries under `analysis/` where provided.
-
-Before staging generated outputs, run the repository-wide anonymization and
-audit:
-
-```bash
-./common/sanitize_results.py --repo-root .
-```
-
-A nonzero exit means a local path, username, hostname, email address, or
-non-anonymous manifest host still needs review.
